@@ -281,34 +281,6 @@
   .ref-body .ref-meta{font-family:"Space Mono",monospace;font-size:11px;color:var(--sage)}
   .ref-numeral{margin-top:14px}
 
-  /* QUOTE OF THE DAY */
-  .day-quote{--dq:var(--jade-bright);background:linear-gradient(180deg,var(--panel),var(--panel-2));
-    border:1px solid var(--hair-strong);border-left:3px solid var(--dq);border-radius:14px;
-    padding:18px 20px;margin:0 0 22px}
-  .dq-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px}
-  .dq-label{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.14em;
-    text-transform:uppercase;color:var(--dq)}
-  .dq-date{font-family:"Space Mono",monospace;font-size:11px;color:var(--sage)}
-  .dq-motto{font-family:"Space Grotesk",system-ui,sans-serif;font-size:20px;line-height:1.42;color:var(--bone);margin-bottom:11px}
-  .dq-sign{font-family:"Space Mono",monospace;font-size:11.5px;color:var(--bone-dim)}
-  .dq-sign b{color:var(--dq);font-weight:500}
-
-  /* WAVE STRIP */
-  .wave-intro{font-size:14px;color:var(--bone-dim);margin:12px 0 12px}
-  .wave-intro b{color:var(--bone);font-weight:500}
-  .wave-strip{display:flex;gap:6px;overflow-x:auto;padding:2px 0 8px;
-    scrollbar-width:none;-webkit-overflow-scrolling:touch}
-  .wave-strip::-webkit-scrollbar{display:none}
-  .wcell{flex:0 0 auto;min-width:56px;border:1px solid var(--hair);border-radius:9px;
-    padding:9px 8px;display:flex;flex-direction:column;align-items:center;gap:4px;
-    background:rgba(32,36,46,.02)}
-  .wcell .wpos{font-family:"Space Mono",monospace;font-size:13px;color:var(--sage)}
-  .wcell .wnaw{font-family:"Space Grotesk",system-ui,sans-serif;font-size:12.5px;color:var(--bone-dim);
-    text-align:center;line-height:1.15}
-  .wcell.here{border-color:var(--wc);background:rgba(82,71,201,.10)}
-  .wcell.here .wpos{color:var(--wc)}
-  .wcell.here .wnaw{color:var(--bone)}
-
   /* ABOUT */
   .about p{font-size:15px;color:var(--bone-dim);margin:0 0 14px;max-width:62ch}
   .about p b{color:var(--bone);font-weight:500}
@@ -328,7 +300,15 @@
   }
   @media (prefers-reduced-motion:reduce){.result{transition:none}}
 
-  /* ── Цолькин matrix ── */
+  /* ── seal icons (original thin-line glyphs) ── */
+  .seal-ic{display:inline-block;vertical-align:-0.16em;margin-right:.34em;flex:0 0 auto}
+  h2.kiche{display:flex;align-items:center;gap:.04em;flex-wrap:wrap}
+  h2.kiche .seal-ic{vertical-align:middle;margin-right:.12em}
+  .mx-d-name .seal-ic,.pkiche .seal-ic{vertical-align:-0.18em}
+  .orc-name{display:flex;align-items:center;justify-content:center;gap:.22em}
+  .orc-name .seal-ic{margin-right:0}
+  .ref-ic{display:inline-flex;align-items:center;justify-content:center;width:24px;flex:0 0 auto}
+  .ref-ic .seal-ic{margin-right:0}
   .matrix-legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin:0 0 14px}
   .mx-leg{display:flex;align-items:center;gap:7px;font-family:"Space Mono",monospace;
     font-size:11px;color:var(--bone-dim)}
@@ -355,6 +335,11 @@
   .mx-cell.mystic{color:#382860}
   .mx-cell.gap{color:#0c3a25;font-weight:700}
   .mx-cell.me{outline:2.5px solid var(--bone);outline-offset:1px;z-index:3;font-weight:700;color:var(--bone)}
+  .mx-cell.wave{box-shadow:inset 0 0 0 2px rgba(82,71,201,.5);z-index:1}
+  .mx-cell.sel{outline:3px solid var(--jade);outline-offset:1px;z-index:5;font-weight:700}
+  .matrix-hint{font-family:"Space Mono",monospace;font-size:11.5px;color:var(--sage);
+    margin:0 0 10px;line-height:1.5}
+  @media(min-width:620px){.matrix-hint{font-size:12px}}
   .mx-detail{background:#fff;border:1px solid var(--hair-strong);border-left:3px solid var(--dir);
     border-radius:14px;padding:18px 20px;margin:8px 0 4px;
     box-shadow:0 1px 2px rgba(32,36,46,.05),0 12px 36px rgba(32,36,46,.07)}
@@ -393,7 +378,7 @@
   .rel-item p{margin:0;font-size:14.5px;color:var(--bone-dim)}
   .relate-empty{font-size:14px;color:var(--sage);background:var(--panel-2);
     border:1px dashed var(--hair-strong);border-radius:12px;padding:18px 20px;margin:0}
-  .console,.card,.pcard,.reading,.chatwrap,.ref-item,.day-quote{
+  .console,.card,.pcard,.reading,.chatwrap,.ref-item{
     box-shadow:0 1px 2px rgba(32,36,46,.05),0 12px 36px rgba(32,36,46,.07)}
   .card,.pcard,.reading,.chatwrap{background:#fff}
   .console{background:linear-gradient(180deg,#fff,var(--panel-2))}
@@ -469,7 +454,6 @@
     <p class="note" id="note2" hidden></p>
   </section>
 
-
   <!-- ░░ TZOLKIN MATRIX ░░ -->
   <section id="view-matrix" class="view" hidden>
     <p class="lede">Цолькин, или «Гармонический модуль» — все 260 кинов одной сеткой 13×20. Слева — двадцать печатей (Дракон сверху → Солнце снизу), счёт идёт вниз по столбцу: кин 1 в левом верхнем углу, кин 20 внизу первого столбца, кин 21 — снова сверху. Цвет ячейки — её замок; зелёные — 52 портала; фиолетовая середина — мистическая колонна. Нажми на любую клетку, чтобы раскрыть кин.</p>
@@ -489,6 +473,7 @@
       <span class="mx-leg"><span class="mx-sw gap"></span>портал (GAP)</span>
       <span class="mx-leg"><span class="mx-sw mystic"></span>мистическая колонна</span>
     </div>
+    <p class="matrix-hint">Сетка шире экрана — прокрути её по горизонтали, чтобы увидеть все 13 столбцов. Нажми клетку — подсветится вся её 13-дневная волна.</p>
     <div class="matrix-wrap"><div class="matrix" id="matrix-grid"></div></div>
     <div id="matrix-detail"></div>
     <p class="note"><b>Как читать.</b> Это «Гармонический модуль» Dreamspell: 260 кинов = 20 печатей × 13 тонов, сложенные в сетку 13×20. Пять <b>замков</b> по 52 кина (формула floor((кин−1)/52)) идут по цветам красный→белый→синий→жёлтый→зелёный. 52 <b>портала</b> (GAP) сверены по «Книге Кинов» Аргуэльеса; они образуют симметричный узор-«бабочку» (оккультные пары, тоны в сумме 14). <b>Мистическая колонна</b> — центральный 7-й столбец, кины 121–140. Это карта-конструкция авторской системы, не древний майяский артефакт.</p>
@@ -713,6 +698,30 @@ const NUMFLAVOR=["несёт в чистом, цельном виде","разд
 
 const NUMSHADOW=[];
 
+// ── оригинальные тонкие линейные значки 20 печатей (в тон интерфейсу) ──
+const SEAL_PATHS=[
+`<path d="M3.5 14q2.6-3.2 5.2 0t5.2 0 5.2 0"/><circle cx="12" cy="6.2" r="1.7"/>`,
+`<path d="M4 9.5q5-3.2 9.2 0"/><path d="M4 14.5q6-3 10 0"/><path d="M14 12.6q3 0 3 2.4"/>`,
+`<path d="M5 10.5h14"/><path d="M6.5 10.5a5.5 5.5 0 0 0 11 0"/><circle cx="12" cy="14" r="1.3"/>`,
+`<ellipse cx="12" cy="16.2" rx="2.5" ry="3.3"/><path d="M12 12.9V6.4"/><path d="M12 8.6Q9 7.6 8.4 4.8"/><path d="M12 8.6Q15 7.6 15.6 4.8"/>`,
+`<path d="M15.5 5.5C9.5 5.5 9.5 11 12 12c2.5 1 2.5 6.5-3.5 6.5"/><circle cx="15.7" cy="5.4" r="0.8"/>`,
+`<path d="M3.5 15.5h17"/><path d="M6 15.5q6-7.5 12 0"/><path d="M12 8V5"/>`,
+`<path d="M9.2 20c-1.2 0-2.2-1-2.2-2.3v-4.8a1 1 0 0 1 2 0V10.5a1 1 0 0 1 2 0V9.5a1 1 0 0 1 2 0v1a1 1 0 0 1 2 0v4.2c0 2.8-2 5.3-4.4 5.3z"/><path d="M7 13.6c-1-.5-2 0-2 1 0 .8.6 1.3 1.4 1.8"/>`,
+`<path d="M12 3.8Q12.8 10.5 19.2 12 12.8 13.5 12 20.2 11.2 13.5 4.8 12 11.2 10.5 12 3.8Z"/>`,
+`<path d="M15.6 5.2a8 8 0 1 0 0 13.6 6.4 6.4 0 0 1 0-13.6z"/>`,
+`<circle cx="8.2" cy="10.2" r="1.3"/><circle cx="11.6" cy="8.6" r="1.3"/><circle cx="15" cy="9.4" r="1.3"/><path d="M8.6 15.6a3.3 3.3 0 0 0 6.4 0c0-2.2-1.6-3.5-3.2-3.5s-3.2 1.3-3.2 3.5z"/>`,
+`<path d="M12 12a1.6 1.6 0 1 0 1.6 1.6 3.6 3.6 0 1 0-3.6 3.6 5.6 5.6 0 1 0 5.6-5.6"/>`,
+`<circle cx="12" cy="6.4" r="2.2"/><path d="M12 8.6V15"/><path d="M12 11L7.2 9M12 11l4.8-2"/><path d="M12 15l-3.4 5M12 15l3.4 5"/>`,
+`<path d="M5 5h14M5 19h14M12 5v14"/><path d="M9 9.5h6M9 14.5h6"/>`,
+`<path d="M3.8 12q8.2-6.4 16.4 0-8.2 6.4-16.4 0Z"/><circle cx="12" cy="12" r="2.3"/>`,
+`<circle cx="12" cy="8.4" r="1.4"/><path d="M12 9.8q-1 4-7 5 4-4.2 6.2-3"/><path d="M12 9.8q1 4 7 5-4-4.2-6.2-3"/>`,
+`<path d="M12 4l7 2.4V12c0 4-3 6.6-7 8-4-1.4-7-4-7-8V6.4z"/><path d="M12 8.5v6"/>`,
+`<circle cx="12" cy="12" r="6.2"/><path d="M12 5.8a6 9 0 0 1 0 12.4M12 5.8a6 9 0 0 0 0 12.4"/><path d="M6 12h12"/>`,
+`<path d="M12 4l6.2 8-6.2 8-6.2-8z"/><path d="M8.6 12h6.8"/>`,
+`<path d="M8 13a3 3 0 0 1 0-6 4 4 0 0 1 7.4.4A3 3 0 0 1 16 13z"/><path d="M12 12.5l-2 3.6h2.2l-1.6 3.4"/>`,
+`<circle cx="12" cy="12" r="3.9"/><path d="M12 3.2V5.6M12 18.4V20.8M3.2 12H5.6M18.4 12H20.8M5.9 5.9l1.7 1.7M16.4 16.4l1.7 1.7M18.1 5.9l-1.7 1.7M7.6 16.4l-1.7 1.7"/>`
+];
+function sealIcon(idx,size,color){size=size||20;return `<svg class="seal-ic" viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="${color||'currentColor'}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${SEAL_PATHS[idx]}</svg>`;}
 const DIRCHAR=[
 "Красная, восточная сторона придаёт всему импульс начала: суть печати обращена к рождению, к зачину, к жизненной силе — она инициирует, выводит из небытия в бытие, полна первого огня.",
 "Белая, северная сторона утончает и очищает: качества печати связаны с духом, ясностью, различением — не горячий порыв, а отшлифованная, проведённая через ум сила.",
@@ -850,7 +859,7 @@ function oracleHTML(r){
     const dc=DIR[o.idx%4];
     return `<button type="button" class="orc-cell ${cls}" style="--oc:${dc.accent}" data-sign="${o.idx}" title="${esc(desc)}">`+
       `<span class="orc-role">${role}</span>`+
-      `<span class="orc-name">${N[o.idx].k}</span>`+
+      `<span class="orc-name">${sealIcon(o.idx,16,dc.accent)}${N[o.idx].k}</span>`+
       `<span class="orc-meta">тон ${o.tone} · кин ${o.kin}</span></button>`;
   };
   return `<div class="angle">Оракул · пятёрка кинов</div>`+
@@ -933,7 +942,7 @@ function todayCardHTML(r,dateStr){
     <div class="head">${numeral(r.tone)}
       <div class="names">
         <div class="today-tag">Кин дня · ${dateStr}</div>
-        <h2 class="kiche">${r.tone} ${N[r.idx].k}</h2>
+        <h2 class="kiche">${sealIcon(r.idx,30,dir.accent)}${r.tone} ${N[r.idx].k}</h2>
         <div class="yuc">${numK[0]} тон · ${dir.col.toLowerCase()}, ${dir.name.toLowerCase()} · кин ${r.kin}</div>
       </div>
       <div class="rose-wrap">${rose(dir.rose)}<span class="dir-label">${dir.name}</span></div>
@@ -993,13 +1002,20 @@ function showKinDetail(kin){
   if(isGap) flags+='<span class="mx-flag gap">портал GAP</span>';
   if(isMystic) flags+='<span class="mx-flag mystic">мистическая колонна</span>';
   host.innerHTML=`<div class="mx-detail" style="--dir:${dir.accent}">
-    <div class="mx-d-head"><span class="mx-d-kin">Кин ${kin}</span><span class="mx-d-name">${tone} ${N[idx].k}</span></div>
+    <div class="mx-d-head"><span class="mx-d-kin">Кин ${kin}</span><span class="mx-d-name">${sealIcon(idx,22,dir.accent)}${tone} ${N[idx].k}</span></div>
     <p class="mx-d-meta">${NUM[tone][0]} тон · ${dir.col.toLowerCase()}, ${dir.name.toLowerCase()} · волна 1 ${N[lordIdx].k} · ${cas.name}, ${cas.court.toLowerCase()}</p>
     ${flags?`<div class="mx-flags">${flags}</div>`:''}
     ${isGap?'<p class="mx-d-note">Портал галактической активации — один из 52 «вплетённых» дней, где энергия, по системе, ощущается ярче (узор «Ткацкий станок майя», или «галактическая бабочка»).</p>':''}
     ${isMystic?'<p class="mx-d-note">Мистическая колонна — 20 «коренных дней» в самом сердце Цолькина (кины 121–140), время покоя, центрирования и присутствия.</p>':''}
   </div>`;
   host.scrollIntoView({behavior:'smooth',block:'nearest'});
+  // подсветить всю волну (13 кинов) выбранного кина
+  const grid=document.getElementById('matrix-grid'); if(grid){
+    grid.querySelectorAll('.mx-cell').forEach(x=>x.classList.remove('wave','sel'));
+    const first=kin-(tone-1);
+    for(let k=first;k<first+13;k++){const cell=grid.querySelector('[data-kin="'+k+'"]'); if(cell) cell.classList.add('wave');}
+    const sel=grid.querySelector('[data-kin="'+kin+'"]'); if(sel) sel.classList.add('sel');
+  }
 }
 function runMatrixFind(){
   const v=document.getElementById('mb').value; if(!v){renderMatrix();return;}
@@ -1035,7 +1051,7 @@ function render(){
   card.innerHTML=`
     <div class="head">${numeral(r.tone)}
       <div class="names">
-        <h2 class="kiche">${naw.k}</h2>
+        <h2 class="kiche">${sealIcon(r.idx,30,dir.accent)}${naw.k}</h2>
         <div class="yuc">тон ${r.tone} · ${numK[0]} · кин ${r.kin}<span class="sep">·</span>печать №${r.idx+1} из 20</div>
         <div class="ds"><span class="ds-tag">Seal · Maya</span>${dsEn} <span class="dsen">(${naw.y})</span></div>
       </div>
@@ -1094,7 +1110,7 @@ function personCard(P,label){
   return `<div class="pcard" style="--dir:${dir.accent}">
     <p class="pname">${esc(label)}</p>
     <div class="prow">${numeral(P.tone)}
-      <div><p class="pkiche">${P.tone} ${N[P.idx].k}</p>
+      <div><p class="pkiche">${sealIcon(P.idx,22,dir.accent)}${P.tone} ${N[P.idx].k}</p>
       <p class="pmeta"><span class="swatch" style="background:${dir.ink}"></span>${dir.name}, ${dir.col.toLowerCase()} · волна 1 ${N[P.lordIdx].k}</p></div>
     </div></div>`;
 }
@@ -1165,87 +1181,6 @@ function runPair(){
   if(rawB) q+='&pnb='+encodeURIComponent(rawB);
   addShare(result.querySelector('.reading'), q);
   addImgBtn(result.querySelector('.reading'), ()=>pairCardSVG(A,B,nameA,nameB), 'dreamspell-pair.png');
-  result.classList.remove('show');void result.offsetWidth;result.classList.add('show');
-}
-
-/* ── you & the day (permanent nature × transient day) ── */
-const tempoWord=t=>t<=4?'мягкой, заземляющей':t<=9?'ровной, рабочей':'высокой, напряжённой';
-const dayTempoWord=t=>t<=4?'мягком, заземляющем':t<=9?'срединном, рабочем':'высоком, напряжённом';
-const wavePhase=p=>p<=4?'начало волны — замысел и разгон':p<=9?'середина волны — работа и равновесие':'вершина волны — проявление, пик и спад к завершению';
-function waveStrip(D){
-  let cells='';
-  for(let pos=1;pos<=13;pos++){
-    const idx=mod(D.lordIdx+pos-1,20), here=pos===D.tone, dcol=DIR[idx%4];
-    cells+=`<div class="wcell${here?' here':''}" style="--wc:${dcol.accent}"><span class="wpos">${pos}</span><span class="wnaw">${N[idx].k}</span></div>`;
-  }
-  return `<h3>Волна целиком · wavespell 1 ${N[D.lordIdx].k}</h3>`+
-    `<p class="wave-intro">Эту волну ведёт её первый день — <b>1 ${N[D.lordIdx].k}</b> (${N[D.lordIdx].y}), и все 13 дней звучат на его фоне. Общая тема периода — <b>${KW[D.lordIdx]}</b>, и волна в целом благоприятна для дел такого рода: ${lc(DESC[D.lordIdx].dfor)} Энергия идёт от зачина в 1-й день к вершине на 13-й.</p>`+
-    `<p class="wave-intro">Этот день — <b>${D.tone}-й из 13</b>: ${wavePhase(D.tone)}.</p>`+
-    `<div class="wave-strip">${cells}</div>`;
-}
-function buildDayRead(B,D,yb){
-  const bdir=DIR[B.idx%4], ddir=DIR[D.idx%4], bn=N[B.idx], dn=N[D.idx], dc=DESC[D.idx], bc=DESC[B.idx];
-  const bd=B.idx%4, dd=D.idx%4;
-  let out='';
-  out+='<h3>Твоя природа · постоянное</h3>';
-  out+=`<p>Ты — <b>${B.tone} ${bn.k}</b>: ${bc.char} Это не меняется день ото дня — твой склад и призвание (${KW[B.idx]}).</p>`;
-  out+='<h3>Тон дня · преходящее</h3>';
-  out+=`<p>Этот день — <b>${D.tone} ${dn.k}</b>, тема ${KW[D.idx]}, на ${dayTempoWord(D.tone)} тоне. Это погода дня: завтра тон будет иным, а твоя суть та же. А весь этот год идёт под печатью года <b>${yb.tone} ${N[yb.idx].k}</b> — самый медленный фон, тема ${KW[yb.idx]}, над днём и волной.</p>`;
-  out+='<h3>Как одно ложится на другое</h3>';
-  let res;
-  if(bd===dd) res=`Сегодняшний день обращён в ту же сторону, что и ты (${bdir.name.toLowerCase()}): он тебе созвучен, ты в своей стихии — твои сильные стороны сегодня особенно в ходу, легче делать то, что и так твоё.`;
-  else if((bd+2)%4===dd) res=`День обращён в противоположную тебе сторону (${ddir.name.toLowerCase()} против твоего ${bdir.name.toLowerCase()}): он тянет туда, где ты обычно не живёшь. Это и встряска, и возможность — день просит непривычного, отсюда и рост, и трение, если упираться.`;
-  else res=`День стоит к тебе боком (${ddir.name.toLowerCase()} к твоему ${bdir.name.toLowerCase()}): не созвучие и не спор, скорее дополнение — он подсвечивает в тебе другую грань.`;
-  let num;
-  if(B.tone===D.tone) num=`И число сегодня одно с твоим (${B.tone}) — день идёт ровно в твоём темпе, всё ляжет особенно складно.`;
-  else if(D.tone>=10) num=`Число дня высокое (${D.tone}) — он подталкивает к проявлению и переменам по-крупному; тебе, с твоей ${tempoWord(B.tone)} природой, стоит взять его энергию, но не дать ему себя загнать.`;
-  else if(D.tone<=4) num=`Число дня мягкое (${D.tone}) — он не торопит; хорошее время для неспешного и основательного, для начала вполголоса.`;
-  else num=`Число дня срединное (${D.tone}) — ровная рабочая энергия без крайностей.`;
-  out+=`<p>${res} ${num}</p>`;
-  out+='<h3>Сегодня</h3>';
-  out+=`<p class="close">Ко двору: ${lc(dc.dfor)} Лучше переждать: ${lc(dc.dnot)} Наложи это на свою природу (${KW[B.idx]}) — и читай не как предсказание событий, а как подсказку: куда сегодня стоит направить себя, а где сбавить.</p>`;
-  out+=waveStrip(D);
-  return out;
-}
-function buildDayOnly(D,yb){
-  const dir=DIR[D.idx%4], dn=N[D.idx], dc=DESC[D.idx], lord=N[D.lordIdx];
-  let out='';
-  out+='<h3>Характер дня</h3>';
-  out+=`<p class="image-line">${dc.img}</p>`;
-  out+=`<p>День под знаком <b>${D.tone} ${dn.k}</b> (${dn.y}), тема ${KW[D.idx]}, на ${dayTempoWord(D.tone)} числе ${D.tone} (${NUM[D.tone][0]}): ${lc(NUM[D.tone][1])} Сторона — ${dir.name.toLowerCase()}, ${dir.col.toLowerCase()}; волна 1 ${lord.k}.</p>`;
-  out+='<h3>День для дел</h3>';
-  out+=`<div class="two"><div><p class="nm" style="color:var(--b)">Благоприятно</p><p>${dc.dfor}</p></div><div><p class="nm" style="color:var(--b)">Лучше отложить</p><p>${dc.dnot}</p></div></div>`;
-  out+=`<p class="close">Над днём — печать года <b>${yb.tone} ${N[yb.idx].k}</b>, тема ${KW[yb.idx]}: самый медленный фон периода.</p>`;
-  out+=waveStrip(D);
-  return out;
-}
-function runDay(){
-  const vd=document.getElementById('dyd').value, vb=document.getElementById('dyb').value;
-  const result=document.getElementById('result3'), note=document.getElementById('note3');
-  if(!vd){result.innerHTML='<div class="reading"><div class="empty">Введи дату дня (по умолчанию — сегодня), чтобы увидеть характер дня. Дату рождения можно добавить по желанию.</div></div>';result.classList.add('show');note.hidden=true;return;}
-  const [yd,md,dd]=vd.split('-').map(Number);
-  const D=compute(yd,md,dd), yb=yearBearer(yd,md,dd), dAcc=DIR[D.idx%4].accent;
-  const dLabel='День — '+String(dd).padStart(2,'0')+'.'+String(md).padStart(2,'0')+'.'+yd;
-  if(vb){
-    const [yy,mm2,dd2]=vb.split('-').map(Number), B=compute(yy,mm2,dd2);
-    document.documentElement.style.setProperty('--a',DIR[B.idx%4].accent);
-    document.documentElement.style.setProperty('--b',dAcc);
-    result.innerHTML=`<div class="cards">${personCard(B,'Ты')}${personCard(D,dLabel)}</div><div class="reading">${dayQuoteCard(D,dd,md,yd)}${buildDayRead(B,D,yb)}</div>`;
-    note.innerHTML='<b>Как это читать.</b> Слева — твоя постоянная природа (печать рождения), справа — преходящий тон дня; ниже — как одно ложится на другое. Это совет об уместности, а не предсказание событий. Завтра тон дня другой — твоя суть та же.';
-    addShare(result.querySelector('.reading'), 'day='+vd+'&born='+vb);
-    addImgBtn(result.querySelector('.reading'), ()=>pairCardSVG(B,D,'Ты','День '+String(dd).padStart(2,'0')+'.'+String(md).padStart(2,'0')), 'dreamspell-day-'+vd+'.png');
-  } else {
-    document.documentElement.style.setProperty('--a',dAcc);
-    document.documentElement.style.setProperty('--b',dAcc);
-    result.innerHTML=`<div class="cards" style="grid-template-columns:1fr">${personCard(D,dLabel)}</div><div class="reading">${dayQuoteCard(D,dd,md,yd)}${buildDayOnly(D,yb)}</div>`;
-    note.innerHTML='<b>Как это читать.</b> Это характер самого дня и его подсказка — к чему он располагает и что просит придержать, безотносительно к конкретному человеку. Добавь дату рождения выше — и я покажу, как этот день ложится именно на твою природу. Совет об уместности, не предсказание.';
-    addShare(result.querySelector('.reading'), 'day='+vd);
-    addImgBtn(result.querySelector('.reading'), ()=>composeCard({eyebrow:'DREAMSPELL · КИН ДНЯ '+String(dd).padStart(2,'0')+'.'+String(md).padStart(2,'0')+'.'+yd, tone:D.tone, title:N[D.idx].k,
-      sub:`${D.tone} ${N[D.idx].y} · ${DIR[D.idx%4].name.toLowerCase()}, ${DIR[D.idx%4].col.toLowerCase()}`,
-      metas:[`волна 1 ${N[D.lordIdx].k} · печать года ${yb.tone} ${N[yb.idx].k}`],
-      essence:'Благоприятно: '+lc(DESC[D.idx].dfor), footer:'День '+String(dd).padStart(2,'0')+'.'+String(md).padStart(2,'0')+'.'+yd, accent:dAcc}), 'dreamspell-day-'+vd+'.png');
-  }
-  note.hidden=false;
   result.classList.remove('show');void result.offsetWidth;result.classList.add('show');
 }
 
@@ -1406,7 +1341,7 @@ function buildReference(){
   const signs=N.map((o,i)=>{
     const dir=DIR[i%4], c=DESC[i];
     return `<details class="ref-item" id="sign-${i}">
-      <summary><span class="ref-sw" style="background:${dir.ink}"></span><span class="ref-no">№${i+1}</span><span class="ref-name">${o.k}</span><span class="ref-theme">${o.y} · ${KW[i]}</span></summary>
+      <summary><span class="ref-ic">${sealIcon(i,22,dir.accent)}</span><span class="ref-no">№${i+1}</span><span class="ref-name">${o.k}</span><span class="ref-theme">${o.y} · ${KW[i]}</span></summary>
       <div class="ref-body"><p>${LONG[i]}</p><p><b>Дар:</b> ${lc(c.gift)} <b>· Тень:</b> ${lc(c.shadow)}</p><p class="ref-meta">Сторона: ${dir.name.toLowerCase()}, ${dir.col.toLowerCase()}</p></div>
     </details>`;
   }).join('');
@@ -1434,10 +1369,10 @@ function numeralSVG(t,cx,top,u,color){
 function svgWrap(text,max){const w=text.split(/\s+/),lines=[];let cur='';
   for(const word of w){ if((cur+' '+word).trim().length>max){ if(cur)lines.push(cur); cur=word; } else cur=(cur+' '+word).trim(); }
   if(cur)lines.push(cur); return lines;}
-const CARD_BG='#0d1311',CARD_JADE='#34a088',CARD_JADEB='#5fc2a8',CARD_BONE='#e8e2d2',CARD_DIM='#bcb4a4',CARD_SAGE='#7d8a82';
+const CARD_BG='#f4f0e6',CARD_JADE='#5247c9',CARD_JADEB='#6a5fe0',CARD_BONE='#20242e',CARD_DIM='#515868',CARD_SAGE='#8d8a7d';
 function composeCard(o){
   const W=800,H=800, acc=o.accent||CARD_JADEB;
-  let s=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" font-family="Georgia, 'Times New Roman', serif">`;
+  let s=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, system-ui, sans-serif">`;
   s+=`<rect width="${W}" height="${H}" fill="${CARD_BG}"/>`;
   s+=`<rect x="18" y="18" width="${W-36}" height="${H-36}" rx="30" fill="none" stroke="${acc}" stroke-opacity="0.4" stroke-width="1.5"/>`;
   s+=`<text x="${W/2}" y="92" text-anchor="middle" font-family="ui-monospace, monospace" font-size="19" letter-spacing="4" fill="${CARD_SAGE}">${esc(o.eyebrow||"DREAMSPELL · ГАЛАКТИЧЕСКАЯ СИГНАТУРА")}</text>`;
@@ -1455,19 +1390,19 @@ function composeCard(o){
 }
 function pairCardSVG(A,B,nameA,nameB){
   const W=800,H=800, accA=DIR[A.idx%4].accent, accB=DIR[B.idx%4].accent;
-  let s=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" font-family="Georgia, 'Times New Roman', serif">`;
+  let s=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, system-ui, sans-serif">`;
   s+=`<rect width="${W}" height="${H}" fill="${CARD_BG}"/>`;
   s+=`<rect x="18" y="18" width="${W-36}" height="${H-36}" rx="30" fill="none" stroke="${CARD_JADE}" stroke-opacity="0.4" stroke-width="1.5"/>`;
   s+=`<text x="${W/2}" y="92" text-anchor="middle" font-family="ui-monospace, monospace" font-size="19" letter-spacing="4" fill="${CARD_SAGE}">DREAMSPELL · ВЗАИМОДЕЙСТВИЕ</text>`;
-  const n1=numeralSVG(A.tone, W*0.30, 158, 17, accA), n2=numeralSVG(B.tone, W*0.70, 158, 17, accB); s+=n1.svg+n2.svg;
+  const n1=numeralSVG(A.tone, W*0.28, 158, 17, accA), n2=numeralSVG(B.tone, W*0.72, 158, 17, accB); s+=n1.svg+n2.svg;
   let y=Math.max(n1.bottom,n2.bottom)+52;
-  s+=`<text x="${W/2}" y="${y-8}" text-anchor="middle" font-size="30" fill="${CARD_SAGE}">и</text>`;
-  const _fs=k=>Math.max(18,Math.min(36,Math.floor(300/Math.max(1,k.length*0.56))));
-  s+=`<text x="${W*0.30}" y="${y}" text-anchor="middle" font-size="${_fs(N[A.idx].k)}" fill="${CARD_BONE}">${esc(N[A.idx].k)}</text>`;
-  s+=`<text x="${W*0.70}" y="${y}" text-anchor="middle" font-size="${_fs(N[B.idx].k)}" fill="${CARD_BONE}">${esc(N[B.idx].k)}</text>`;
+  const _fs=k=>Math.max(18,Math.min(30,Math.floor(300/Math.max(1,k.length*0.56))));
+  s+=`<text x="${W*0.28}" y="${y}" text-anchor="middle" font-size="${_fs(N[A.idx].k)}" fill="${CARD_BONE}">${esc(N[A.idx].k)}</text>`;
+  s+=`<text x="${W*0.72}" y="${y}" text-anchor="middle" font-size="${_fs(N[B.idx].k)}" fill="${CARD_BONE}">${esc(N[B.idx].k)}</text>`;
+  s+=`<text x="${W/2}" y="${y-6}" text-anchor="middle" font-size="28" fill="${CARD_SAGE}">и</text>`;
   y+=34;
-  s+=`<text x="${W*0.30}" y="${y}" text-anchor="middle" font-family="ui-monospace, monospace" font-size="18" fill="${CARD_JADEB}">${esc(nameA)}</text>`;
-  s+=`<text x="${W*0.70}" y="${y}" text-anchor="middle" font-family="ui-monospace, monospace" font-size="18" fill="${CARD_JADEB}">${esc(nameB)}</text>`;
+  s+=`<text x="${W*0.28}" y="${y}" text-anchor="middle" font-family="ui-monospace, monospace" font-size="18" fill="${CARD_JADEB}">${esc(nameA)}</text>`;
+  s+=`<text x="${W*0.72}" y="${y}" text-anchor="middle" font-family="ui-monospace, monospace" font-size="18" fill="${CARD_JADEB}">${esc(nameB)}</text>`;
   y+=58;
   const common = A.idx%4===B.idx%4 ? 'один цвет-сторона — вы смотрите в мир похоже' : (A.tone===B.tone?'один галактический тон — общий темп и ритм':'разные цвета и тоны — вы дополняете друг друга');
   svgWrap('Общая почва: '+common+'. Где дар одного встречает нужду другого — там опора; где сходятся тени — там работа.',46).slice(0,5).forEach(line=>{ s+=`<text x="${W/2}" y="${y}" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" fill="${CARD_DIM}">${esc(line)}</text>`; y+=32; });
@@ -1496,35 +1431,6 @@ function addImgBtn(container, getSVG, filename){
 }
 
 /* ── quote of the day ── */
-const MOTTO=[
-"Питай начатое и доверься истоку — кин рождения, день Дракона.",
-"Говори ясно и одухотвори дело — день Ветра.",
-"Слушай сны и копи изобилие — день Ночи.",
-"Сей и наводи на цель — день Семени.",
-"Доверься телу, держи огонь в узде — день Змея.",
-"Отпусти отжившее и наведи мост — день Соединителя миров.",
-"Доводи до свершения, исцеляй делом — день Руки.",
-"Твори красоту и гармонию — день Звезды.",
-"Иди потоком и очистись — день Луны.",
-"Люби и будь верен — день Собаки.",
-"Играй и расколдуй иллюзию — день Обезьяны.",
-"Выбирай свободно, влияй мудростью — день Человека.",
-"Исследуй, соедини землю с небом — день Небесного Странника.",
-"Принимай и ворожи сердцем — день Мага.",
-"Смотри с высоты, твори умом — день Орла.",
-"Спрашивай, иди сквозь страх — день Воина.",
-"Лови знаки, выровняйся с землёй — день Земли.",
-"Отрази правду, наведи порядок — день Зеркала.",
-"Катализируй, обнови застой — день Бури.",
-"Свети, доводи до полноты — день Солнца."];
-function dayQuoteCard(D,dd,md,yd){
-  const dir=DIR[D.idx%4];
-  return `<div class="day-quote" style="--dq:${dir.accent}">`+
-    `<div class="dq-top"><span class="dq-label">Цитата дня</span><span class="dq-date">${String(dd).padStart(2,'0')}.${String(md).padStart(2,'0')}.${yd}</span></div>`+
-    `<div class="dq-motto">«${MOTTO[D.idx]}»</div>`+
-    `<div class="dq-sign"><b>${D.tone} ${N[D.idx].k}</b> · ${KW[D.idx]} · ${dir.name.toLowerCase()}, ${dir.col.toLowerCase()}</div>`+
-    `</div>`;
-}
 
 /* ── tabs ── */
 function switchTab(v){
