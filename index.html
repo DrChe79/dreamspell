@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dreamspell — галактическая сигнатура</title>
+<meta name="description" content="Календарь Dreamspell Хосе Аргуэльеса (13:20): солнечная печать, галактический тон, цвет-сторона, волна-wavespell и год-носитель по дате рождения. Личность, взаимодействие двоих, кин дня.">
+<meta name="theme-color" content="#f4f0e6">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNyIgZmlsbD0iI2YxZWNlMCIvPjxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjMuMiIgZmlsbD0iIzUyNDdjOSIvPjxjaXJjbGUgY3g9IjE2IiBjeT0iNi42IiByPSIyLjIiIGZpbGw9IiM2YTVmZTAiLz48Y2lyY2xlIGN4PSIxNiIgY3k9IjI1LjQiIHI9IjIuMiIgZmlsbD0iIzZhNWZlMCIvPjxjaXJjbGUgY3g9IjYuNiIgY3k9IjE2IiByPSIyLjIiIGZpbGw9IiM2YTVmZTAiLz48Y2lyY2xlIGN4PSIyNS40IiBjeT0iMTYiIHI9IjIuMiIgZmlsbD0iIzZhNWZlMCIvPjwvc3ZnPg==">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Dreamspell — галактическая сигнатура">
+<meta property="og:description" content="Узнай свою солнечную печать, галактический тон, цвет-сторону, волну и год-носитель по дате рождения — по календарю Dreamspell Хосе Аргуэльеса.">
+<meta property="og:url" content="https://drche79.github.io/dreamspell/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --obsidian:#f4f0e6;--panel:#ffffff;--panel-2:#fbf8f1;
+    --jade:#5247c9;--jade-bright:#6a5fe0;--bone:#20242e;--bone-dim:#515868;--sage:#8d8a7d;
+    --hair:rgba(32,36,46,.12);--hair-strong:rgba(32,36,46,.20);
+    --dir:#5247c9;--a:#5247c9;--b:#5247c9;
+  }
+  *{box-sizing:border-box}html,body{margin:0}
+  body{background:radial-gradient(1100px 560px at 50% -8%,rgba(82,71,201,.09),transparent 60%),radial-gradient(900px 520px at 100% 2%,rgba(217,154,22,.06),transparent 55%),var(--obsidian);
+    color:var(--bone);font-family:"Inter",system-ui,sans-serif;line-height:1.55;
+    -webkit-font-smoothing:antialiased;min-height:100vh;padding:clamp(20px,5vw,64px) 20px 90px}
+  .wrap{max-width:700px;margin:0 auto}
+  .eyebrow{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.32em;
+    text-transform:uppercase;color:var(--jade-bright);margin:0 0 14px}
+  h1{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:500;font-size:clamp(32px,7vw,50px);
+    line-height:1.02;letter-spacing:-.01em;margin:0 0 20px}
+  .lede{color:var(--bone-dim);max-width:56ch;margin:0 0 28px;font-size:15.5px}
+  .lede b{color:var(--bone);font-weight:500}
+
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:4px;background:var(--panel-2);border:1px solid var(--hair-strong);
+    border-radius:12px;padding:4px;margin:0 0 26px;max-width:100%}
+  .tab{background:transparent;color:var(--bone-dim);border:none;border-radius:9px;
+    padding:9px 18px;font-family:"Inter";font-weight:500;font-size:14px;cursor:pointer;
+    white-space:nowrap;flex:0 0 auto;transition:background .2s,color .2s}
+  .tab:hover{color:var(--bone);background:rgba(32,36,46,.04)}
+  .tab.active{background:var(--jade);color:#ffffff;font-weight:600}
+  .tab.active:hover{background:var(--jade-bright)}
+  .view[hidden]{display:none}
+
+  /* inputs */
+  .console{background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--hair-strong);border-radius:16px;padding:22px;
+    display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end}
+  .console-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{flex:1 1 200px;min-width:170px}
+  label{display:block;font-family:"Space Mono",monospace;font-size:11px;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--sage);margin:0 0 8px}
+  .who{display:flex;flex-direction:column;gap:10px}
+  .who h4{margin:0;font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--sage);font-weight:500}
+  input{width:100%;background:#ffffff;color:var(--bone);border:1px solid var(--hair-strong);
+    border-radius:10px;padding:13px 14px;font-family:"Space Mono",monospace;font-size:14.5px;
+    color-scheme:light}
+  input::placeholder{color:var(--sage)}
+  input:focus{outline:2px solid var(--jade);outline-offset:1px;border-color:transparent}
+  .go-row{grid-column:1/-1;display:flex;justify-content:center;margin-top:4px}
+  .btn{flex:0 0 auto;cursor:pointer;border:none;border-radius:10px;background:var(--jade);
+    color:#ffffff;font-family:"Inter";font-weight:600;font-size:15px;letter-spacing:.01em;
+    padding:14px 26px;transition:transform .12s,background .2s}
+  .btn:hover{background:var(--jade-bright)}.btn:active{transform:translateY(1px)}
+  .btn:focus-visible{outline:2px solid var(--bone);outline-offset:2px}
+
+  /* result shared */
+  .result{margin-top:30px;opacity:0;transform:translateY(8px);
+    transition:opacity .45s,transform .45s}
+  .result.show{opacity:1;transform:none}
+  .empty{padding:32px 26px;color:var(--sage);font-size:14px}
+  .sharebtn{display:inline-block;margin:18px 0 2px;background:transparent;
+    border:1px solid var(--hair-strong);color:var(--jade-bright);
+    font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.08em;
+    border-radius:9px;padding:9px 14px;cursor:pointer;transition:background .2s,border-color .2s}
+  .sharebtn:hover{background:rgba(82,71,201,.08);border-color:var(--jade)}
+  .imgbtn{display:inline-block;margin:18px 0 2px 8px;background:transparent;
+    border:1px solid var(--hair-strong);color:var(--jade-bright);
+    font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.08em;
+    border-radius:9px;padding:9px 14px;cursor:pointer;transition:background .2s,border-color .2s}
+  .imgbtn:hover{background:rgba(82,71,201,.08);border-color:var(--jade)}
+  .chat-head{display:flex;justify-content:flex-end;padding:10px 12px 0}
+  .chat-clear{background:transparent;border:1px solid var(--hair);color:var(--sage);
+    font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.08em;
+    border-radius:8px;padding:6px 11px;cursor:pointer;transition:color .2s,border-color .2s}
+  .chat-clear:hover{color:var(--jade-bright);border-color:var(--hair-strong)}
+  .note{font-size:12.5px;color:var(--sage);line-height:1.6;margin:26px 4px 0}
+  .note b{color:var(--bone-dim);font-weight:500}
+
+  /* numeral (shared) */
+  .numeral{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:7px;min-width:54px}
+  .dots{display:flex;gap:6px;height:11px;align-items:center}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--dir)}
+  .bars{display:flex;flex-direction:column;gap:5px;width:40px}
+  .bar{height:8px;border-radius:3px;background:var(--dir)}
+  .numlabel{font-family:"Space Mono",monospace;font-size:12px;color:var(--sage)}
+  .swatch{display:inline-block;width:12px;height:12px;border-radius:3px;
+    vertical-align:middle;margin-right:8px;border:1px solid var(--hair-strong)}
+
+  /* SINGLE-DAY card */
+  .card{background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--hair-strong);border-radius:18px;overflow:hidden;position:relative}
+  .card::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:var(--dir);opacity:.9}
+  .head{padding:28px 26px 22px;display:flex;gap:22px;align-items:center;border-bottom:1px solid var(--hair)}
+  .names{flex:1 1 auto;min-width:0}
+  .kiche{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:600;font-size:clamp(28px,6vw,40px);
+    line-height:1;letter-spacing:-.01em;margin:0 0 6px}
+  .yuc{font-family:"Space Mono",monospace;font-size:13px;color:var(--bone-dim);letter-spacing:.04em}
+  .yuc .sep{color:var(--sage);margin:0 8px}
+  .ds{margin-top:9px;font-size:13.5px;color:var(--bone-dim)}
+  .ds-tag{display:inline-block;font-family:"Space Mono",monospace;font-size:9.5px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--jade-bright);
+    border:1px solid var(--hair-strong);border-radius:4px;padding:2px 6px;margin-right:9px;vertical-align:1px}
+  .dsen{font-family:"Space Mono",monospace;font-size:11.5px;color:var(--sage)}
+  .rose-wrap{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:8px}
+  .rose{width:62px;height:62px}
+  .rose .q{stroke:var(--hair-strong);stroke-width:1.2;fill:rgba(32,36,46,.04)}
+  .rose .q.active{fill:var(--dir)}
+  .rose .center{fill:var(--jade)}
+  .dir-label{font-family:"Space Mono",monospace;font-size:11px;color:var(--bone-dim);
+    text-align:center;letter-spacing:.04em}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hair)}
+  .cell{background:var(--panel);padding:18px 22px}
+  .cell .k{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--sage);margin:0 0 7px}
+  .cell .v{font-family:"Space Grotesk",system-ui,sans-serif;font-size:18px;font-weight:500;color:var(--bone)}
+  .cell .v small{font-family:"Space Mono",monospace;font-size:12px;color:var(--bone-dim);
+    font-weight:400;display:block;margin-top:2px}
+  .read{padding:24px 26px 6px}
+  .read p{margin:0 0 16px;font-size:15px;color:var(--bone-dim)}
+  .read p b{color:var(--bone);font-weight:500}
+  .read h3{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--sage);margin:0 0 10px;font-weight:500}
+  .read .angle{display:flex;align-items:center;gap:10px;font-family:"Space Grotesk",system-ui,sans-serif;
+    font-weight:600;font-size:20px;color:var(--bone);margin:4px 0 14px}
+  .read .angle::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--dir);flex:0 0 auto}
+  .read .angle.day{margin-top:30px;padding-top:24px;border-top:1px solid var(--hair)}
+  .read .day-note{font-size:12.5px;color:var(--sage);font-style:italic;margin:0 0 14px}
+  .read .image-line{font-family:"Space Mono",monospace;font-size:11.5px;
+    color:var(--jade-bright);letter-spacing:.04em;margin:0 0 16px}
+  .read .facets{margin:0 0 6px}
+  .read .facets > div{display:grid;grid-template-columns:140px 1fr;gap:16px;
+    padding:12px 0;border-top:1px solid var(--hair)}
+  .read .facets > div:first-child{border-top:none;padding-top:2px}
+  .read .facets dt{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--sage);padding-top:2px}
+  .read .facets dd{margin:0;font-size:14.5px;color:var(--bone-dim)}
+  .read .synth{font-size:14.5px;color:var(--bone);background:rgba(82,71,201,.06);
+    border:1px solid var(--hair);border-left:2px solid var(--dir);border-radius:8px;
+    padding:14px 16px;margin:0 0 6px}
+  .read .synth b{color:var(--dir);font-weight:500}
+  .read .mam{font-size:13.5px;color:var(--bone-dim);margin:14px 0 0;
+    border-top:1px dashed var(--hair);padding-top:14px}
+  .read .mam b{color:var(--bone);font-weight:500}
+  .read .mam .mam-k{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--sage);display:block;margin-bottom:5px}
+  .read .toggle-detail{background:transparent;border:1px solid var(--hair-strong);
+    color:var(--jade-bright);font-family:"Space Mono",monospace;font-size:11px;
+    letter-spacing:.12em;text-transform:uppercase;border-radius:9px;padding:10px 16px;
+    cursor:pointer;margin:10px 0 4px;transition:background .2s,border-color .2s}
+  .read .toggle-detail:hover{background:rgba(82,71,201,.08);border-color:var(--jade)}
+  .read .detailed{margin:14px 0 4px;padding-left:14px;border-left:2px solid var(--dir)}
+  .read .detailed[hidden]{display:none}
+  .read .detailed p{font-size:14.5px;color:var(--bone-dim);margin:0 0 14px}
+  .read .detailed p:last-child{margin-bottom:4px}
+
+  /* oracle */
+  .read .oracle-intro{font-size:13.5px;color:var(--bone-dim);margin:2px 0 12px}
+  .read .oracle{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:4px 0 14px}
+  .orc-cell{display:flex;flex-direction:column;gap:3px;text-align:center;cursor:pointer;
+    background:var(--panel-2);border:1px solid var(--hair);border-top:2px solid var(--oc);
+    border-radius:10px;padding:11px 8px;min-height:84px;justify-content:center;
+    transition:background .2s,border-color .2s,transform .12s}
+  .orc-cell:hover{background:rgba(32,36,46,.05);border-color:var(--hair-strong)}
+  .orc-cell:active{transform:translateY(1px)}
+  .orc-cell.guide{grid-column:2;grid-row:1}
+  .orc-cell.antipode{grid-column:1;grid-row:2}
+  .orc-cell.destiny{grid-column:2;grid-row:2;background:rgba(82,71,201,.10);
+    border:1px solid var(--oc);border-top:2px solid var(--oc)}
+  .orc-cell.analog{grid-column:3;grid-row:2}
+  .orc-cell.occult{grid-column:2;grid-row:3}
+  .orc-role{font-family:"Space Mono",monospace;font-size:9px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--sage)}
+  .orc-name{font-family:"Space Grotesk",system-ui,sans-serif;font-size:15px;color:var(--bone);line-height:1.12}
+  .orc-meta{font-family:"Space Mono",monospace;font-size:10px;color:var(--sage)}
+  .read .orc-legend{margin:0 0 6px}
+  .read .orc-legend > div{display:grid;grid-template-columns:140px 1fr;gap:16px;
+    padding:8px 0;border-top:1px solid var(--hair)}
+  .read .orc-legend dt{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--jade-bright);margin:0}
+  .read .orc-legend dd{margin:0;font-size:13px;color:var(--bone-dim)}
+  @media(max-width:480px){.read .orc-legend > div{grid-template-columns:1fr;gap:3px}}
+
+  /* PAIR */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+  .pcard{background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--hair-strong);border-radius:16px;padding:20px;position:relative;overflow:hidden}
+  .pcard::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:var(--dir)}
+  .pname{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.1em;color:var(--sage);
+    margin:0 0 12px;text-transform:uppercase}
+  .prow{display:flex;align-items:center;gap:14px}
+  .pkiche{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:600;font-size:23px;line-height:1;margin:0 0 4px}
+  .pmeta{font-family:"Space Mono",monospace;font-size:11.5px;color:var(--bone-dim)}
+  .reading{background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--hair-strong);border-radius:18px;padding:26px 26px 8px}
+  .reading h3{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--sage);margin:22px 0 10px;font-weight:500;
+    display:flex;align-items:center;gap:9px}
+  .reading h3::before{content:"";width:7px;height:7px;border-radius:50%;
+    background:linear-gradient(90deg,var(--a),var(--b))}
+  .reading h3:first-child{margin-top:0}
+  .reading p{margin:0 0 14px;font-size:14.5px;color:var(--bone-dim)}
+  .reading p b{color:var(--bone);font-weight:500}
+  .reading .two{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hair);
+    border-radius:10px;overflow:hidden;margin:0 0 16px}
+  .reading .two > div{background:var(--panel-2);padding:14px 16px}
+  .reading .two .nm{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;margin:0 0 7px}
+  .reading .two .col-a .nm{color:var(--a)}.reading .two .col-b .nm{color:var(--b)}
+  .reading .two p{margin:0;font-size:13.5px;color:var(--bone-dim)}
+  .reading .close{font-size:15px;color:var(--bone);background:rgba(82,71,201,.06);
+    border:1px solid var(--hair);border-radius:10px;padding:15px 17px;margin:6px 0 0}
+  .reading .image-line{font-family:"Space Mono",monospace;font-size:11.5px;
+    color:var(--jade-bright);letter-spacing:.04em;margin:0 0 12px}
+
+  /* CHAT */
+  .chatwrap{background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--hair-strong);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+  .chat-log{padding:20px;display:flex;flex-direction:column;gap:12px;min-height:180px;max-height:58vh;overflow-y:auto}
+  .msg{max-width:86%;padding:11px 14px;border-radius:14px;font-size:14.5px;line-height:1.5}
+  .msg.bot{align-self:flex-start;background:rgba(82,71,201,.08);border:1px solid var(--hair);
+    color:var(--bone-dim);border-bottom-left-radius:4px}
+  .msg.user{align-self:flex-end;background:rgba(32,36,46,.06);border:1px solid var(--hair-strong);
+    color:var(--bone);border-bottom-right-radius:4px}
+  .msg b{color:var(--bone);font-weight:500}
+  .msg.typing{opacity:.55;letter-spacing:.25em}
+  .msg ul,.msg ol{margin:6px 0;padding-left:20px}
+  .msg li{margin:3px 0}
+  .msg .mdh{font-weight:600;color:var(--bone);margin:9px 0 4px}
+  .msg .mdh:first-child{margin-top:0}
+  .msg i{font-style:italic}
+  .msg code{font-family:"Space Mono",monospace;font-size:.9em;
+    background:rgba(32,36,46,.08);padding:1px 5px;border-radius:4px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 14px}
+  .chip{background:transparent;border:1px solid var(--hair-strong);color:var(--jade-bright);
+    border-radius:20px;padding:7px 13px;font-size:12.5px;cursor:pointer;font-family:"Inter";
+    transition:background .2s,border-color .2s}
+  .chip:hover{background:rgba(82,71,201,.08);border-color:var(--jade)}
+  .chat-input{display:flex;gap:10px;padding:16px;border-top:1px solid var(--hair)}
+  .chat-input input{flex:1}
+  .chat-input .btn{padding:13px 20px}
+
+  /* REFERENCE */
+  .ref-h{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:600;font-size:21px;color:var(--bone);margin:28px 0 12px}
+  .ref-h:first-of-type{margin-top:4px}
+  .ref-list{display:flex;flex-direction:column;gap:8px}
+  .ref-item{background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--hair-strong);border-radius:12px;overflow:hidden}
+  .ref-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;
+    padding:14px 16px;user-select:none}
+  .ref-item summary::-webkit-details-marker{display:none}
+  .ref-item summary::after{content:"▾";margin-left:auto;color:var(--sage);font-size:12px;
+    transition:transform .2s;flex:0 0 auto}
+  .ref-item[open] summary::after{transform:rotate(180deg)}
+  .ref-item summary:hover .ref-name{color:var(--jade-bright)}
+  .ref-sw{width:13px;height:13px;border-radius:3px;flex:0 0 auto;border:1px solid var(--hair-strong)}
+  .ref-no{font-family:"Space Mono",monospace;font-size:12px;color:var(--sage);
+    min-width:30px;flex:0 0 auto}
+  .ref-tone-no{font-size:16px;color:var(--jade-bright);text-align:center}
+  .ref-name{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:600;font-size:16px;color:var(--bone)}
+  .ref-theme{font-family:"Space Mono",monospace;font-size:11px;color:var(--bone-dim);
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .ref-body{padding:2px 16px 16px;border-top:1px solid var(--hair)}
+  .ref-body p{font-size:14px;color:var(--bone-dim);margin:12px 0 0}
+  .ref-body p b{color:var(--bone);font-weight:500}
+  .ref-body .ref-meta{font-family:"Space Mono",monospace;font-size:11px;color:var(--sage)}
+  .ref-numeral{margin-top:14px}
+
+  /* QUOTE OF THE DAY */
+  .day-quote{--dq:var(--jade-bright);background:linear-gradient(180deg,var(--panel),var(--panel-2));
+    border:1px solid var(--hair-strong);border-left:3px solid var(--dq);border-radius:14px;
+    padding:18px 20px;margin:0 0 22px}
+  .dq-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px}
+  .dq-label{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--dq)}
+  .dq-date{font-family:"Space Mono",monospace;font-size:11px;color:var(--sage)}
+  .dq-motto{font-family:"Space Grotesk",system-ui,sans-serif;font-size:20px;line-height:1.42;color:var(--bone);margin-bottom:11px}
+  .dq-sign{font-family:"Space Mono",monospace;font-size:11.5px;color:var(--bone-dim)}
+  .dq-sign b{color:var(--dq);font-weight:500}
+
+  /* WAVE STRIP */
+  .wave-intro{font-size:14px;color:var(--bone-dim);margin:12px 0 12px}
+  .wave-intro b{color:var(--bone);font-weight:500}
+  .wave-strip{display:flex;gap:6px;overflow-x:auto;padding:2px 0 8px;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .wave-strip::-webkit-scrollbar{display:none}
+  .wcell{flex:0 0 auto;min-width:56px;border:1px solid var(--hair);border-radius:9px;
+    padding:9px 8px;display:flex;flex-direction:column;align-items:center;gap:4px;
+    background:rgba(32,36,46,.02)}
+  .wcell .wpos{font-family:"Space Mono",monospace;font-size:13px;color:var(--sage)}
+  .wcell .wnaw{font-family:"Space Grotesk",system-ui,sans-serif;font-size:12.5px;color:var(--bone-dim);
+    text-align:center;line-height:1.15}
+  .wcell.here{border-color:var(--wc);background:rgba(82,71,201,.10)}
+  .wcell.here .wpos{color:var(--wc)}
+  .wcell.here .wnaw{color:var(--bone)}
+
+  /* ABOUT */
+  .about p{font-size:15px;color:var(--bone-dim);margin:0 0 14px;max-width:62ch}
+  .about p b{color:var(--bone);font-weight:500}
+  .about .layers{margin:0 0 16px;padding-left:18px}
+  .about .layers li{font-size:14.5px;color:var(--bone-dim);margin:7px 0;max-width:60ch}
+  .about .layers li b{color:var(--bone);font-weight:500}
+  .glossary p{font-size:14px;color:var(--bone-dim);margin:0 0 11px;max-width:62ch}
+  .glossary p b{color:var(--jade-bright);font-weight:500}
+  .sources p{font-size:13.5px;color:var(--bone-dim);margin:0 0 10px;max-width:62ch}
+  .sources p b{color:var(--bone);font-weight:500}
+
+  @media (max-width:560px){
+    .head{flex-wrap:wrap;gap:18px}.rose-wrap{order:3}.grid{grid-template-columns:1fr}
+    .read .facets > div{grid-template-columns:1fr;gap:5px}
+    .console-pair{grid-template-columns:1fr}.cards{grid-template-columns:1fr}
+    .reading .two{grid-template-columns:1fr}
+  }
+  @media (prefers-reduced-motion:reduce){.result{transition:none}}
+
+  /* ── Цолькин matrix ── */
+  .matrix-legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin:0 0 14px}
+  .mx-leg{display:flex;align-items:center;gap:7px;font-family:"Space Mono",monospace;
+    font-size:11px;color:var(--bone-dim)}
+  .mx-sw{width:14px;height:14px;border-radius:3px;flex:0 0 auto;border:1px solid var(--hair)}
+  .matrix-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 4px;padding-bottom:8px}
+  .matrix{display:grid;grid-template-columns:auto repeat(13,minmax(30px,1fr));gap:2px;min-width:500px}
+  .mx-corner{}
+  .mx-colhead{font-family:"Space Mono",monospace;font-size:12px;color:var(--sage);
+    text-align:center;align-self:end;padding-bottom:3px}
+  .mx-seal{font-family:"Space Mono",monospace;font-size:13.5px;color:var(--bone-dim);
+    white-space:nowrap;display:flex;align-items:center;gap:6px;justify-content:flex-end;padding-right:9px}
+  .mx-dot{width:10px;height:10px;border-radius:2px;flex:0 0 auto}
+  .mx-cell{aspect-ratio:1;min-height:30px;border:1px solid rgba(32,36,46,.06);border-radius:3px;
+    cursor:pointer;font-family:"Space Mono",monospace;font-size:12px;color:var(--bone-dim);
+    display:flex;align-items:center;justify-content:center;padding:0;transition:transform .1s}
+  .mx-cell:hover{transform:scale(1.18);z-index:2;box-shadow:0 2px 7px rgba(32,36,46,.22)}
+  .mx-cell.c-red{background:#f4ddd9}.mx-cell.c-white{background:#e9ecef}
+  .mx-cell.c-blue{background:#dde8f3}.mx-cell.c-yellow{background:#f4ead0}
+  .mx-cell.c-green{background:#dcefe5}
+  .mx-cell.mystic{background:#cdbdec;color:#382860}
+  .mx-cell.gap{background:#74c39b;color:#0c3a25;font-weight:700}
+  .mx-cell.me{outline:2.5px solid var(--bone);outline-offset:1px;z-index:3;font-weight:700;color:var(--bone)}
+  .mx-detail{background:#fff;border:1px solid var(--hair-strong);border-left:3px solid var(--dir);
+    border-radius:14px;padding:18px 20px;margin:8px 0 4px;
+    box-shadow:0 1px 2px rgba(32,36,46,.05),0 12px 36px rgba(32,36,46,.07)}
+  .mx-d-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+  .mx-d-kin{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--dir)}
+  .mx-d-name{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:21px;color:var(--bone)}
+  .mx-d-meta{font-family:"Space Mono",monospace;font-size:12px;color:var(--bone-dim);margin:0}
+  .mx-flags{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+  .mx-flag{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.08em;
+    text-transform:uppercase;border-radius:5px;padding:3px 8px}
+  .mx-flag.gap{background:#74c39b;color:#0c3a25}
+  .mx-flag.mystic{background:#cdbdec;color:#382860}
+  .mx-d-note{font-size:13px;color:var(--bone-dim);margin:10px 0 0}
+  /* affirmation */
+  .affirm{background:linear-gradient(180deg,rgba(82,71,201,.055),rgba(82,71,201,.02));
+    border:1px solid var(--hair);border-left:2px solid var(--dir);border-radius:10px;
+    padding:16px 18px;margin:2px 0 16px}
+  .affirm-label{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--jade);margin-bottom:8px}
+  .affirm-body{font-family:"Space Grotesk",sans-serif;font-size:16.5px;line-height:1.5;
+    color:var(--bone);margin:0;font-weight:500}
+  /* today */
+  .today-tag{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--jade);margin-bottom:8px}
+  .relate{background:#fff;border:1px solid var(--hair-strong);border-radius:16px;
+    padding:22px 24px 10px;box-shadow:0 1px 2px rgba(32,36,46,.05),0 12px 36px rgba(32,36,46,.07)}
+  .relate .angle{display:flex;align-items:center;gap:10px;font-family:"Space Grotesk",sans-serif;
+    font-weight:600;font-size:19px;color:var(--bone);margin:0 0 6px}
+  .relate .angle::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--jade)}
+  .relate-sub{font-size:14px;color:var(--bone-dim);margin:0 0 14px}
+  .relate-sub b{color:var(--bone);font-weight:600}
+  .rel-item{padding:12px 0;border-top:1px solid var(--hair)}
+  .rel-k{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--jade);margin-bottom:5px}
+  .rel-item p{margin:0;font-size:14.5px;color:var(--bone-dim)}
+  .relate-empty{font-size:14px;color:var(--sage);background:var(--panel-2);
+    border:1px dashed var(--hair-strong);border-radius:12px;padding:18px 20px;margin:0}
+  .console,.card,.pcard,.reading,.chatwrap,.ref-item,.day-quote{
+    box-shadow:0 1px 2px rgba(32,36,46,.05),0 12px 36px rgba(32,36,46,.07)}
+  .card,.pcard,.reading,.chatwrap{background:#fff}
+  .console{background:linear-gradient(180deg,#fff,var(--panel-2))}
+  .cell{background:#fff}
+  .tab.active{box-shadow:0 2px 10px rgba(82,71,201,.30)}
+  .ref-item summary:hover{background:rgba(82,71,201,.035)}
+  input{box-shadow:inset 0 1px 2px rgba(32,36,46,.05)}
+  h1{letter-spacing:-.02em}
+  .eyebrow{font-weight:500}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Dreamspell · галактический счёт 13:20</p>
+  <h1>Календарь Dreamspell</h1>
+
+  <div class="tabs" role="tablist" aria-label="Режимы календаря">
+    <button class="tab active" data-v="today" role="tab" aria-selected="true">Сегодня</button>
+    <button class="tab" data-v="single" role="tab" aria-selected="false">Сигнатура</button>
+    <button class="tab" data-v="pair" role="tab" aria-selected="false">Двое</button>
+    <button class="tab" data-v="matrix" role="tab" aria-selected="false">Цолькин</button>
+    <button class="tab" data-v="chat" role="tab" aria-selected="false">Беседа</button>
+    <button class="tab" data-v="ref" role="tab" aria-selected="false">Справочник</button>
+    <button class="tab" data-v="about" role="tab" aria-selected="false">О календаре</button>
+  </div>
+
+  <!-- ░░ TODAY ░░ -->
+  <section id="view-today" class="view">
+    <p class="lede">Кин сегодняшнего дня — солнечная печать, галактический тон, волна, замок и аффирмация. Введёшь свою дату рождения — покажу, чем сегодня приходится лично тебе: проводник, аналог, антипод, скрытая сила, твоя волна или замок.</p>
+    <div class="result show" id="today-card"></div>
+    <div class="console" style="margin-top:24px">
+      <div class="field">
+        <label for="tb">Твоя дата рождения · необязательно</label>
+        <input type="date" id="tb" min="1800-01-01" max="2200-12-31">
+      </div>
+      <button class="btn" id="tb-go">Показать связь</button>
+    </div>
+    <div id="today-relate" style="margin-top:18px"></div>
+    <p class="note">Кин дня — общий для всех. «Как сегодня относится к тебе» строится через твой оракул: это тон дня и совет об уместности, а не предсказание событий.</p>
+  </section>
+
+  <!-- ░░ SINGLE ░░ -->
+  <section id="view-single" class="view" hidden>
+    <p class="lede">Полный галактический профиль по дате рождения: солнечная печать и тон, цвет-сторона, волна, замок, аффирмация-код, оракул из пяти кинов и портрет человека этого кина. Сигнатура-зеркало для размышления, а не приговор.</p>
+    <div class="console">
+      <div class="field">
+        <label for="d">Дата</label>
+        <input type="date" id="d" min="1800-01-01" max="2200-12-31">
+      </div>
+      <button class="btn" id="go">Определить кин</button>
+    </div>
+    <div class="result" id="result" aria-live="polite"><div class="card" id="card"></div></div>
+    <p class="note" id="note" hidden></p>
+  </section>
+
+  <!-- ░░ PAIR ░░ -->
+  <section id="view-pair" class="view" hidden>
+    <p class="lede">Две даты рождения — и разбор по оракулу Dreamspell: есть ли между кинами прямое родство (аналог, антипод, проводник, скрытая сила), как складываются стихии и темп, общие волна и замок, вклад каждого и зоны трения.</p>
+    <div class="console console-pair">
+      <div class="who">
+        <h4>Первый</h4>
+        <input type="text" id="na" placeholder="Имя (необязательно)" autocomplete="off" aria-label="Имя первого человека">
+        <input type="date" id="da" min="1800-01-01" max="2200-12-31" aria-label="Дата рождения первого человека">
+      </div>
+      <div class="who">
+        <h4>Второй</h4>
+        <input type="text" id="nb" placeholder="Имя (необязательно)" autocomplete="off" aria-label="Имя второго человека">
+        <input type="date" id="db" min="1800-01-01" max="2200-12-31" aria-label="Дата рождения второго человека">
+      </div>
+      <div class="go-row"><button class="btn" id="go2">Сравнить</button></div>
+    </div>
+    <div class="result" id="result2" aria-live="polite"></div>
+    <p class="note" id="note2" hidden></p>
+  </section>
+
+
+  <!-- ░░ TZOLKIN MATRIX ░░ -->
+  <section id="view-matrix" class="view" hidden>
+    <p class="lede">Цолькин, или «Гармонический модуль» — все 260 кинов одной сеткой 13×20. Слева — двадцать печатей (Дракон сверху → Солнце снизу), счёт идёт вниз по столбцу: кин 1 в левом верхнем углу, кин 20 внизу первого столбца, кин 21 — снова сверху. Цвет ячейки — её замок; зелёные — 52 портала; фиолетовая середина — мистическая колонна. Нажми на любую клетку, чтобы раскрыть кин.</p>
+    <div class="console" style="margin-bottom:18px">
+      <div class="field">
+        <label for="mb">Твоя дата рождения · необязательно</label>
+        <input type="date" id="mb" min="1800-01-01" max="2200-12-31">
+      </div>
+      <button class="btn" id="mb-go">Найти мой кин</button>
+    </div>
+    <div class="matrix-legend">
+      <span class="mx-leg"><span class="mx-sw c-red"></span>Красный замок</span>
+      <span class="mx-leg"><span class="mx-sw c-white"></span>Белый</span>
+      <span class="mx-leg"><span class="mx-sw c-blue"></span>Синий</span>
+      <span class="mx-leg"><span class="mx-sw c-yellow"></span>Жёлтый</span>
+      <span class="mx-leg"><span class="mx-sw c-green"></span>Зелёный</span>
+      <span class="mx-leg"><span class="mx-sw gap"></span>портал (GAP)</span>
+      <span class="mx-leg"><span class="mx-sw mystic"></span>мистическая колонна</span>
+    </div>
+    <div class="matrix-wrap"><div class="matrix" id="matrix-grid"></div></div>
+    <div id="matrix-detail"></div>
+    <p class="note"><b>Как читать.</b> Это «Гармонический модуль» Dreamspell: 260 кинов = 20 печатей × 13 тонов, сложенные в сетку 13×20. Пять <b>замков</b> по 52 кина (формула floor((кин−1)/52)) идут по цветам красный→белый→синий→жёлтый→зелёный. 52 <b>портала</b> (GAP) сверены по «Книге Кинов» Аргуэльеса; они образуют симметричный узор-«бабочку» (оккультные пары, тоны в сумме 14). <b>Мистическая колонна</b> — центральный 7-й столбец, кины 121–140. Это карта-конструкция авторской системы, не древний майяский артефакт.</p>
+  </section>
+
+  <!-- ░░ CHAT ░░ -->
+  <section id="view-chat" class="view" hidden>
+    <p class="lede">Помощник, который беседует только про календарь Dreamspell. Спроси про дату, солнечную печать, галактический тон, цвета и волны — или чем этот счёт отличается от жреческого цолькина.</p>
+    <div class="chatwrap">
+      <div class="chat-head"><button class="chat-clear" id="chat-clear" type="button">Очистить</button></div>
+      <div class="chat-log" id="chat-log" aria-live="polite"></div>
+      <div class="chips" id="chat-chips"></div>
+      <div class="chat-input">
+        <input type="text" id="chat-input" placeholder="Спроси про календарь…" autocomplete="off" aria-label="Сообщение помощнику">
+        <button class="btn" id="chat-send">Спросить</button>
+      </div>
+    </div>
+    <p class="note">Пока к странице не подключён ИИ-посредник, это локальный помощник на знаниях самой страницы — отвечает офлайн и только в рамках Dreamspell. Если подключить Cloudflare Worker (см. отдельную инструкцию), беседа становится свободной — через модель Claude, но на ту же тему; при сбое или исчерпании лимита бот сам возвращается к офлайн-ответам.</p>
+  </section>
+
+  <!-- ░░ REFERENCE ░░ -->
+  <section id="view-ref" class="view" hidden>
+    <p class="lede">Все двадцать солнечных печатей и тринадцать галактических тонов — листай и читай, без ввода даты. Нажми на любой, чтобы раскрыть описание.</p>
+    <h3 class="ref-h">20 печатей · solar seals</h3>
+    <div class="ref-list" id="ref-signs"></div>
+    <h3 class="ref-h">13 тонов · галактические тоны</h3>
+    <div class="ref-list" id="ref-tones"></div>
+    <p class="note">Печать — это «кто» (постоянный нрав), тон — «как» (его окраска). В кине они сочетаются: тон + печать. Это словарь архетипов, зеркало для размышления, не приговор.</p>
+  </section>
+
+  <!-- ░░ ABOUT ░░ -->
+  <section id="view-about" class="view" hidden>
+    <p class="lede">Коротко и честно: что это за счёт, из чего он сложён, как его читать — и где проходит граница между живой традицией и современной подачей.</p>
+
+    <div class="about">
+      <h3 class="ref-h">Что это</h3>
+      <p><b>Dreamspell</b> («заклинание снов», он же счёт <b>13:20</b>) — календарь, созданный Хосе Аргуэльесом и Ллойдией Аргуэльес в конце 1980-х (массово — с 1987–1990 годов). В нём двадцать <b>солнечных печатей</b> вращаются вместе с тринадцатью <b>галактическими тонами</b>, и 20 × 13 даёт 260 неповторяющихся сочетаний — <b>кинов</b>. Это не астрология «по небу»: твой кин определяется тем, какой день Dreamspell выпал на дату рождения, — один и тот же для всех, кто родился в этот день.</p>
+      <p>Аргуэльес взял у майя идею 260-дневного цикла и имена-архетипы, но выстроил <b>свою</b> систему: привязал счёт к григорианскому году, ввёл год из 13 «лун» по 28 дней и «день вне времени», добавил язык «галактической синхронизации». Поэтому Dreamspell честнее называть <b>вдохновлённой майя авторской системой</b>, а не древним календарём.</p>
+
+      <h3 class="ref-h">Слои времени</h3>
+      <p>Время в Dreamspell вложено, как шестерёнки — от быстрого к медленному:</p>
+      <ul class="layers">
+        <li><b>Кин</b> — тон + печать. Самый быстрый слой, основа всего.</li>
+        <li><b>Волна (wavespell)</b> — 13 дней, которыми правит их первый день (тон 1 такой-то печати). Все 13 звучат на фоне его темы; день волны виден в «Сегодня» и «Сигнатуре».</li>
+        <li><b>Год-носитель</b> — печать кина 26 июля, «глиф года»; медленный фон над кином и волной. Носителей всего четыре — Семя, Луна, Маг, Буря, — они сменяются по кругу, тон растёт на 1 каждый год.</li>
+        <li><b>52-летний круг</b> — через 52 года счёт Dreamspell возвращается в ту же точку. Ради ровного повтора 29 февраля делается «пустым днём».</li>
+      </ul>
+      <p>Этот файл считает первые три слоя: кин, волну и год-носитель.</p>
+
+      <h3 class="ref-h">Как это читать честно</h3>
+      <p>Печать рождения — про <b>постоянное</b>: склад и призвание. Тон — его <b>окраска</b> и сила. Волна — <b>фон</b>, на котором кин звучит. Чтение дня («для дел») — про <b>уместность действий</b>, а не про судьбу: «к чему день располагает», а не «что случится».</p>
+      <p>Это зеркало для размышления, а не предсказание и не наука. Совпало — повод узнать себя; не совпало — это говорит о тебе не меньше. Сам Аргуэльес подавал Dreamspell как инструмент пробуждения и синхронизации, а не как гадание о будущем.</p>
+
+      <h3 class="ref-h">Чем это не является</h3>
+      <p><b>Не древний счёт жрецов.</b> Живые календаристы-<b>ajqʼij</b> в горной Гватемале ведут <b>непрерывный</b> цолькин по корреляции GMT тысячелетиями. Dreamspell привязан к григорианскому году и «замораживает» 29 февраля — из-за этого он <b>расходится</b> с жреческим счётом: для одной даты они, как правило, дают разные кины. Многие майя и исследователи критикуют Dreamspell как <b>культурное присвоение</b>. Здесь — именно система Аргуэльеса; если нужен непрерывный жреческий счёт, это другой инструмент.</p>
+      <p><b>Не западная астрология.</b> Там считают положение светил над конкретной точкой Земли в конкретную минуту — оттого нужны точное время и место. Здесь логика иная: не «небо над тобой», а «место в 260-дневном потоке кинов».</p>
+
+      <h3 class="ref-h">Глоссарий</h3>
+      <div class="glossary">
+        <p><b>Кин</b> — «день» в Dreamspell, одно из 260 сочетаний печати и тона; «кто» этого дня и человека.</p>
+        <p><b>Солнечная печать (solar seal)</b> — один из двадцати архетипов-духов; «кто» дня. В скобках у каждой — её майяский корень (Imix, Ik, Akbal…).</p>
+        <p><b>Галактический тон</b> — число от 1 до 13, окраска и сила печати; у каждого тона своё имя (Магнитный, Лунный … Космический).</p>
+        <p><b>Волна (wavespell)</b> — 13-дневный цикл внутри счёта; его задаёт первый день (тон 1).</p>
+        <p><b>Год-носитель</b> — печать кина 26 июля; «глиф года». Всегда одна из четырёх: Семя, Луна, Маг, Буря.</p>
+        <p><b>Hunab Ku / 0.0</b> — «день вне времени», 29 февраля: пустой день без собственной сигнатуры, на котором счёт не двигается.</p>
+        <p><b>Галактическая сигнатура</b> — полное имя кина: тон + печать (например, «Белый Планетарный Маг»).</p>
+        <p><b>Оракул (пятёрка кинов)</b> — «силовое поле» сигнатуры: проводник (высшая опора), аналог (родственная сила), антипод (вызов) и скрытая сила (тайный ресурс) вокруг твоего кина. Связи жёстко заданы счётом.</p>
+        <p><b>Цолькин</b> — исходный 260-дневный счёт майя, из которого Аргуэльес взял идею; непрерывный жреческий счёт ведут по нему, а не по Dreamspell.</p>
+      </div>
+
+      <h3 class="ref-h">Источники и честная рамка</h3>
+      <div class="sources">
+        <p><b>José Argüelles, «The Mayan Factor» (1987) и Dreamspell (1990)</b> — первоисточник системы; на ней построены все расчёты здесь. Фонд «Foundation for the Law of Time» продолжает её распространять.</p>
+        <p><b>Опорная точка.</b> 26 июля 2013 = Кин 164 (Жёлтое Галактическое Семя) — день «галактической синхронизации»; от него отсчитан весь счёт и год-носитель.</p>
+        <p><b>Расхождение с майя.</b> Dreamspell — не календарь живых майя; антропологи и сами daykeepers отмечают, что он расходится с непрерывным цолькином и опирается на нью-эйдж-интерпретации. Это стоит держать в уме.</p>
+        <p><b>Честная рамка.</b> Тексты печатей и тонов здесь — современная подача в духе системы Аргуэльеса, синтез источников, а не дословная передача одной школы. Это инструмент-зеркало для размышления, не наука и не предсказание.</p>
+      </div>
+    </div>
+
+    <p class="note">Если что-то здесь покажется упрощением — так и есть: это введение, а не учебник. Dreamspell — авторская система; за её первоисточником — к работам Аргуэльеса, а за живой традицией майя — к этнографам и календаристам нагорья.</p>
+  </section>
+</div>
+
+<script>
+const mod=(n,m)=>((n%m)+m)%m;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// ░░ DREAMSPELL ░░ — 20 солнечных печатей и 13 галактических тонов (Хосе Аргуэльес)
+// N: k = русское имя печати, y = классический майя-глиф (корень)
+const N=[
+ {k:"Красный Дракон",y:"Imix"},{k:"Белый Ветер",y:"Ik"},{k:"Синяя Ночь",y:"Akbal"},{k:"Жёлтое Семя",y:"Kan"},{k:"Красный Змей",y:"Chicchan"},
+ {k:"Белый Соединитель Миров",y:"Cimi"},{k:"Синяя Рука",y:"Manik"},{k:"Жёлтая Звезда",y:"Lamat"},{k:"Красная Луна",y:"Muluc"},{k:"Белая Собака",y:"Oc"},
+ {k:"Синяя Обезьяна",y:"Chuen"},{k:"Жёлтый Человек",y:"Eb"},{k:"Красный Небесный Странник",y:"Ben"},{k:"Белый Маг",y:"Ix"},{k:"Синий Орёл",y:"Men"},
+ {k:"Жёлтый Воин",y:"Cib"},{k:"Красная Земля",y:"Caban"},{k:"Белое Зеркало",y:"Etznab"},{k:"Синяя Буря",y:"Cauac"},{k:"Жёлтое Солнце",y:"Ahau"}];
+
+const DSEN=["Red Dragon","White Wind","Blue Night","Yellow Seed","Red Serpent",
+ "White Worldbridger","Blue Hand","Yellow Star","Red Moon","White Dog",
+ "Blue Monkey","Yellow Human","Red Skywalker","White Wizard","Blue Eagle",
+ "Yellow Warrior","Red Earth","White Mirror","Blue Storm","Yellow Sun"];
+const DS=DSEN; // совместимость со старым именем
+
+// ── короткие темы печатей ──
+const KW=["рождения и питания","духа и слова","сна и изобилия","цветения и потенциала",
+ "жизненной силы и инстинкта","смерти и перехода","свершения и исцеления","изящества и искусства",
+ "потока и очищения","сердца и любви","игры и магии","свободной воли и мудрости",
+ "пространства и пробуждённости","безвременья и чар","видения и разума","разума и бесстрашия",
+ "синхронности и навигации","отражения и порядка","самопорождения и преображения","света и полноты"];
+
+// ── структурный портрет печати (для вкладки «Личность») ──
+const DESC=[
+{img:"Первичные воды · кровь матери · восток",char:"Человек начала — тёплый, питающий, чувствует исток вещей и даёт им жизнь.",gift:"Рождать, питать, давать опору и доверие; начинать с самой первой клетки.",shadow:"Тонет в опеке и страхе быть покинутым, не отпускает выращенное.",dfor:"Начать что-то с нуля, позаботиться, дать опору, довериться телу и истоку.",dnot:"Дела, требующие холодной дистанции и готового результата — энергия ещё в зачатке."},
+{img:"Дыхание · слово · дух",char:"Человек духа и слова — проводник истины, что входит с первым вдохом и звучит наружу.",gift:"Говорить, вдохновлять, передавать дух и истину, одушевлять незримое.",shadow:"Рассеивается в словах, проповедует ветром, теряет тело за идеей.",dfor:"Разговоры, обучение, тексты, молитва, всё, что нужно высказать и одухотворить.",dnot:"Дела, которым нужна оседлость и долгая выдержка — дух не любит застывать."},
+{img:"Дом сна · поле грёз · запад внутри",char:"Человек грёзы — носитель внутреннего изобилия, видящий сны как реальность.",gift:"Мечтать, прозревать интуицией, копить внутреннее богатство, видеть скрытое.",shadow:"Уходит в свои сумерки, прячется, путает изобилие с накоплением страхов.",dfor:"Замыслы, интуитивная работа, уход в тишину и грёзу, обращение к изобилию.",dnot:"То, что любит яркий свет и публичность — день обращён вглубь."},
+{img:"Семя · росток · цветок",char:"Человек семени — терпеливый, целеустремлённый, видит в малом будущий цвет.",gift:"Сеять, взращивать осознанность, метить в цель, доводить до цветения.",shadow:"Распыляет всходы, торопит незрелое или, наоборот, застревает в потенциале.",dfor:"Посев буквальный и переносный, начало роста, наведение на цель, обучение.",dnot:"Рвать незрелое раньше срока — семени нужно время."},
+{img:"Змей · позвоночник · жизненная сила",char:"Человек витальной силы — чувствует правду телом, живёт инстинктом и страстью.",gift:"Нести и будить жизненную силу, исцелять телом, действовать из инстинкта.",shadow:"Во власти импульса — вспыльчивость, ревность, цепляние, выживание любой ценой.",dfor:"Телесные практики, исцеление, страстные смелые дела, пробуждение энергии.",dnot:"Несдержанность — легко вспыхнуть и поддаться порыву."},
+{img:"Мост между мирами · закат · отпускание",char:"Человек порога — спокоен у границы конца и начала, умеет соединять разное.",gift:"Соединять миры и людей, отпускать отжившее, выравнивать и давать шанс.",shadow:"Цепляется за умершее или, напротив, растворяется, теряя опору и себя.",dfor:"Завершения, прощания, посредничество, отпускание, наведение мостов.",dnot:"Начинания, которым нужен рост вовне — энергия обращена к завершению."},
+{img:"Раскрытая ладонь · дело · исцеление",char:"Человек-рука — знает через делание, исцеляет прикосновением и доводит до свершения.",gift:"Исцелять, завершать начатое, познавать на практике, брать и держать.",shadow:"Хватается за всё, переоценивает свои силы, не выпускает из рук контроль.",dfor:"Исцеление, ремесло, завершение дел, всё, что делается руками и доводится до конца.",dnot:"Чистое умозрение без действия — руке нужно дело."},
+{img:"Звезда · Венера · гармония",char:"Человек-звезда — изящный, гармоничный, превращает грубое в красивое.",gift:"Творить красоту, гармонизировать, придавать форме совершенство и блеск.",shadow:"Тщеславие, перфекционизм, зависимость от внешнего блеска и одобрения.",dfor:"Искусство, оформление, всё, чему нужны вкус, мера и красота; примирение через гармонию.",dnot:"Грубая черновая работа без формы — звезде нужна огранка."},
+{img:"Вода · луна · поток чувств",char:"Человек потока — текучий, чувствующий, очищает и помнит изначальное.",gift:"Чувствовать, очищать, идти потоком, смывать наносное и помнить главное.",shadow:"Захлёстывается чувством, увязает в обидах, теряет берега в эмоциях.",dfor:"Очищение, эмоциональная работа, всё, что должно течь и обновиться водой.",dnot:"Дела, требующие сухой логики и жёсткой структуры — поток их размывает."},
+{img:"Сердце · пёс · верность",char:"Человек сердца — верный, любящий, преданный своим до конца.",gift:"Любить, хранить верность, держать слово, согревать сердечным теплом.",shadow:"Ревность, зависимость от любви, обида, цепляние за «свою стаю».",dfor:"Союзы, дружба, дела верности и сердца, защита близких.",dnot:"Холодный расчёт и предательство доверия — день про сердце."},
+{img:"Обезьяна · игра · нить иллюзии",char:"Человек-трикстер — лёгкий, артистичный, видит игру и магию насквозь.",gift:"Играть, творить, вносить лёгкость и волшебство, разоблачать иллюзию смехом.",shadow:"Заигрывается, прячет глубину за шуткой, дурачит себя и других.",dfor:"Творчество, игра, импровизация, всё, где помогают лёгкость и трюк.",dnot:"Сверхсерьёзные дела без права на ошибку — обезьяна спутает карты."},
+{img:"Человек · чаша · свободная воля",char:"Человек воли — мудрый, влияющий, свободно выбирающий свой путь.",gift:"Влиять мудростью, делать свободный выбор, проводить высшее в земное.",shadow:"Своеволие, гордыня ума, давление своим выбором на других.",dfor:"Решения, выбор пути, наставничество, всё, что требует мудрости и воли.",dnot:"Слепое подчинение чужой воле — день про свободу выбора."},
+{img:"Странник неба · столб между землёй и небом",char:"Человек неба — смелый исследователь, соединяющий землю и небо, пророк пространства.",gift:"Исследовать, идти первым, соединять земное и небесное, будить пространство.",shadow:"Неприкаянность, бегство в новое, страх остановиться и осесть.",dfor:"Путешествия, новые пространства, смелые вылазки, пророческие прозрения.",dnot:"То, что требует прочной оседлости здесь и сейчас."},
+{img:"Маг · ягуар · безвременье",char:"Человек-маг — приёмный сосуд силы, действует из сердца и безвременья.",gift:"Очаровывать, принимать, ворожить сердцем, держать связь с вневременным.",shadow:"Уход в себя, манипуляция, холод тайной власти, застывание в безвременье.",dfor:"Тонкие, магические, сердечные дела; принятие, тишина, обращение к вневременному.",dnot:"Суетная гонка напоказ — магу нужна тишина."},
+{img:"Орёл · кетсаль · планетарный разум",char:"Человек-орёл — видит картину целиком с высоты, мыслит масштабом планеты.",gift:"Прозревать видение, охватывать целое, творить умом, служить общему благу.",shadow:"Витание над бытом, холодная отстранённость, мечты вместо шага.",dfor:"Замыслы, стратегия, широкий взгляд, дела ради общего блага.",dnot:"Мелкая приземлённая рутина — орлу нужен горизонт."},
+{img:"Воин · вопрос · бесстрашие",char:"Человек-воин — бесстрашный, спрашивающий, идущий сквозь страх к разуму.",gift:"Спрашивать, идти сквозь страх, разведывать истину, держать волю.",shadow:"Воинственность, упрямство вопроса, страх, обёрнутый в браваду.",dfor:"Сложные вопросы, разведка, преодоление страха, дела воли и интеллекта.",dnot:"То, что требует мягкости и недеяния — воин рвётся в бой."},
+{img:"Земля · навигатор · синхронность",char:"Человек земли — настроен на знаки и потоки, ведёт по синхронностям к эволюции.",gift:"Чувствовать синхронность, навигировать по знакам, выравнивать с землёй, развивать.",shadow:"Сверхчувствительность к знакам, тревога, потеря центра в потоке совпадений.",dfor:"Решения по знакам, выравнивание, экология, всё, что про путь и эволюцию.",dnot:"Грубое движение против течения — земля просит созвучия."},
+{img:"Зеркало · обсидиан · бесконечный порядок",char:"Человек-зеркало — ясный, прямой, отражает истину и видит порядок вещей.",gift:"Отражать правду, вносить порядок, рассекать иллюзию, держать ясность.",shadow:"Холодность, резкость, перфекционизм, рассечение там, где можно не резать.",dfor:"Прояснение, наведение порядка, честный разговор, отсечение лишнего.",dnot:"Хрупкие связи, которые легко поранить остротой — зеркало не щадит."},
+{img:"Гроза · молния · самопорождение",char:"Человек-буря — катализатор перемен, обновляющий застой вспышкой энергии.",gift:"Катализировать, преображать, самообновляться, заряжать и встряхивать.",shadow:"Драматизм, перегрев, хаос перемен ради перемен, выжигание себя.",dfor:"Перемены, прорывы, обновление застоявшегося, мощная трансформация.",dnot:"Дела, которым нужны тишина и постоянство — буря их разметает."},
+{img:"Солнце · огонь жизни · полнота",char:"Человек-солнце — цельный, просветлённый, согревает и завершает цикл.",gift:"Просветлять, согревать, доводить до целого, вдохновлять светом и зрелостью.",shadow:"Завышенная планка к себе, выгорание, нетерпимость к собственной тени.",dfor:"Завершения, торжества, мастерство, всё, что доводится до света и полноты.",dnot:"Незрелые начинания — солнце про вершину, а не про старт."}];
+
+// ── мифический разворот печати ──
+const LONG=[
+"Красный Дракон (Imix) — это первичные воды и кровь матери, тот исток, из которого рождается всё. Человек этой печати живёт ближе к началу, чем другие: он питает, порождает, даёт опору и доверие. В нём материнская сила, что вынашивает и кормит, — и связь с самым первым, изначальным.",
+"Белый Ветер (Ik) — это дух, дыхание и слово, само незримое, что входит в человека с первым вдохом. Человек этой печати — проводник: он пропускает сквозь себя истину и вдохновение и передаёт их дальше словом и присутствием. В нём живёт воздушное, одухотворённое начало.",
+"Синяя Ночь (Akbal) — это дом сна и поле грёз, внутреннее изобилие, скрытое в темноте. Человек этой печати богат внутренне: он мечтает, прозревает интуицией, носит в себе целые миры. Его сила — в глубине, в умении видеть то, что приходит из снов и тишины.",
+"Жёлтое Семя (Kan) — это семя и цветение, в которых уже свёрнут будущий урожай. Человек этой печати терпелив и целеустремлён: он сеет, взращивает осознанность, метит в цель и ждёт, пока вызреет плод. В нём тяга давать росту состояться.",
+"Красный Змей (Chicchan) — это жизненная сила, поднимающаяся по позвоночнику, чистый инстинкт и страсть. Человек этой печати наделён сильной витальностью и телесной мудростью: он чувствует правду кожей и живёт интенсивно. В нём горит огонь, что и лечит, и обжигает.",
+"Белый Соединитель Миров (Cimi) — это смерть и мост, переход между мирами, искусство отпускать. Человек этой печати спокоен у границы конца и умеет соединять разное: миры, людей, берега. В нём дар сдаваться достойно, наводить мосты и давать всему равный шанс.",
+"Синяя Рука (Manik) — это раскрытая ладонь, знание через делание и сила исцеления. Человек этой печати познаёт мир руками: он мастер, целитель, тот, кто доводит начатое до свершения. В нём способность брать, держать и завершать.",
+"Жёлтая Звезда (Lamat) — это звезда, Венера, изящество и искусство. Человек этой печати превращает грубое в красивое, гармонизирует, придаёт форме блеск. В нём чувство меры и красоты, тяга к совершенству облика.",
+"Красная Луна (Muluc) — это вселенская вода, поток чувств и очищение. Человек этой печати текуч и чувствующий: он идёт потоком, смывает наносное и помнит изначальное. В нём сила воды — мягкая, всепроникающая, очищающая.",
+"Белая Собака (Oc) — это сердце, любовь и верность. Человек этой печати предан, тёпл, любит всем сердцем и держит слово. Для него верность и близость — основа жизни; он защищает своих и согревает сердечным теплом.",
+"Синяя Обезьяна (Chuen) — это игра, магия и нить иллюзии. Человек этой печати лёгок, артистичен, видит игру и волшебство насквозь и умеет смехом разоблачать ложное. В нём живут мастер и трикстер разом.",
+"Жёлтый Человек (Eb) — это свободная воля и мудрость, чаша, принимающая высшее. Человек этой печати мудр и влиятелен: он свободно выбирает путь и проводит незримое в земное. В нём достоинство выбора и сила доброго влияния.",
+"Красный Небесный Странник (Ben) — это пространство и пробуждённость, столб, соединяющий землю и небо. Человек этой печати смел и любопытен: он исследует, идёт первым, будит пространство собой. В нём пророческая тяга к новому и к высоте.",
+"Белый Маг (Ix) — это безвременье, ягуар и сила сердца. Человек этой печати — приёмный сосуд: он очаровывает, принимает, ворожит сердцем и держит связь с вневременным. В нём тихая магия и царственная мощь, обращённые внутрь.",
+"Синий Орёл (Men) — это видение, разум и планетарное сознание. Человек этой печати видит картину целиком с высоты и мыслит масштабом большего целого. В нём творящий ум, широкий взгляд и тяга служить общему благу.",
+"Жёлтый Воин (Cib) — это разум, вопрос и бесстрашие. Человек этой печати спрашивает и идёт сквозь страх к истине. В нём воля, интеллект и отвага разведчика, что не отступает перед трудным вопросом.",
+"Красная Земля (Caban) — это навигация, синхронность и эволюция. Человек этой печати настроен на знаки и потоки земли; он ведёт по совпадениям, выравнивается с большим движением жизни. В нём чутьё к синхронности и к пути.",
+"Белое Зеркало (Etznab) — это бесконечность, отражение и порядок. Человек этой печати ясен и прям: он отражает истину, рассекает иллюзию и видит устройство вещей. В нём острота обсидианового ножа и любовь к ясному порядку.",
+"Синяя Буря (Cauac) — это самопорождение, гроза и катализ. Человек этой печати обновляет застой вспышкой: он катализирует перемены, преображает и заряжает энергией. В нём сила грозы, что очищает и рождает новое из себя самой.",
+"Жёлтое Солнце (Ahau) — это вселенский огонь, просветление и полнота. Человек этой печати цельный и светлый: он согревает, доводит до целого, вдохновляет зрелостью. Он — вершина цикла, солнце, под которым всё созревает."];
+
+// ── среди людей ──
+const PRESENCE=[
+"Среди людей он часто тот, к кому идут за теплом и опорой, кто умеет приютить и накормить — буквально и душевно. Его тянет давать начало, заботиться, держать дом. Но ему важно не раствориться в опеке и научиться отпускать выращенное.",
+"Он живёт через слово и дух: ему легко вдохновлять, объяснять, находить нужную фразу, нести идею дальше. Часто это учитель, рассказчик, вестник. Ему нужно, чтобы было кому передать, иначе ветер внутри метёт вхолостую.",
+"Он носит в себе целые внутренние миры и часто кажется задумчивым, погружённым. К нему идут за интуицией, за нестандартным взглядом, за тем, что приходит из глубины. Ему нужно своё тёмное тихое пространство, где копится изобилие.",
+"Он терпелив и нацелен: умеет видеть в малом будущее и доводить до цветения — людей, дела, замыслы. Часто это тот, кто учит и взращивает. Но ему важно не торопить незрелое и не распыляться по многим всходам.",
+"В нём есть телесный магнетизм и жар — он притягивает, заражает энергией, реагирует сильно и искренне. Люди чувствуют в нём живую витальную мощь. Ему важно править этим огнём, а не давать ему власть над собой.",
+"Он держится с тихой ясностью у самых трудных границ — конца, потери, перемены. К нему идут, когда надо отпустить или навести мост, потому что он не отшатывается от тьмы. Но, неся переходы других, он должен беречь собственную опору.",
+"Он человек дела и рук: к нему идут чинить, лечить, доводить начатое до конца. Он познаёт мир, делая, и его помощь всегда осязаема. Но он склонен брать на себя слишком много и не выпускать контроль.",
+"Он вносит красоту и гармонию всюду, где появляется: оформляет, примиряет, придаёт вещам блеск и форму. К нему тянутся за вкусом и изяществом. Но он зависим от внешнего одобрения и легко уходит в перфекционизм.",
+"Он текуч и чувствующий — улавливает настроения, очищает атмосферу, идёт потоком и ведёт за собой мягко. К нему идут, когда нужно выплакать наносное и вспомнить главное. Но он рискует захлебнуться чувством и потерять берега.",
+"Он — сердце круга: верный, тёплый, преданный, тот, на кого можно опереться. К нему идут за участием и защитой; предательство он переживает почти телесно. Но его любовь бывает цепкой, а обида — глубокой.",
+"Он лёгок, обаятелен, остроумен — в нём живут художник и трикстер, и люди тянутся к этой искре. Он умеет разрядить, рассмешить, показать игру жизни. Но за шуткой он порой прячет глубину и заигрывается.",
+"Он держится с достоинством свободного человека: мудрый, влияющий, умеющий выбрать. К нему идут за советом и за примером взвешенного решения. Но его воля бывает своевольной, а ум — гордым.",
+"Он лёгок на подъём, любопытен, тянется к новому и к высоте; часто это человек дороги и пространства. Он будит окружающих собой и идёт первым. Но в движении он может убегать от близости и не пускать корни.",
+"Он держится тихо и притягивает к себе — в нём скрытая магия и магнетизм, к нему идут за принятием и тонким советом. Ему нужны тишина и своё пространство, где он подзаряжается. Близость он раздаёт скупо, зато впущенному даёт редкую глубину.",
+"Он видит дальше других и мыслит большим — к нему идут за стратегией, идеей, широким взглядом. Он заражает оптимизмом и думает о целом. Но ему важно возвращаться на землю и превращать видение в шаг.",
+"Он бесстрашен и пытлив — не боится трудных вопросов и идёт туда, где страшно. К нему идут за смелостью и ясной разведкой ситуации. Но его пытливость бывает воинственной, а бесстрашие — бравадой поверх страха.",
+"Он чуток к знакам и потокам — будто ведёт переговоры с самой жизнью, ловя совпадения. К нему идут, когда нужно почувствовать верное направление. Но он может перегружаться знаками и терять центр в потоке совпадений.",
+"Он прям и ясен — называет вещи именами, отражает людям их же правду, наводит порядок. К нему идут за честностью и разрешением запутанного. Но его прямота бывает резкой и ранит тех, кто хрупок.",
+"Он — катализатор: рядом с ним застой приходит в движение, он встряхивает и обновляет. К нему идут за переменой и зарядом энергии. Но он легко перегревается и устраивает бурю там, где хватило бы ветерка.",
+"В нём цельность и свет — он вдохновляет, согревает, доводит до мастерства и освещает другим путь. К нему тянутся за ясностью и теплом. Но к себе он строг сверх меры и не прощает себе несовершенства."];
+
+const NUMCHAR=[];
+
+// ── тень, развёрнутая в живые черты ──
+const SHADOWLONG=[
+"Та же питающая сила без меры оборачивается удушающей опекой, страхом покинутости, неумением отпустить. Он привязывает заботой и тонет в тревоге за тех, кого вынашивает, теряя в этом себя.",
+"Та же лёгкость духа без опоры даёт рассеянность, переменчивость, слова, что уносит ветром. Он проповедует вместо того, чтобы прожить, и метётся между идеями, не оседая ни на чём.",
+"То же внутреннее изобилие без выхода даёт уход в сумерки, замкнутость, накопление страхов вместо богатства. Он прячется в своей ночи и путает грёзу с бегством от яви.",
+"Та же нацеленность, перегнув, даёт распыление всходов, нетерпение к незрелому или, напротив, вечное «ещё не время». Он либо рвёт зелёным, либо застревает в потенциале, так и не дав плоду налиться.",
+"Тот же огонь без узды даёт вспыльчивость, ревность, цепляние, выживание любой ценой. Сила, которая лечит, в тени обжигает — и его, и близких, превращаясь в одержимость.",
+"Та же близость к порогу без опоры даёт цепляние за умершее или, наоборот, растворение и потерю себя. Он застревает в прощании или наводит мосты в ущерб собственной земле.",
+"Та же хватка руки, перегнув, становится неумением выпустить контроль, перегрузкой, тягой делать всё самому. Он берёт больше, чем удержит, и надрывается, не доверяя дело другим.",
+"Та же тяга к красоте без глубины даёт тщеславие, перфекционизм, зависимость от блеска и чужого одобрения. Он шлифует облик, пока не выхолащивает суть, и страдает от любого изъяна.",
+"Тот же поток без берегов захлёстывает чувством, увязает в обидах, размывает решимость. Он тонет в эмоциях и старом, не умея отпустить воду, которую давно пора слить.",
+"Та же любовь, задетая, оборачивается ревностью, зависимостью, глубокой обидой и цеплянием за «свою стаю». Он требует верности сверх меры и наказывает холодом за малейшую измену сердца.",
+"Та же лёгкость без глубины даёт заигрывание, привычку прятать настоящее за шуткой, обман себя и других. Он дурачится там, где нужна честность, и запутывается в собственной игре.",
+"Та же воля, перегнув, становится своеволием, гордыней ума, давлением своим выбором на других. Он навязывает «как правильно» и не слышит чужой свободы, приняв своеволие за мудрость.",
+"Та же тяга к простору без корней даёт неприкаянность, бегство в новое от близости, страх остановиться. Он срывается с места всякий раз, когда нужно остаться, путая свободу с побегом.",
+"Та же скрытая сила, обращённая внутрь, даёт уход в себя, тихую манипуляцию, холод тайной власти. Когда ему больно, он замыкается и ворожит в тени, застывая в безвременье как в укрытии.",
+"То же высокое видение без земли даёт витание, холодную отстранённость, мечты вместо шага. Он парит над бытом и судит сверху, забывая спуститься и сделать.",
+"То же бесстрашие, перегнув, становится воинственностью, упрямством вопроса, бравадой поверх страха. Он лезет в бой ради боя и задаёт вопросы, чтобы спорить, а не чтобы понять.",
+"Та же чуткость к знакам без центра даёт тревожную сверхвпечатлительность, потерю себя в потоке совпадений, суеверный страх. Он читает знаки повсюду и теряет собственную опору среди них.",
+"Та же прямота без бережности даёт холод, резкость, рассечение там, где можно было не резать. Он отражает людям их тень безжалостно и ранит хрупких, приняв жёсткость за честность.",
+"Та же сила обновления без меры даёт драматизм, перегрев, хаос перемен ради перемен. Он раздувает бурю и выжигает себя и других в постоянной встряске.",
+"Тот же свет, обращённый требованием, даёт завышенную планку к себе, выгорание, нетерпимость к собственной тени. Он не прощает себе несовершенства и светит на дистанции, не подпуская близко."];
+
+// ── окраска тона, вплетённая в характер, с её ценой (для разворота и справочника) ──
+const NUMLONG=[
+"Магнитный тон (1) даёт цель и единство: человек несёт суть печати в чистом, цельном виде — как замысел и притяжение к цели. Цена — одиночество первого и трудность доводить начатое до конца.",
+"Лунный тон (2) вносит полярность и вызов: суть печати раздваивается, держит напряжение двух полюсов и чувствительность к препятствию. Цена — колебание, застревание между двумя, трудность решиться.",
+"Электрический тон (3) даёт служение и связь: суть печати активируется, тянется соединять и отдавать себя делу. Цена — суетливость, разбросанность, растрата себя в связях.",
+"Самосущный тон (4) даёт форму и меру: суть печати обретает определённость, структуру, устойчивые границы. Цена — ригидность, тяжеловесность, упрямство формы.",
+"Обертонный тон (5) даёт сияние и силу: суть печати собирается к центру, наделяет властью, командует из ядра. Цена — давление этого центра, тяга всё держать на себе.",
+"Ритмический тон (6) даёт равновесие и порядок: суть печати организуется, входит в ровный рабочий ритм, уравнивает. Цена — увязание в рутине, потеря размаха ради порядка.",
+"Резонансный тон (7) даёт настройку и вдохновение: суть печати встаёт на срединную ось, становится каналом, резонирует с незримым. Цена — отрешённость, уход от действия в созерцание.",
+"Галактический тон (8) даёт цельность и гармонию: суть печати проверяется на соответствие — живёт ли человек тем, во что верит. Цена — требовательность к себе и другим, нетерпимость к расхождению.",
+"Солнечный тон (9) даёт намерение и осуществление: суть печати пульсирует к цели, доводит замысел до яви силой воли. Цена — надрыв намерением, одержимость своей правдой.",
+"Планетарный тон (10) даёт проявление и совершенствование: суть печати воплощается в материи, в делах, доводится до зримого результата. Цена — груз проявления, перфекционизм, публичность.",
+"Спектральный тон (11) даёт освобождение и растворение: суть печати на пике напряжения — распускает застывшее, отпускает, прорывается. Цена — нестабильность, разрушительность, трудность удержаться.",
+"Кристаллический тон (12) даёт сотрудничество и ясность: суть печати открывается другим, посвящает себя общему, обретает прозрачность. Цена — растворённость в общем, потеря личного фокуса.",
+"Космический тон (13) даёт присутствие и превосхождение: суть печати доведена до полноты и выходит за предел, пребывает и претерпевает. Цена — переполненность, вынесенность за край, неустойчивость пика."];
+
+// глагольная вставка тона в развороте
+const NUMFLAVOR=["несёт в чистом, цельном виде","раздваивает и испытывает","активирует и связывает","оформляет и упрочивает",
+"наделяет силой из центра","вводит в ровный ритм","настраивает и углубляет","проверяет на цельность",
+"пульсирует к осуществлению","выводит в материю и проявляет","распускает и освобождает","раскрывает и посвящает общему","возносит на вершину и за предел"];
+
+const NUMSHADOW=[];
+
+const DIRCHAR=[
+"Красная, восточная сторона придаёт всему импульс начала: суть печати обращена к рождению, к зачину, к жизненной силе — она инициирует, выводит из небытия в бытие, полна первого огня.",
+"Белая, северная сторона утончает и очищает: качества печати связаны с духом, ясностью, различением — не горячий порыв, а отшлифованная, проведённая через ум сила.",
+"Синяя, западная сторона преображает: суть печати обращена к перемене, к глубине, к трансформации — сила, что переплавляет и переводит из одного состояния в другое.",
+"Жёлтая, южная сторона доводит до зрелости: качества печати обращены к теплу, спелости, плоду — не вспышка, а вызревание и доведение до целого."];
+
+const GROWTH=[
+"Его рост — питать, не удушая; давать опору и отпускать, не растворяясь в заботе.",
+"Его рост — заземлить дух в проживание, не растратить слово в говорении, доводить начатое.",
+"Его рост — выносить внутреннее изобилие на свет, не прятаться в своей ночи, отличать грёзу от бегства.",
+"Его рост — довести всходы до плода, не торопить незрелое и не застревать в вечном «ещё не время».",
+"Его рост — направлять огонь, а не отдавать ему власть; держать страсть под уздой.",
+"Его рост — наводить мосты, не теряя своей земли; отпускать отжившее и не цепляться за умершее.",
+"Его рост — завершать, доверяя дело другим; не хвататься за всё и выпускать контроль.",
+"Его рост — служить красотой сути, а не блеску; не зависеть от одобрения и принять несовершенство.",
+"Его рост — течь, не теряя берегов; очищаться от обид, отпускать старую воду.",
+"Его рост — любить без цепляния; отличать верность от собственничества, прощать измену сердца.",
+"Его рост — играть, не прячась; вынести глубину из-за шутки и не дурачить себя.",
+"Его рост — выбирать свободно, не навязывая выбор другим; смирить гордыню ума.",
+"Его рост — пустить корни, не убегая в новое от близости; соединить простор с оседлостью.",
+"Его рост — выносить силу из тени наружу; не замыкаться и не ворожить властью, когда больно.",
+"Его рост — возвращаться на землю, превращать видение в шаг; не судить сверху.",
+"Его рост — спрашивать, чтобы понять, а не спорить; пройти сквозь страх, не прячась в браваду.",
+"Его рост — держать центр среди знаков; не теряться в потоке совпадений и суеверном страхе.",
+"Его рост — отражать правду бережно; резать только нужное и щадить хрупкое.",
+"Его рост — обновлять с мерой; отличать живую перемену от бури ради бури, беречь себя.",
+"Его рост — простить себе тень и несовершенство; светить вблизи, а не на дистанции."];
+
+// 13 галактических тонов: [имя, короткое описание]
+const NUM={1:["Магнитный","цель, единство, притяжение; зачин, что собирает вокруг намерения."],2:["Лунный","полярность, вызов, два полюса; стабилизация через препятствие."],
+ 3:["Электрический","служение, активация, связь; первое движение к другому."],4:["Самосущный","форма, определение, мера; устойчивая структура."],
+ 5:["Обертонный","сияние, сила, центр; наделение властью из ядра."],6:["Ритмический","равновесие, организация, ритм; рабочий порядок."],
+ 7:["Резонансный","настройка, канал, вдохновение; срединная, медитативная ось."],8:["Галактический","цельность, гармония, соответствие формы и сути; этическая мера."],
+ 9:["Солнечный","намерение, пульс, осуществление; воля, что доводит замысел до яви."],10:["Планетарный","проявление, воплощение, совершенствование; результат в материи."],
+ 11:["Спектральный","освобождение, растворение, отпускание; прорыв через распускание."],12:["Кристаллический","сотрудничество, посвящение, ясность; открытость общему."],
+ 13:["Космический","присутствие, пребывание, превосхождение; полнота и выход за предел."]};
+
+const DIR=[
+ {name:"Восток",col:"Красный",ink:"#cf3a2a",accent:"#d2402f",q:"рождение, зачин, жизненная сила, импульс",rose:0,theme:"началу и жизненной силе",risk:"слишком много начинаний и мало завершения"},
+ {name:"Север", col:"Белый",  ink:"#7c8896",accent:"#7f8b99",q:"дух, очищение, ясность, утончение",rose:1,theme:"духу, ясности, утончению",risk:"слишком много холода и дистанции — тепло придётся добавлять намеренно"},
+ {name:"Запад", col:"Синий",  ink:"#2f6fb0",accent:"#2f72b6",q:"преображение, глубина, перемена",rose:2,theme:"преображению и глубине",risk:"оба уходят в перемену и не дают улечься постоянству"},
+ {name:"Юг",    col:"Жёлтый", ink:"#c98a12",accent:"#c4880f",q:"зрелость, тепло, спелость, плод",rose:3,theme:"зрелости, теплу, плодоношению",risk:"слишком уютно и сыто — паре не хватает вызова и движения"}];
+
+// ── парное чтение ──
+const GIVES=["питание, заботу, опору, чувство истока и доверия","дух, слово, вдохновение, умение проговорить и одушевить",
+"внутреннее изобилие, интуицию, глубину грёзы","терпение, нацеленность, веру в рост и будущий плод",
+"витальную силу, страсть, телесную искренность реакции","умение отпускать и соединять, спокойствие у порога, наведение мостов",
+"исцеление, мастерство рук, способность довести до свершения","красоту, гармонию, изящество, умение придать форме блеск",
+"чувствующий поток, очищение, мягкость воды","сердце, верность, тепло, преданность близким",
+"лёгкость, игру, юмор, умение разрядить и расколдовать","мудрость, свободу выбора, доброе влияние, достоинство",
+"смелость пространства, тягу к новому, пробуждающую энергию","принятие, тихую магию, чуткость к вневременному",
+"видение целого, широкий взгляд, творящий ум","бесстрашие, ясный вопрос, разведку истины",
+"чуткость к знакам, чувство пути, синхронность","ясность, прямоту, порядок, умение отразить правду",
+"заряд перемен, обновление, готовность встряхнуть застой","свет, цельность, тепло, доведение до мастерства"];
+const NEEDS=["того, кто примет заботу и не даст ей стать удушающей","того, кто заземлит дух и удержит слова от разлёта",
+"того, кто не боится её сумерек и впускает грёзу в явь","того, кто разделит долгое ожидание плода",
+"того, кто выдержит её жар и не испугается силы","того, кто даст опору, пока он наводит мосты для других",
+"того, кто не сядет ему на шею и примет, что он не всё тащит сам","того, кто любит суть, а не только блеск",
+"того, кто не даст ей утонуть в чувстве","того, кто не предаст её доверие и верность",
+"того, кто примет глубину за её игрой","того, кто примет его выбор, не считая давлением",
+"того, кто примет его потребность в просторе","пространство, тишину и терпение к её уходам в себя",
+"того, кто вернёт его на землю, не подрезав крылья","того, кто примет его вопросы без обиды",
+"того, кто удержит её центр среди знаков","того, кто не ранится о его прямоту",
+"того, кто разделит её бурю и не сгорит в ней","того, кто примет, что он строг к себе"];
+const RSHADOW=["удушает опекой, тонет в тревоге, не отпускает выращенное","рассеивается, проповедует ветром, метётся между идеями",
+"уходит в сумерки, прячется, копит страхи вместо изобилия","распыляет всходы, торопит незрелое или застревает в потенциале",
+"вспыхивает, ревнует, цепляется, выживает любой ценой","цепляется за умершее или растворяется, теряя опору",
+"хватается за всё, не выпускает контроль, надрывается","тщеславится, шлифует облик, зависит от одобрения",
+"захлёстывается чувством, увязает в обидах, теряет берега","ревнует, впадает в зависимость, наказывает холодом",
+"заигрывается, прячет глубину за шуткой, дурачит себя","своевольничает, давит выбором, гордится умом",
+"срывается с места, бежит от близости, не пускает корни","замыкается, ворожит в тени, холодеет тайной властью",
+"витает, парит над бытом, судит сверху","лезет в бой ради боя, бравирует поверх страха",
+"тревожится знаками, теряет центр в совпадениях","режет резкостью, отражает тень безжалостно",
+"драматизирует, перегревает, устраивает бурю на ровном месте","требует идеала, выгорает, не подпускает близко"];
+
+// ════ DREAMSPELL ENGINE — счёт кинов с «заморозкой» 29 февраля ════
+const _f=Y=>Math.floor(Y/4)-Math.floor(Y/100)+Math.floor(Y/400);
+const _isLeap=Y=>(Y%4===0&&Y%100!==0)||Y%400===0;
+function dsOrdinal(y,m,d){
+  const days=Math.round(Date.UTC(y,m-1,d)/86400000);
+  let leaps=_f(y-1);
+  if(_isLeap(y)&&(m>2||(m===2&&d===29))) leaps+=1;
+  return days-leaps;
+}
+const DS_ANCHOR=dsOrdinal(2013,7,26); // 26.07.2013 = Kin 164 (Жёлтое Галактическое Семя)
+function dsKin(y,m,d){ return mod(dsOrdinal(y,m,d)-DS_ANCHOR+163,260)+1; }
+function compute(y,m,d){
+  const kin=dsKin(y,m,d);
+  const idx=mod(kin-1,20), tone=mod(kin-1,13)+1;
+  const lordIdx=mod(idx-(tone-1),20);
+  const kp=mod(kin-2,260)+1, kn=mod(kin,260)+1;
+  return {kin, tone, idx, lordIdx,
+          prevIdx:mod(kp-1,20), nextIdx:mod(kn-1,20),
+          prevTone:mod(kp-1,13)+1, nextTone:mod(kn-1,13)+1};
+}
+// Носитель года (Год по Dreamspell): новый год — 26 июля; глиф года = кин этого 26 июля.
+// Печать года всегда одна из четырёх: Семя, Луна, Маг, Буря; тон растёт на 1 каждый год.
+function yearBearer(y,m,d){
+  const afterNY=(m>7)||(m===7&&d>=26);
+  const Y=afterNY?y:y-1;
+  const k=dsKin(Y,7,26);
+  return {idx:mod(k-1,20), tone:mod(k-1,13)+1, year:Y};
+}
+
+function numeral(n){
+  const bars=Math.floor(n/5),dots=n%5;let dd="",bb="";
+  for(let i=0;i<dots;i++)dd+='<span class="dot"></span>';
+  for(let i=0;i<bars;i++)bb+='<span class="bar"></span>';
+  return `<div class="numeral">${dots?`<div class="dots">${dd}</div>`:""}${bars?`<div class="bars">${bb}</div>`:""}<span class="numlabel">${n}</span></div>`;
+}
+function rose(active){
+  const tri=["M31,31 L60,2 L60,60 Z","M31,31 L2,2 L60,2 Z","M31,31 L2,60 L2,2 Z","M31,31 L60,60 L2,60 Z"];
+  let s='<svg class="rose" viewBox="0 0 62 62" aria-hidden="true">';
+  tri.forEach((p,i)=>s+=`<path class="q${i===active?' active':''}" d="${p}"/>`);
+  return s+'<circle class="center" cx="31" cy="31" r="4.5"/></svg>';
+}
+
+/* ── SINGLE ── */
+const lc=s=>s.charAt(0).toLowerCase()+s.slice(1);
+// ── оракул: пятёрка кинов вокруг сигнатуры ──
+function kinOf(idx,tone){const t=mod(2*((tone-1)-idx),13);return mod(idx+20*t,260)+1;}
+function oracle(r){
+  const gi=mod(r.idx+12*(r.tone-1),20);          // проводник: тот же тон, та же цветовая семья
+  const ai=mod(17-r.idx,20);                       // аналог: партнёр, тот же тон
+  const ti=mod(r.idx+10,20);                       // антипод: вызов, тот же тон
+  const ok=261-r.kin, oi=mod(ok-1,20), ot=mod(ok-1,13)+1; // скрытая сила: кин 261−kin
+  return {guide:{idx:gi,tone:r.tone,kin:kinOf(gi,r.tone)},
+          analog:{idx:ai,tone:r.tone,kin:kinOf(ai,r.tone)},
+          antipode:{idx:ti,tone:r.tone,kin:kinOf(ti,r.tone)},
+          occult:{idx:oi,tone:ot,kin:ok}};
+}
+function oracleHTML(r){
+  const O=oracle(r);
+  const cell=(o,role,cls,desc)=>{
+    const dc=DIR[o.idx%4];
+    return `<button type="button" class="orc-cell ${cls}" style="--oc:${dc.accent}" data-sign="${o.idx}" title="${esc(desc)}">`+
+      `<span class="orc-role">${role}</span>`+
+      `<span class="orc-name">${N[o.idx].k}</span>`+
+      `<span class="orc-meta">тон ${o.tone} · кин ${o.kin}</span></button>`;
+  };
+  return `<div class="angle">Оракул · пятёрка кинов</div>`+
+    `<p class="oracle-intro">Пять связанных кинов вокруг твоего — классический расклад Dreamspell, «силовое поле» сигнатуры: кто ведёт, кто поддерживает, кто бросает вызов и где спрятан скрытый ресурс. Нажми на любой, чтобы открыть его описание.</p>`+
+    `<div class="oracle">`+
+      cell(O.guide,'Проводник','guide','Высшая опора: как ты направляешь свою силу')+
+      cell(O.antipode,'Вызов · антипод','antipode','Противосила, что испытывает и закаляет')+
+      cell({idx:r.idx,tone:r.tone,kin:r.kin},'Сигнатура','destiny','Ты сам — центр расклада')+
+      cell(O.analog,'Аналог · партнёр','analog','Родственная сила, поддержка и созвучие')+
+      cell(O.occult,'Скрытая сила','occult','Тайный ресурс, что раскрывается на глубине')+
+    `</div>`+
+    `<dl class="orc-legend">`+
+      `<div><dt>Проводник</dt><dd>тот же тон, та же цветовая семья — высшая опора и то, как ты направляешь силу.</dd></div>`+
+      `<div><dt>Аналог · партнёр</dt><dd>родственный кин: что тебе созвучно и помогает без борьбы.</dd></div>`+
+      `<div><dt>Вызов · антипод</dt><dd>противосила: то, что испытывает тебя и учит через сопротивление.</dd></div>`+
+      `<div><dt>Скрытая сила</dt><dd>«спрятанное золото» (тон дополняет твой до 14): ресурс, раскрывающийся на глубине.</dd></div>`+
+    `</dl>`;
+}
+// ── замки (5 × 52 кина) ──
+const CASTLES=[
+ {name:"Красный Восточный Замок Поворота",court:"Двор Рождения",col:"Красный",power:"сила Входа",accent:"#cf3a2a"},
+ {name:"Белый Северный Замок Пересечения",court:"Двор Смерти",col:"Белый",power:"сила Нисхождения",accent:"#7f8b99"},
+ {name:"Синий Западный Замок Горения",court:"Двор Магии",col:"Синий",power:"сила Преображения",accent:"#2f72b6"},
+ {name:"Жёлтый Южный Замок Дарения",court:"Двор Разума",col:"Жёлтый",power:"сила Дарения",accent:"#c4880f"},
+ {name:"Зелёный Центральный Замок Зачарования",court:"Двор Синтеза",col:"Зелёный",power:"сила Зачарования",accent:"#2e9e6e"}];
+function castleOf(kin){return CASTLES[Math.floor((kin-1)/52)];}
+
+// ── аффирмация (код-спелл) по Аргуэльесу ──
+const TPOW=["объединяю","поляризую","активирую","определяю","наделяю силой","упорядочиваю","настраиваю","гармонизирую","пульсирую","совершенствую","растворяю","обобщаю","пребываю"];
+const TGER=["притягивая","стабилизируя","связуя","измеряя","повелевая","уравновешивая","вдохновляя","воплощая образ","осуществляя","производя","высвобождая","посвящая","превосходя"];
+const SACT=["питать","говорить","грезить","нацеливать","выживать","уравнивать","познавать","украшать","очищать","любить","играть","влиять","исследовать","зачаровывать","творить","вопрошать","развиваться","отражать","катализировать","просветлять"];
+const SESS=["бытие","дыхание","интуицию","осознание","инстинкт","возможность","исцеление","искусство","поток","верность","иллюзию","мудрость","пробуждённость","восприимчивость","разум","бесстрашие","синхронность","порядок","энергию","жизнь"];
+const SPOW=["рождения","духа","изобилия","цветения","жизненной силы","смерти","свершения","изящества","вселенской воды","сердца","магии","свободной воли","пространства","безвременья","видения","разума","навигации","бесконечности","самопорождения","вселенского огня"];
+function affirmationRU(r){
+  const t=r.tone,i=r.idx,O=oracle(r),self=(t===1||t===6||t===11);
+  const g=TGER[t-1], gc=self?"моя собственная сила, удвоенная":"сила "+SPOW[O.guide.idx];
+  return {l1:"Я "+TPOW[t-1]+", чтобы "+SACT[i]+",",
+          l2:g.charAt(0).toUpperCase()+g.slice(1)+" "+SESS[i]+".",
+          l3:"Меня ведёт "+gc+"."};
+}
+function affirmHTML(r){const a=affirmationRU(r);
+  return `<div class="affirm"><div class="affirm-label">Аффирмация · код-спелл</div>`+
+    `<p class="affirm-body">${a.l1}<br>${a.l2}<br>${a.l3}</p></div>`;}
+
+// ── связь «сегодня ↔ ты» через оракул ──
+// стихия дня (по цвету сегодняшнего кина)
+const COLORDAY=[
+ {act:"запуска и импульса", text:"красный, восточный день — энергия начала. Хорошо начинать, пробовать, действовать решительно и из тела."},
+ {act:"очищения и утончения", text:"белый, северный день — энергия ясности. Хорошо разбирать, формулировать, очищать, отделять главное от лишнего."},
+ {act:"перемены и глубины", text:"синий, западный день — энергия преображения. Хорошо менять, отпускать отжившее, идти вглубь."},
+ {act:"созревания и тепла", text:"жёлтый, южный день — энергия завершения. Хорошо доводить до конца, собирать плоды, отдыхать и благодарить."}];
+function relateToday(you,today){
+  const O=oracle(you),out=[],tc=today.idx%4,yc=you.idx%4;
+  // ── особый день оракула (заголовок-бонус) ──
+  if(today.kin===you.kin) out.push(['★ Твой кин','Сегодня — точно твой кин. Круг в 260 кинов замкнулся: энергия вернулась к истоку. Личный галактический день рождения, день силы и обновления.']);
+  else if(today.kin===O.guide.kin) out.push(['★ День проводника','Сегодняшний кин — твой проводник. Твоя высшая опора активна: день брать инициативу, вести и направлять.']);
+  else if(today.kin===O.analog.kin) out.push(['★ День аналога','Сегодня — твой аналог-партнёр. День поддержки и созвучия: дела идут по руке, помощь приходит легко.']);
+  else if(today.kin===O.antipode.kin) out.push(['★ День антипода','Сегодня — твой антипод. День вызова и трения, того, что закаляет. Не бей в лоб — учись у сопротивления.']);
+  else if(today.kin===O.occult.kin) out.push(['★ День скрытой силы','Сегодня раскрывается твоё «спрятанное золото»: из глубины может прийти неожиданный ресурс или озарение.']);
+  else if(today.idx===you.idx) out.push(['★ Твоя печать','У сегодня — твоя солнечная печать ('+N[you.idx].k+'), но в другом тоне. Родная тема звучит громко, в иной окраске — день определённо про твоё.']);
+  // ── стихия дня (всегда) ──
+  const cd=COLORDAY[tc]; let elem='Сегодня — '+cd.text;
+  elem+= (tc===yc) ? ' Это и твоя стихия — день усиливает то, что в тебе и так сильно.'
+    : ' Твоя природа — '+DIR[yc].col.toLowerCase()+' ('+DIR[yc].q.split(',')[0]+'): сегодняшняя энергия '+cd.act+' даёт ей внешний толчок.';
+  out.push(['Стихия дня', elem]);
+  // ── тон дня (всегда) ──
+  const tt=today.tone, ph=tt<=3?'завязка и намерение':tt<=7?'построение и равновесие':tt<=10?'проявление и зрелость':'освобождение и пик';
+  let tone='Тон дня — '+tt+' ('+NUM[tt][0]+'): '+NUM[tt][1].split(';')[0].split(',').slice(0,2).join(',')+'. Фаза волны — '+ph+'.';
+  if(tt===you.tone) tone+=' Это и твой тон — день звучит ровно в твоём ритме.';
+  out.push(['Тон дня', tone]);
+  // ── положение в цикле (если совпало) ──
+  if(today.lordIdx===you.lordIdx) out.push(['Твоя волна','Сегодня — внутри твоей волны (1 '+N[you.lordIdx].k+'), день '+today.tone+' из 13. Идёт твой личный 13-дневный цикл, тема '+KW[you.lordIdx]+'.']);
+  else if(castleOf(today.kin)===castleOf(you.kin)) out.push(['Твой замок','Сегодня — в твоём замке: '+castleOf(you.kin).court.toLowerCase()+'. Вы в одном 52-дневном «сезоне» 260-дневного пути.']);
+  return out;
+}
+
+function todayCardHTML(r,dateStr){
+  const dir=DIR[r.idx%4],numK=NUM[r.tone],lord=N[r.lordIdx],cas=castleOf(r.kin),c=DESC[r.idx];
+  return `<div class="card today-card" style="--dir:${dir.accent}">
+    <div class="head">${numeral(r.tone)}
+      <div class="names">
+        <div class="today-tag">Кин дня · ${dateStr}</div>
+        <h2 class="kiche">${r.tone} ${N[r.idx].k}</h2>
+        <div class="yuc">${numK[0]} тон · ${dir.col.toLowerCase()}, ${dir.name.toLowerCase()} · кин ${r.kin}</div>
+      </div>
+      <div class="rose-wrap">${rose(dir.rose)}<span class="dir-label">${dir.name}</span></div>
+    </div>
+    <div class="read">
+      ${affirmHTML(r)}
+      <p class="synth">Сегодня хорошо: ${lc(c.dfor)} Тема дня — ${KW[r.idx]}; тон ${r.tone}, ${tempo(r.tone)}. Это погода дня, не приговор.</p>
+      <p class="mam"><span class="mam-k">Где в счёте</span>День <b>${r.tone} из 13</b> в волне <b>1 ${lord.k}</b> (${KW[r.lordIdx]}) · кин <b>${r.kin} из 260</b> · ${cas.name}, <b>${cas.court.toLowerCase()}</b>.</p>
+    </div></div>`;
+}
+function renderToday(){
+  const host=document.getElementById('today-card'); if(!host) return;
+  const n=new Date(); const y=n.getFullYear(),m=n.getMonth()+1,d=n.getDate();
+  const r=compute(y,m,d);
+  const ds=`${String(d).padStart(2,'0')}.${String(m).padStart(2,'0')}.${y}`;
+  host.innerHTML=todayCardHTML(r,ds);
+  const tb=document.getElementById('tb'), rel=document.getElementById('today-relate');
+  if(tb && tb.value && rel){
+    const [by,bm,bd]=tb.value.split('-').map(Number); const you=compute(by,bm,bd);
+    const rels=relateToday(you,r);
+    rel.innerHTML=`<div class="relate"><div class="angle">Как сегодня относится к тебе</div>`+
+      `<p class="relate-sub">Твой кин — <b>${you.tone} ${N[you.idx].k}</b>. Сегодняшний день в твоём личном раскладе:</p>`+
+      rels.map(x=>`<div class="rel-item"><div class="rel-k">${x[0]}</div><p>${x[1]}</p></div>`).join('')+`</div>`;
+  } else if(rel){
+    rel.innerHTML=`<p class="relate-empty">Введи свою дату рождения выше — и я покажу, как сегодняшняя стихия и тон ложатся на твой кин, и не выпал ли сегодня особый день твоего оракула (проводник, аналог, антипод, скрытая сила) или твоя волна и замок.</p>`;
+  }
+}
+// ── Цолькин: Гармонический модуль 13×20 ──
+// 52 портала галактической активации (GAP), сверены по Книге Кинов (lawoftime.org)
+const GAP=new Set([1,20,22,39,43,50,51,58,64,69,72,77,85,88,93,96,106,107,108,109,110,111,112,113,114,115,146,147,148,149,150,151,152,153,154,155,165,168,173,176,184,189,192,197,203,210,211,218,222,239,241,260]);
+const CASTLE_TINT=['c-red','c-white','c-blue','c-yellow','c-green'];
+function renderMatrix(highlightKin){
+  const grid=document.getElementById('matrix-grid'); if(!grid) return;
+  let html='<div class="mx-corner"></div>';
+  for(let c=1;c<=13;c++) html+=`<div class="mx-colhead">${c}</div>`;
+  for(let r=1;r<=20;r++){
+    const dir=DIR[(r-1)%4];
+    html+=`<div class="mx-seal"><span class="mx-dot" style="background:${dir.ink}"></span>${N[r-1].k}</div>`;
+    for(let c=1;c<=13;c++){
+      const kin=(c-1)*20+r, cas=Math.floor((kin-1)/52);
+      const isGap=GAP.has(kin), isMystic=(kin>=121&&kin<=140);
+      let cls='mx-cell '+CASTLE_TINT[cas];
+      if(isMystic) cls+=' mystic';
+      if(isGap) cls+=' gap';
+      if(highlightKin===kin) cls+=' me';
+      html+=`<button class="${cls}" data-kin="${kin}" aria-label="Кин ${kin}">${kin}</button>`;
+    }
+  }
+  grid.innerHTML=html;
+  grid.querySelectorAll('.mx-cell').forEach(b=>b.addEventListener('click',()=>showKinDetail(+b.dataset.kin)));
+}
+function showKinDetail(kin){
+  const host=document.getElementById('matrix-detail'); if(!host) return;
+  const idx=(kin-1)%20, tone=(kin-1)%13+1, lordIdx=mod(idx-(tone-1),20);
+  const dir=DIR[idx%4], cas=castleOf(kin), isGap=GAP.has(kin), isMystic=(kin>=121&&kin<=140);
+  let flags='';
+  if(isGap) flags+='<span class="mx-flag gap">портал GAP</span>';
+  if(isMystic) flags+='<span class="mx-flag mystic">мистическая колонна</span>';
+  host.innerHTML=`<div class="mx-detail" style="--dir:${dir.accent}">
+    <div class="mx-d-head"><span class="mx-d-kin">Кин ${kin}</span><span class="mx-d-name">${tone} ${N[idx].k}</span></div>
+    <p class="mx-d-meta">${NUM[tone][0]} тон · ${dir.col.toLowerCase()}, ${dir.name.toLowerCase()} · волна 1 ${N[lordIdx].k} · ${cas.name}, ${cas.court.toLowerCase()}</p>
+    ${flags?`<div class="mx-flags">${flags}</div>`:''}
+    ${isGap?'<p class="mx-d-note">Портал галактической активации — один из 52 «вплетённых» дней, где энергия, по системе, ощущается ярче (узор «Ткацкий станок майя», или «галактическая бабочка»).</p>':''}
+    ${isMystic?'<p class="mx-d-note">Мистическая колонна — 20 «коренных дней» в самом сердце Цолькина (кины 121–140), время покоя, центрирования и присутствия.</p>':''}
+  </div>`;
+  host.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function runMatrixFind(){
+  const v=document.getElementById('mb').value; if(!v){renderMatrix();return;}
+  const [y,m,d]=v.split('-').map(Number); const r=compute(y,m,d);
+  renderMatrix(r.kin); showKinDetail(r.kin);
+}
+function composeDetailed(r){
+  const naw=N[r.idx], lord=N[r.lordIdx], t=r.tone, c=DESC[r.idx];
+  const p=[
+    LONG[r.idx],
+    PRESENCE[r.idx],
+    NUMLONG[t-1],
+    DIRCHAR[r.idx%4]+' Фоновая волна (wavespell) ведётся первой печатью — 1 '+lord.k+' (тема '+KW[r.lordIdx]+'): она задаёт направление, ради которого звучит печать, и её силы служат этой теме.',
+    'Если стянуть в одну фигуру — призвание этого человека: '+lc(c.gift.replace(/\.$/,''))+'. '+NUM[t][0]+' тон '+NUMFLAVOR[t-1]+' эту суть, а волна 1 '+lord.k+' направляет её к теме '+KW[r.lordIdx]+'.',
+    SHADOWLONG[r.idx]+' '+GROWTH[r.idx]
+  ];
+  return p.map(x=>'<p>'+x+'</p>').join('');
+}
+function render(){
+  const val=document.getElementById('d').value, card=document.getElementById('card');
+  const result=document.getElementById('result'), note=document.getElementById('note');
+  if(!val){card.innerHTML='<div class="empty">Выбери дату и нажми «Определить кин».</div>';
+    result.classList.add('show');note.hidden=true;return;}
+  const [y,m,d]=val.split('-').map(Number), r=compute(y,m,d);
+  const naw=N[r.idx],dir=DIR[r.idx%4],lord=N[r.lordIdx],numK=NUM[r.tone];
+  const voidDay=(m===2&&d===29);
+  // дата возвращения кина: следующая календарная дата с тем же кином
+  const _n=new Date(); let rd=new Date(Date.UTC(_n.getFullYear(),_n.getMonth(),_n.getDate()));
+  let retIn=0; while(retIn<=366){ if(dsKin(rd.getUTCFullYear(),rd.getUTCMonth()+1,rd.getUTCDate())===r.kin) break; rd.setUTCDate(rd.getUTCDate()+1); retIn++; }
+  const retStr=`${String(rd.getUTCDate()).padStart(2,'0')}.${String(rd.getUTCMonth()+1).padStart(2,'0')}.${rd.getUTCFullYear()}`;
+  const prev=N[r.prevIdx],next=N[r.nextIdx],dsEn=DSEN[r.idx],c=DESC[r.idx];
+  card.style.setProperty('--dir',dir.accent);
+  card.innerHTML=`
+    <div class="head">${numeral(r.tone)}
+      <div class="names">
+        <h2 class="kiche">${naw.k}</h2>
+        <div class="yuc">тон ${r.tone} · ${numK[0]} · кин ${r.kin}<span class="sep">·</span>печать №${r.idx+1} из 20</div>
+        <div class="ds"><span class="ds-tag">Seal · Maya</span>${dsEn} <span class="dsen">(${naw.y})</span></div>
+      </div>
+      <div class="rose-wrap">${rose(dir.rose)}<span class="dir-label">${dir.name}</span></div>
+    </div>
+    <div class="grid">
+      <div class="cell"><p class="k">Цвет · сторона</p><p class="v"><span class="swatch" style="background:${dir.ink}"></span>${dir.col}, ${dir.name.toLowerCase()}<small>${dir.q}</small></p></div>
+      <div class="cell"><p class="k">Волна · wavespell</p><p class="v">1 ${lord.k}<small>тема волны: ${KW[r.lordIdx]}</small></p></div>
+      <div class="cell"><p class="k">Откуда выходишь</p><p class="v">${r.prevTone} ${prev.k}<small>предыдущий кин</small></p></div>
+      <div class="cell"><p class="k">Куда входишь</p><p class="v">${r.nextTone} ${next.k}<small>следующий кин</small></p></div>
+    </div>
+    <div class="read">
+      <div class="angle">Человек этого кина</div>
+      <p class="image-line">${c.img}</p>
+      <dl class="facets">
+        <div><dt>Характер</dt><dd>${c.char}</dd></div>
+        <div><dt>Дар · призвание</dt><dd>${c.gift}</dd></div>
+        <div><dt>Теневая сторона</dt><dd>${c.shadow}</dd></div>
+        <div><dt>Тон ${r.tone} · ${numK[0]}</dt><dd>${numK[1]}</dd></div>
+      </dl>
+      ${affirmHTML(r)}
+      ${oracleHTML(r)}
+      <p class="mam"><span class="mam-k">Где в счёте · путешествие</span>Кин <b>${r.kin} из 260</b> · день <b>${r.tone} из 13</b> в волне <b>1 ${lord.k}</b> · ${castleOf(r.kin).name} (<b>${castleOf(r.kin).court.toLowerCase()}</b>) — один из пяти 52-дневных замков 260-дневного пути.</p>
+      <p class="mam"><span class="mam-k">Возвращение твоего кина</span>${retIn===0
+        ? `Сегодня твой кин возвращается — <b>${r.tone} ${naw.k}</b> снова в счёте: личный галактический «новый год» по кругу в 260 кинов, точка обновления твоей энергии.`
+        : `Тот же кин — <b>${r.tone} ${naw.k}</b> — вернётся <b>${retStr}</b>, через ${retIn} дн.: личный галактический «новый год» по кругу в 260 кинов, когда твоя энергия совершает полный оборот и обновляется.`}</p>
+      <button class="toggle-detail" type="button">Подробный портрет ▾</button>
+      <div class="detailed" hidden>${composeDetailed(r)}</div>
+    </div>`;
+  note.hidden=false;
+  note.innerHTML=(voidDay?'<b>День вне времени.</b> 29 февраля в Dreamspell — это «0.0 Hunab Ku», пустой день между кинами Галактический-22 и Галактический-23: у него нет собственной галактической сигнатуры. По принятому правилу рождённым 29 февраля присваивают кин 28 февраля — он и показан выше.<br><br>':'')+'<b>О методе.</b> Расчёт — счёт кинов по Dreamspell Хосе Аргуэльеса: 20 солнечных печатей × 13 галактических тонов = 260 сигнатур, привязанных к григорианскому году. Опорная точка — 26 июля 2013 = Кин 164 (Жёлтое Галактическое Семя), на ней сверен весь счёт. Чтение печати как склада и призвания — современная подача в духе системы Аргуэльеса: это сигнатура-зеркало для размышления, тенденция, а не приговор и не предсказание.<br><br><b>Про оракул.</b> Пятёрка кинов (проводник, аналог, антипод, скрытая сила) — это «фифт-форс»-расклад Dreamspell. Связи строго заданы счётом: проводник и аналог делят твой тон, антипод стоит на печати +10, а скрытая сила — это кин 261−твой (его тон дополняет твой до 14). Это карта внутренних сил, а не предсказание.';
+  const tg=card.querySelector('.toggle-detail');
+  if(tg) tg.addEventListener('click',()=>{const dt=card.querySelector('.detailed');
+    if(dt.hasAttribute('hidden')){dt.removeAttribute('hidden');tg.textContent='Свернуть ▴';}
+    else{dt.setAttribute('hidden','');tg.textContent='Подробный портрет ▾';}});
+  card.querySelectorAll('.orc-cell').forEach(b=>b.addEventListener('click',()=>{
+    const i=+b.dataset.sign; switchTab('ref');
+    const e=document.getElementById('sign-'+i);
+    if(e){e.open=true; setTimeout(()=>e.scrollIntoView({behavior:'smooth',block:'center'}),60);}
+  }));
+  addShare(card.querySelector('.read'), 'd='+val);
+  addImgBtn(card.querySelector('.read'), ()=>composeCard({tone:r.tone,title:naw.k,
+    sub:`тон ${r.tone} · ${numK[0]} · кин ${r.kin}`,
+    metas:[`волна 1 ${lord.k} · печать №${r.idx+1} из 20`],
+    essence:c.char, footer:val.split('-').reverse().join('.'), accent:dir.accent}), 'dreamspell-'+val+'.png');
+  result.classList.remove('show');void result.offsetWidth;result.classList.add('show');
+}
+
+/* ── PAIR ── */
+const tempo=t=>t<=4?"мягкий, заземляющий":t<=9?"рабочий, уравновешенный":"высокий, напряжённый";
+const tclass=t=>t<=4?0:t<=9?1:2;
+const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
+
+function personCard(P,label){
+  const dir=DIR[P.idx%4];
+  return `<div class="pcard" style="--dir:${dir.accent}">
+    <p class="pname">${esc(label)}</p>
+    <div class="prow">${numeral(P.tone)}
+      <div><p class="pkiche">${P.tone} ${N[P.idx].k}</p>
+      <p class="pmeta"><span class="swatch" style="background:${dir.ink}"></span>${dir.name}, ${dir.col.toLowerCase()} · волна 1 ${N[P.lordIdx].k}</p></div>
+    </div></div>`;
+}
+function buildReading(A,B,nameA,nameB){
+  const da=A.idx%4,db=B.idx%4,dirA=DIR[da],dirB=DIR[db];
+  const OA=oracle(A),OB=oracle(B),x=da^db; // 0 одна стихия,1 аналог,2 антипод,3 скрытая (по цвету)
+  let out='';
+
+  out+='<h3>Связь по оракулу</h3>';
+  let head;
+  if(A.kin===B.kin) head='У вас <b>один и тот же кин</b> — вы зеркало друг друга: мгновенное понимание без слов, но и общие слепые зоны усилены вдвое.';
+  else if(B.kin===OA.analog.kin) head='Вы — <b>аналоги</b> в раскладе Dreamspell, родственные кины-партнёры. Поддержка приходит легко, вы созвучны на глубоком уровне и тянетесь дополнять друг друга.';
+  else if(B.kin===OA.antipode.kin) head='Вы — <b>антиподы</b> друг другу: встроенный вызов. Именно вы способны закалять и сдвигать один другого — через здоровое трение, а не через комфорт.';
+  else if(B.kin===OA.occult.kin) head='Вы — <b>скрытая сила</b> один для другого (ваши тоны в сумме дают 14): неочевидное, глубокое притяжение; вместе раскрываете спрятанные ресурсы.';
+  else if(B.kin===OA.guide.kin) head=`В оракуле <b>${esc(nameB)} — проводник</b> для ${esc(nameA)}: естественно ведёт, направляет и служит высшей опорой.`;
+  else if(A.kin===OB.guide.kin) head=`В оракуле <b>${esc(nameA)} — проводник</b> для ${esc(nameB)}: естественно ведёт, направляет и служит высшей опорой.`;
+  else head='Прямого оракульного родства (аналог, антипод, проводник, скрытая сила) между вашими кинами нет — связь складывается из стихий и тонов ниже. Это самый частый, «рабочий» случай: вы не зеркала и не вызов, а просто два разных кина рядом.';
+  out+=`<p>${head}</p>`;
+
+  out+='<h3>Стихии и темп</h3>';
+  const colTxt=[
+    `Одна стихия — <b>${dirA.col.toLowerCase()}</b> (${dirA.name.toLowerCase()}): вы смотрите в мир похоже, сильный базовый резонанс. Оборотная сторона — оба в одной слепой зоне (${dirA.risk}).`,
+    `Ваши цвета — <b>аналоги</b> (${dirA.col.toLowerCase()} и ${dirB.col.toLowerCase()}): родственные стихии, вы поддерживаете и дополняете друг друга почти без борьбы.`,
+    `Ваши цвета — <b>антиподы</b> (${dirA.col.toLowerCase()} и ${dirB.col.toLowerCase()}): притяжение противоположностей — много энергии и взаимного дополнения, но языки разные, их приходится переводить.`,
+    `Ваши цвета — <b>скрытая пара</b> (${dirA.col.toLowerCase()} и ${dirB.col.toLowerCase()}): неочевидное притяжение, которое раскрывается не сразу, а на глубине.`
+  ][x];
+  out+=`<p>${colTxt}`;
+  if(A.idx===B.idx && A.kin!==B.kin) out+=` Более того, у вас <b>одна печать</b> — ${N[A.idx].k}: одна природа в разных тонах.`;
+  out+='</p>';
+  if(A.tone===B.tone) out+=`<p>Тоны совпадают — оба на <b>${A.tone} (${NUM[A.tone][0]})</b>, общий темп: ${tempo(A.tone)}. Подстраивать ритм друг под друга не нужно.</p>`;
+  else{const close=tclass(A.tone)===tclass(B.tone);
+    out+=`<p>Тоны <b>${A.tone}</b> и <b>${B.tone}</b>: ${close?'оба в близком темпе ('+tempo(A.tone)+') — расхождения мелкие':'темп разный ('+tempo(A.tone)+' против '+tempo(B.tone)+') — одному нужно больше движения, другому больше покоя; согласуйте сознательно'}.</p>`;}
+  if(A.lordIdx===B.lordIdx) out+=`<p>Вы — в <b>одной волне</b> (1 ${N[A.lordIdx].k}, тема ${KW[A.lordIdx]}): общий 13-дневный сюжет, родная для обоих задача.</p>`;
+  else if(castleOf(A.kin)===castleOf(B.kin)) out+=`<p>Вы — в <b>одном замке</b>: ${castleOf(A.kin).court.toLowerCase()}. Один 52-дневный «сезон» 260-дневного пути на двоих.</p>`;
+
+  out+='<h3>Что каждый приносит</h3>';
+  out+=`<div class="two"><div class="col-a"><p class="nm">${esc(nameA)}</p><p>${cap(GIVES[A.idx])}.</p></div><div class="col-b"><p class="nm">${esc(nameB)}</p><p>${cap(GIVES[B.idx])}.</p></div></div>`;
+  out+='<h3>Чего каждому нужно от другого</h3>';
+  out+=`<div class="two"><div class="col-a"><p class="nm">${esc(nameA)}</p><p>Ищет ${NEEDS[A.idx]}.</p></div><div class="col-b"><p class="nm">${esc(nameB)}</p><p>Ищет ${NEEDS[B.idx]}.</p></div></div>`;
+  out+='<h3>Зоны трения</h3>';
+  out+=`<p>Теневая сторона каждого: <b>${esc(nameA)}</b> ${RSHADOW[A.idx]}; <b>${esc(nameB)}</b> ${RSHADOW[B.idx]}.</p>`;
+  let ex=[];
+  if(A.tone>=11&&B.tone>=11) ex.push('Оба на высоких, «разрешающих» тонах — между вами легко вспыхивает; нужна пауза, чтобы остыть.');
+  if(A.tone<=3&&B.tone<=3) ex.push('Оба на ранних, неспешных тонах — паре может не хватать спонтанности; динамику вносите осознанно.');
+  if(ex.length) out+=`<p>${ex.join(' ')}</p>`;
+
+  out+='<h3>Вместе</h3>';
+  out+=`<p class="close">Сложите вклад одного с нуждой другого: где дар одного встречает потребность второго — там опора; где сходятся две тени — там работа. ${A.kin===B.kin?'Вы — одно зеркало: сила в полном понимании, задача — не утонуть в общих тенях.':(x===0?'Родственные стихии дают тепло узнавания.':x===2?'Контраст стихий даёт ток — берегите его от короткого замыкания.':'')}</p>`;
+  return out;
+}
+function runPair(){
+  const va=document.getElementById('da').value, vb=document.getElementById('db').value;
+  const result=document.getElementById('result2'), note=document.getElementById('note2');
+  if(!va||!vb){result.innerHTML='<div class="reading"><div class="empty">Укажи обе даты рождения и нажми «Сравнить».</div></div>';
+    result.classList.add('show');note.hidden=true;return;}
+  const [ya,ma,daa]=va.split('-').map(Number),[yb,mb,dbb]=vb.split('-').map(Number);
+  const A=compute(ya,ma,daa),B=compute(yb,mb,dbb);
+  const nameA=document.getElementById('na').value.trim()||`${A.tone} ${N[A.idx].k}`;
+  const nameB=document.getElementById('nb').value.trim()||`${B.tone} ${N[B.idx].k}`;
+  document.documentElement.style.setProperty('--a',DIR[A.idx%4].accent);
+  document.documentElement.style.setProperty('--b',DIR[B.idx%4].accent);
+  result.innerHTML=`<div class="cards">${personCard(A,nameA)}${personCard(B,nameB)}</div><div class="reading">${buildReading(A,B,nameA,nameB)}</div>`;
+  note.hidden=false;
+  note.innerHTML='<b>Как это читать.</b> Связь строится по раскладу Dreamspell: сперва — есть ли между кинами прямое родство (аналог, антипод, проводник, скрытая сила), затем — как складываются ваши стихии-цвета и тоны, общие волна и замок. Это оптика для разговора, а не вердикт о живых отношениях, которых калькулятор знать не может: совпало — повод узнать себя, не совпало — повод уточнить, как у вас на самом деле. Не предсказание.';
+  let q='pa='+va+'&pb='+vb;
+  const rawA=document.getElementById('na').value.trim(), rawB=document.getElementById('nb').value.trim();
+  if(rawA) q+='&pna='+encodeURIComponent(rawA);
+  if(rawB) q+='&pnb='+encodeURIComponent(rawB);
+  addShare(result.querySelector('.reading'), q);
+  addImgBtn(result.querySelector('.reading'), ()=>pairCardSVG(A,B,nameA,nameB), 'dreamspell-pair.png');
+  result.classList.remove('show');void result.offsetWidth;result.classList.add('show');
+}
+
+/* ── you & the day (permanent nature × transient day) ── */
+const tempoWord=t=>t<=4?'мягкой, заземляющей':t<=9?'ровной, рабочей':'высокой, напряжённой';
+const dayTempoWord=t=>t<=4?'мягком, заземляющем':t<=9?'срединном, рабочем':'высоком, напряжённом';
+const wavePhase=p=>p<=4?'начало волны — замысел и разгон':p<=9?'середина волны — работа и равновесие':'вершина волны — проявление, пик и спад к завершению';
+function waveStrip(D){
+  let cells='';
+  for(let pos=1;pos<=13;pos++){
+    const idx=mod(D.lordIdx+pos-1,20), here=pos===D.tone, dcol=DIR[idx%4];
+    cells+=`<div class="wcell${here?' here':''}" style="--wc:${dcol.accent}"><span class="wpos">${pos}</span><span class="wnaw">${N[idx].k}</span></div>`;
+  }
+  return `<h3>Волна целиком · wavespell 1 ${N[D.lordIdx].k}</h3>`+
+    `<p class="wave-intro">Эту волну ведёт её первый день — <b>1 ${N[D.lordIdx].k}</b> (${N[D.lordIdx].y}), и все 13 дней звучат на его фоне. Общая тема периода — <b>${KW[D.lordIdx]}</b>, и волна в целом благоприятна для дел такого рода: ${lc(DESC[D.lordIdx].dfor)} Энергия идёт от зачина в 1-й день к вершине на 13-й.</p>`+
+    `<p class="wave-intro">Этот день — <b>${D.tone}-й из 13</b>: ${wavePhase(D.tone)}.</p>`+
+    `<div class="wave-strip">${cells}</div>`;
+}
+function buildDayRead(B,D,yb){
+  const bdir=DIR[B.idx%4], ddir=DIR[D.idx%4], bn=N[B.idx], dn=N[D.idx], dc=DESC[D.idx], bc=DESC[B.idx];
+  const bd=B.idx%4, dd=D.idx%4;
+  let out='';
+  out+='<h3>Твоя природа · постоянное</h3>';
+  out+=`<p>Ты — <b>${B.tone} ${bn.k}</b>: ${bc.char} Это не меняется день ото дня — твой склад и призвание (${KW[B.idx]}).</p>`;
+  out+='<h3>Тон дня · преходящее</h3>';
+  out+=`<p>Этот день — <b>${D.tone} ${dn.k}</b>, тема ${KW[D.idx]}, на ${dayTempoWord(D.tone)} тоне. Это погода дня: завтра тон будет иным, а твоя суть та же. А весь этот год идёт под печатью года <b>${yb.tone} ${N[yb.idx].k}</b> — самый медленный фон, тема ${KW[yb.idx]}, над днём и волной.</p>`;
+  out+='<h3>Как одно ложится на другое</h3>';
+  let res;
+  if(bd===dd) res=`Сегодняшний день обращён в ту же сторону, что и ты (${bdir.name.toLowerCase()}): он тебе созвучен, ты в своей стихии — твои сильные стороны сегодня особенно в ходу, легче делать то, что и так твоё.`;
+  else if((bd+2)%4===dd) res=`День обращён в противоположную тебе сторону (${ddir.name.toLowerCase()} против твоего ${bdir.name.toLowerCase()}): он тянет туда, где ты обычно не живёшь. Это и встряска, и возможность — день просит непривычного, отсюда и рост, и трение, если упираться.`;
+  else res=`День стоит к тебе боком (${ddir.name.toLowerCase()} к твоему ${bdir.name.toLowerCase()}): не созвучие и не спор, скорее дополнение — он подсвечивает в тебе другую грань.`;
+  let num;
+  if(B.tone===D.tone) num=`И число сегодня одно с твоим (${B.tone}) — день идёт ровно в твоём темпе, всё ляжет особенно складно.`;
+  else if(D.tone>=10) num=`Число дня высокое (${D.tone}) — он подталкивает к проявлению и переменам по-крупному; тебе, с твоей ${tempoWord(B.tone)} природой, стоит взять его энергию, но не дать ему себя загнать.`;
+  else if(D.tone<=4) num=`Число дня мягкое (${D.tone}) — он не торопит; хорошее время для неспешного и основательного, для начала вполголоса.`;
+  else num=`Число дня срединное (${D.tone}) — ровная рабочая энергия без крайностей.`;
+  out+=`<p>${res} ${num}</p>`;
+  out+='<h3>Сегодня</h3>';
+  out+=`<p class="close">Ко двору: ${lc(dc.dfor)} Лучше переждать: ${lc(dc.dnot)} Наложи это на свою природу (${KW[B.idx]}) — и читай не как предсказание событий, а как подсказку: куда сегодня стоит направить себя, а где сбавить.</p>`;
+  out+=waveStrip(D);
+  return out;
+}
+function buildDayOnly(D,yb){
+  const dir=DIR[D.idx%4], dn=N[D.idx], dc=DESC[D.idx], lord=N[D.lordIdx];
+  let out='';
+  out+='<h3>Характер дня</h3>';
+  out+=`<p class="image-line">${dc.img}</p>`;
+  out+=`<p>День под знаком <b>${D.tone} ${dn.k}</b> (${dn.y}), тема ${KW[D.idx]}, на ${dayTempoWord(D.tone)} числе ${D.tone} (${NUM[D.tone][0]}): ${lc(NUM[D.tone][1])} Сторона — ${dir.name.toLowerCase()}, ${dir.col.toLowerCase()}; волна 1 ${lord.k}.</p>`;
+  out+='<h3>День для дел</h3>';
+  out+=`<div class="two"><div><p class="nm" style="color:var(--b)">Благоприятно</p><p>${dc.dfor}</p></div><div><p class="nm" style="color:var(--b)">Лучше отложить</p><p>${dc.dnot}</p></div></div>`;
+  out+=`<p class="close">Над днём — печать года <b>${yb.tone} ${N[yb.idx].k}</b>, тема ${KW[yb.idx]}: самый медленный фон периода.</p>`;
+  out+=waveStrip(D);
+  return out;
+}
+function runDay(){
+  const vd=document.getElementById('dyd').value, vb=document.getElementById('dyb').value;
+  const result=document.getElementById('result3'), note=document.getElementById('note3');
+  if(!vd){result.innerHTML='<div class="reading"><div class="empty">Введи дату дня (по умолчанию — сегодня), чтобы увидеть характер дня. Дату рождения можно добавить по желанию.</div></div>';result.classList.add('show');note.hidden=true;return;}
+  const [yd,md,dd]=vd.split('-').map(Number);
+  const D=compute(yd,md,dd), yb=yearBearer(yd,md,dd), dAcc=DIR[D.idx%4].accent;
+  const dLabel='День — '+String(dd).padStart(2,'0')+'.'+String(md).padStart(2,'0')+'.'+yd;
+  if(vb){
+    const [yy,mm2,dd2]=vb.split('-').map(Number), B=compute(yy,mm2,dd2);
+    document.documentElement.style.setProperty('--a',DIR[B.idx%4].accent);
+    document.documentElement.style.setProperty('--b',dAcc);
+    result.innerHTML=`<div class="cards">${personCard(B,'Ты')}${personCard(D,dLabel)}</div><div class="reading">${dayQuoteCard(D,dd,md,yd)}${buildDayRead(B,D,yb)}</div>`;
+    note.innerHTML='<b>Как это читать.</b> Слева — твоя постоянная природа (печать рождения), справа — преходящий тон дня; ниже — как одно ложится на другое. Это совет об уместности, а не предсказание событий. Завтра тон дня другой — твоя суть та же.';
+    addShare(result.querySelector('.reading'), 'day='+vd+'&born='+vb);
+    addImgBtn(result.querySelector('.reading'), ()=>pairCardSVG(B,D,'Ты','День '+String(dd).padStart(2,'0')+'.'+String(md).padStart(2,'0')), 'dreamspell-day-'+vd+'.png');
+  } else {
+    document.documentElement.style.setProperty('--a',dAcc);
+    document.documentElement.style.setProperty('--b',dAcc);
+    result.innerHTML=`<div class="cards" style="grid-template-columns:1fr">${personCard(D,dLabel)}</div><div class="reading">${dayQuoteCard(D,dd,md,yd)}${buildDayOnly(D,yb)}</div>`;
+    note.innerHTML='<b>Как это читать.</b> Это характер самого дня и его подсказка — к чему он располагает и что просит придержать, безотносительно к конкретному человеку. Добавь дату рождения выше — и я покажу, как этот день ложится именно на твою природу. Совет об уместности, не предсказание.';
+    addShare(result.querySelector('.reading'), 'day='+vd);
+    addImgBtn(result.querySelector('.reading'), ()=>composeCard({eyebrow:'DREAMSPELL · КИН ДНЯ '+String(dd).padStart(2,'0')+'.'+String(md).padStart(2,'0')+'.'+yd, tone:D.tone, title:N[D.idx].k,
+      sub:`${D.tone} ${N[D.idx].y} · ${DIR[D.idx%4].name.toLowerCase()}, ${DIR[D.idx%4].col.toLowerCase()}`,
+      metas:[`волна 1 ${N[D.lordIdx].k} · печать года ${yb.tone} ${N[yb.idx].k}`],
+      essence:'Благоприятно: '+lc(DESC[D.idx].dfor), footer:'День '+String(dd).padStart(2,'0')+'.'+String(md).padStart(2,'0')+'.'+yd, accent:dAcc}), 'dreamspell-day-'+vd+'.png');
+  }
+  note.hidden=false;
+  result.classList.remove('show');void result.offsetWidth;result.classList.add('show');
+}
+
+/* ── chat assistant (rule-based, offline) ── */
+const cnorm=s=>s.toLowerCase().replace(/[ʼʻ'’`]/g,'').replace(/ё/g,'е');
+const ALIASES=[
+ ['дракон',0],['драк',0],['dragon',0],['имиш',0],['имош',0],
+ ['ветер',1],['ветр',1],['wind',1],['ик',1],
+ ['ночь',2],['ноч',2],['night',2],['акбаль',2],['акаб',2],
+ ['семя',3],['семен',3],['seed',3],['кан',3],
+ ['змей',4],['змея',4],['serpent',4],['snake',4],['чикчан',4],
+ ['мост',5],['соединит',5],['worldbridger',5],['bridge',5],['смерть',5],['кими',5],
+ ['рука',6],['руки',6],['hand',6],['маник',6],
+ ['звезда',7],['звезд',7],['star',7],['ламат',7],
+ ['луна',8],['лун',8],['moon',8],['мулук',8],
+ ['собак',9],['пес',9],['пёс',9],['dog',9],
+ ['обезьян',10],['monkey',10],['чуэн',10],
+ ['человек',11],['человеч',11],['human',11],['эб',11],
+ ['странник',12],['небесн',12],['небоход',12],['skywalker',12],['walker',12],
+ ['маг',13],['волшебник',13],['wizard',13],
+ ['орел',14],['орёл',14],['eagle',14],
+ ['воин',15],['warrior',15],['киб',15],['сиб',15],
+ ['земля',16],['земл',16],['earth',16],['кабан',16],
+ ['зеркал',17],['mirror',17],['эцнаб',17],
+ ['буря',18],['гроза',18],['storm',18],['кавак',18],
+ ['солнце',19],['солнц',19],['sun',19],['ахау',19],['ахпу',19]];
+N.forEach((o,i)=>{ALIASES.push([cnorm(o.k),i]);ALIASES.push([cnorm(o.y),i]);});
+ALIASES.sort((a,b)=>b[0].length-a[0].length);
+function findNawal(s){const t=cnorm(s);for(const [a,i] of ALIASES){if(a.length>=3&&t.includes(a))return i;}return -1;}
+
+const MONTHS=[['янва',1],['февр',2],['март',3],['апре',4],['мая',5],['май',5],['июн',6],['июл',7],['авгу',8],['сент',9],['октя',10],['нояб',11],['дека',12]];
+function realDate(y,m,d){const dt=new Date(Date.UTC(y,m-1,d));return dt.getUTCFullYear()===y&&dt.getUTCMonth()===m-1&&dt.getUTCDate()===d;}
+function parseDate(s){let m;
+  if(m=s.match(/(\d{4})-(\d{1,2})-(\d{1,2})/)){const r=[+m[1],+m[2],+m[3]];return realDate(...r)?r:null;}
+  if(m=s.match(/(\d{1,2})[.\/](\d{1,2})[.\/](\d{4})/)){const r=[+m[3],+m[2],+m[1]];return realDate(...r)?r:null;}
+  if(m=s.match(/(\d{1,2})\s+([а-я]+)\s+(\d{4})/i)){const day=+m[1],yr=+m[3],mw=m[2].toLowerCase();
+    for(const [k,n] of MONTHS){if(mw.startsWith(k)){return realDate(yr,n,day)?[yr,n,day]:null;}}}
+  return null;}
+function parseNum(s){const m=s.match(/(?:числ\w*|тон\w*)\D{0,5}(\d{1,2})/i);if(m){const n=+m[1];if(n>=1&&n<=13)return n;}return null;}
+
+function dayLine(y,m,d,prefix){
+  const r=compute(y,m,d),naw=N[r.idx],dir=DIR[r.idx%4],lord=N[r.lordIdx];
+  const dd=String(d).padStart(2,'0'),mm=String(m).padStart(2,'0');
+  return `${prefix} по Dreamspell — это кин <b>${r.tone} ${naw.k}</b> (${r.tone} ${naw.y}). Цвет-сторона: ${dir.name.toLowerCase()}, ${dir.col.toLowerCase()}; волна: 1 ${lord.k}. Коротко: ${DESC[r.idx].char} Полный портрет — во вкладке «Сигнатура» по дате ${dd}.${mm}.${y} (там оракул и подробный разбор).`;
+}
+const FAQ=[
+ [/жрец|цолькин|чольк|непрерывн|gmt|корреляц|чем\s+отлич|разниц|настоящ\w*\s+майя|древн/, 'Dreamspell — авторская система Хосе Аргуэльеса (конец 1980-х), вдохновлённая майя, но не их древний счёт. Живые календаристы-ajqʼij в Гватемале ведут <b>непрерывный</b> цолькин по корреляции GMT; Dreamspell же привязан к григорианскому году и «замораживает» 29 февраля, поэтому для одной даты два счёта дают, как правило, <b>разные</b> кины. Здесь считается именно Dreamspell. Многие майя критикуют его как культурное присвоение — это стоит держать в уме.'],
+ [/29\s?фев|високос|заморозк|hunab|0\.0|вне\s+времени|пуст\w*\s+день/, '29 февраля в Dreamspell — «день вне времени» (0.0 Hunab Ku): счёт в этот день не двигается, у даты нет своей сигнатуры. Так Dreamspell добивается, чтобы цикл ровно повторялся каждые 52 года. По принятому правилу рождённым 29 февраля присваивают кин 28 февраля.'],
+ [/опор\w*\s*точк|якор|26\s?июл|синхрониз|кин\s*164|откуда\s+счет|откуда\s+счёт/, 'Опорная точка Dreamspell — 26 июля 2013 = Кин 164 (Жёлтое Галактическое Семя), день «галактической синхронизации». От него отсчитан весь счёт здесь. Год в Dreamspell тоже начинается 26 июля.'],
+ [/\b52\b|круг|повтор/, '52 года (52×365 дней) = 73 оборота 260-дневного счёта — всё возвращается в ту же точку. Ради этого ровного повтора Dreamspell и делает 29 февраля «пустым днём».'],
+ [/волн|wavespell|тринадцатидневн/, 'Волна (wavespell) — это 13-дневный цикл, которым правит его первый день (тон 1 такой-то печати). Каждый кин внутри волны звучит на фоне её темы. В определителе волна показана для каждой даты.'],
+ [/носител|глиф\s+год|год.{0,3}носител|какой\s+год/, 'Год в Dreamspell начинается 26 июля, и его «глиф» — кин этого дня. Печать года всегда одна из четырёх: Семя → Луна → Маг → Буря, они сменяются по кругу, а тон растёт на 1 каждый год. Это медленный фон над кином и волной.'],
+ [/сторон|четыре\s+цвет|цвет\w*\s+печат|направлени|красн.{0,4}бел.{0,4}син/, 'Каждая печать привязана к цвету и стороне, и они идут по кругу: Красный — восток (начало, запуск), Белый — север (очищение, утончение), Синий — запад (превращение, глубина), Жёлтый — юг (созревание, плод). 1-я печать красная, 2-я белая, 3-я синяя, 4-я жёлтая, 5-я снова красная — и так далее.'],
+ [/печат|двадцат|\b20\b\s*печат|солнечн\w*\s+печат|солнечн\w*\s+знак/, 'Солнечных печатей двадцать — это «кто» дня и человека: Дракон, Ветер, Ночь, Семя, Змей, Соединитель миров, Рука, Звезда, Луна, Собака, Обезьяна, Человек, Небесный Странник, Маг, Орёл, Воин, Земля, Зеркало, Буря, Солнце. Назови любую — расскажу подробнее.'],
+ [/тон|галактическ\w*\s+тон|тринадцат\w*\s+тон/, 'Галактических тонов тринадцать (1–13), у каждого своё имя — Магнитный, Лунный, Электрический, Самосущный, Обертонный, Ритмический, Резонансный, Галактический, Солнечный, Планетарный, Спектральный, Кристаллический, Космический. Тон — это «как»: окраска и сила печати. Назови число от 1 до 13 — расскажу.']
+];
+function replyTo(text){
+  const s=text.trim(), low=cnorm(s);
+  const dt=parseDate(s);
+  if(dt) return dayLine(dt[0],dt[1],dt[2], `<b>${String(dt[2]).padStart(2,'0')}.${String(dt[1]).padStart(2,'0')}.${dt[0]}</b>`);
+  if(/сегодня|какой\s+(сейчас\s+)?день|день\s+сегодня|нынешн/.test(low)){const t=new Date();return dayLine(t.getFullYear(),t.getMonth()+1,t.getDate(),'Сегодня');}
+  for(const [rx,ans] of FAQ){if(rx.test(low))return ans;}
+  const ni=findNawal(s);
+  if(/печат|знак/.test(low) && /(каки|сколько|перечисл|список|\bвсе\b|быва|двадцат|\b20\b)/.test(low) && ni<0)
+    return 'Солнечных печатей двадцать, и они идут по кругу: '+N.map(o=>o.k).join(', ')+'. Каждая привязана к цвету-стороне, галактическому тону и волне (в скобках майяские корни: '+N.slice(0,4).map(o=>o.k+'='+o.y).join(', ')+'… и так далее). Назови любую печать — расскажу о ней; или дай дату — посчитаю кин.';
+  if(ni>=0)return `<b>${N[ni].k} (${N[ni].y})</b>${LONG[ni].slice((N[ni].k+' ('+N[ni].y+')').length)} Цвет-сторона — ${DIR[ni%4].name.toLowerCase()}, ${DIR[ni%4].col.toLowerCase()}. Назови дату — посчитаю, у кого эта печать.`;
+  const nn=parseNum(s);
+  if(nn)return `<b>Тон ${nn} (${NUM[nn][0]})</b> — ${NUMLONG[nn-1]}`;
+  if(/тон|числ/.test(low))
+    return 'Галактических тонов тринадцать (1–13), и они идут вместе с печатями. Младшие (1–4) — мягкие, заземляющие; серединные (5–9) — уравновешивающие, рабочие; старшие (10–13) — напряжённые, проявляющие и расшатывающие. Каждый кин — это тон и печать (например, 4 Маг). Назови тон от 1 до 13 — расскажу подробнее.';
+  if(/привет|здравств|добр\w*\s+(день|утр|вечер|ночи)|здаров|hello|^hi\b/.test(low))
+    return 'Здравствуй! Спроси меня про дату рождения, про солнечную печать (Маг, Орёл, Собака, Дракон…), про галактический тон, цвета-стороны или волны — или чем Dreamspell отличается от жреческого счёта майя.';
+  if(/помощ|что\s+ты\s+(умеешь|можешь|знаешь)|как\s+пользоват|команд|зачем\s+ты/.test(low))
+    return 'Я считаю кин по любой дате (напиши «30 мая 1989» или «07.10.1952»), объясняю каждую из 20 солнечных печатей и 13 галактических тонов, цвета-стороны и волны, год-носитель, чем Dreamspell отличается от жреческого счёта и зачем «заморожено» 29 февраля. Попробуй: «расскажи про Мага», «что значит тон 4», «какой сегодня кин».';
+  return 'Я беседую только про <b>календарь Dreamspell</b>. Спроси про дату рождения, про солнечную печать, галактический тон, цвета-стороны или волны — либо чем Dreamspell отличается от жреческого счёта майя. На остальное, увы, не отвечаю.';
+}
+// ── Чтобы беседа стала живым ИИ, вставь сюда адрес своего Cloudflare Worker
+// (вида https://имя.логин.workers.dev). Пока строка пустая — помощник работает
+// офлайн по правилам, как сейчас. При сбое Worker тоже срабатывает офлайн-ответ.
+const WORKER_URL = "";
+let chatHistory = [];
+function chatAdd(role,html){const log=document.getElementById('chat-log');const d=document.createElement('div');d.className='msg '+role;d.innerHTML=html;log.appendChild(d);log.scrollTop=log.scrollHeight;return d;}
+function chatTyping(){const log=document.getElementById('chat-log');const d=document.createElement('div');d.className='msg bot typing';d.textContent='…';log.appendChild(d);log.scrollTop=log.scrollHeight;return d;}
+function mdToHtml(src){
+  let s=esc(src);
+  s=s.replace(/`([^`]+)`/g,'<code>$1</code>');
+  s=s.replace(/\*\*([^*\n]+)\*\*/g,'<b>$1</b>');
+  s=s.replace(/__([^_\n]+)__/g,'<b>$1</b>');
+  s=s.replace(/(^|[^*\w])\*([^*\n]+)\*(?!\*)/g,'$1<i>$2</i>');
+  const lines=s.split('\n');
+  let html='',inUl=false,inOl=false,prevInline=false;
+  const closeLists=()=>{if(inUl){html+='</ul>';inUl=false;}if(inOl){html+='</ol>';inOl=false;}};
+  for(const line of lines){
+    let m;
+    if(m=line.match(/^\s*#{1,6}\s+(.*)$/)){closeLists();html+='<div class="mdh">'+m[1]+'</div>';prevInline=false;continue;}
+    if(m=line.match(/^\s*[-*•]\s+(.*)$/)){if(inOl){html+='</ol>';inOl=false;}if(!inUl){html+='<ul>';inUl=true;}html+='<li>'+m[1]+'</li>';prevInline=false;continue;}
+    if(m=line.match(/^\s*\d+[.)]\s+(.*)$/)){if(inUl){html+='</ul>';inUl=false;}if(!inOl){html+='<ol>';inOl=true;}html+='<li>'+m[1]+'</li>';prevInline=false;continue;}
+    closeLists();
+    if(line.trim()===''){if(prevInline)html+='<br>';prevInline=false;continue;}
+    html+=(prevInline?'<br>':'')+line;prevInline=true;
+  }
+  closeLists();
+  return html;
+}
+const fmt=mdToHtml;
+function allDates(text){
+  const out=[],seen=new Set();
+  const push=(y,m,d)=>{if(realDate(y,m,d)){const k=y+'-'+m+'-'+d;if(!seen.has(k)){seen.add(k);out.push([y,m,d]);}}};
+  let m;
+  const r1=/(\d{4})-(\d{1,2})-(\d{1,2})/g; while(m=r1.exec(text))push(+m[1],+m[2],+m[3]);
+  const r2=/(\d{1,2})[.\/](\d{1,2})[.\/](\d{4})/g; while(m=r2.exec(text))push(+m[3],+m[2],+m[1]);
+  const r3=/(\d{1,2})\s+([а-яё]+)\s+(\d{4})/gi; while(m=r3.exec(text)){const dy=+m[1],yr=+m[3],mw=m[2].toLowerCase();for(const [k,n] of MONTHS){if(mw.startsWith(k)){push(yr,n,dy);break;}}}
+  return out;
+}
+function factsFor(y,m,d){
+  const r=compute(y,m,d),naw=N[r.idx],dir=DIR[r.idx%4],lord=N[r.lordIdx],c=DESC[r.idx];
+  const dd=String(d).padStart(2,'0'),mm=String(m).padStart(2,'0');
+  return `${dd}.${mm}.${y} = ${r.tone} ${naw.k} (${r.tone} ${naw.y}); сторона ${dir.name.toLowerCase()}, ${dir.col.toLowerCase()}; волна 1 ${lord.k}; число ${r.tone} (${NUM[r.tone][0]}). Суть знака: ${c.char} Дар: ${c.gift} Тень: ${c.shadow}`;
+}
+function groundDates(t){
+  const ds=allDates(t); if(!ds.length)return t;
+  const facts=ds.map(d=>'• '+factsFor(d[0],d[1],d[2])).join('\n');
+  return 'ТОЧНЫЙ РАСЧЁТ СТРАНИЦЫ (истинные данные, НЕ пересчитывай даты сам, опирайся только на них):\n'+facts+'\n\nСообщение пользователя: '+t;
+}
+function chatSend(t){
+  const inp=document.getElementById('chat-input');
+  t=(t!=null?t:inp.value).trim(); if(!t)return;
+  chatAdd('user',esc(t)); inp.value='';
+  if(!WORKER_URL){ setTimeout(()=>chatAdd('bot',replyTo(t)),130); return; }
+  chatHistory.push({role:'user',content:groundDates(t)});
+  const typing=chatTyping();
+  fetch(WORKER_URL,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({messages:chatHistory.slice(-12)})})
+    .then(r=>r.json())
+    .then(d=>{ typing.remove();
+      const text=d&&typeof d.text==='string'?d.text.trim():'';
+      if(text){ chatHistory.push({role:'assistant',content:text}); chatAdd('bot',fmt(text)); }
+      else { chatAdd('bot',replyTo(t)); }
+    })
+    .catch(()=>{ typing.remove(); chatAdd('bot',replyTo(t)); });
+}
+function chatWelcome(){
+  chatAdd('bot','Привет! Я отвечаю только про <b>календарь Dreamspell</b>. Назови дату рождения, спроси про солнечную печать (Маг, Орёл, Собака…), про галактический тон, цвета-стороны и волны — или чем Dreamspell отличается от жреческого счёта майя.');
+}
+function chatClear(){ chatHistory=[]; document.getElementById('chat-log').innerHTML=''; chatWelcome(); }
+(function(){
+  chatWelcome();
+  const chips=["Что такое Dreamspell?","Чем отличается от счёта жрецов?","Какой сегодня кин?"];
+  const box=document.getElementById('chat-chips');
+  chips.forEach(c=>{const b=document.createElement('button');b.className='chip';b.textContent=c;b.onclick=()=>chatSend(c);box.appendChild(b);});
+  document.getElementById('chat-send').addEventListener('click',()=>chatSend());
+  document.getElementById('chat-input').addEventListener('keydown',e=>{if(e.key==='Enter')chatSend();});
+  document.getElementById('chat-clear').addEventListener('click',chatClear);
+})();
+
+/* ── reference (20 signs + 13 tones) ── */
+const toneShort=t=>t<=4?'младшее · мягкое, заземляющее':t<=9?'срединное · рабочее, уравновешенное':'старшее · напряжённое, проявляющее';
+function buildReference(){
+  const signs=N.map((o,i)=>{
+    const dir=DIR[i%4], c=DESC[i];
+    return `<details class="ref-item" id="sign-${i}">
+      <summary><span class="ref-sw" style="background:${dir.ink}"></span><span class="ref-no">№${i+1}</span><span class="ref-name">${o.k}</span><span class="ref-theme">${o.y} · ${KW[i]}</span></summary>
+      <div class="ref-body"><p>${LONG[i]}</p><p><b>Дар:</b> ${lc(c.gift)} <b>· Тень:</b> ${lc(c.shadow)}</p><p class="ref-meta">Сторона: ${dir.name.toLowerCase()}, ${dir.col.toLowerCase()}</p></div>
+    </details>`;
+  }).join('');
+  let tones='';
+  for(let t=1;t<=13;t++){
+    tones+=`<details class="ref-item" id="tone-${t}">
+      <summary><span class="ref-no ref-tone-no">${t}</span><span class="ref-name">${NUM[t][0]}</span><span class="ref-theme">${toneShort(t)}</span></summary>
+      <div class="ref-body"><div class="ref-numeral" style="--dir:var(--jade-bright)">${numeral(t)}</div><p>${NUMLONG[t-1]}</p></div>
+    </details>`;
+  }
+  document.getElementById('ref-signs').innerHTML=signs;
+  document.getElementById('ref-tones').innerHTML=tones;
+}
+
+/* ── save reading as image (SVG card → PNG) ── */
+function numeralSVG(t,cx,top,u,color){
+  const bars=Math.floor(t/5),dots=t%5; let g='',y=top;
+  if(dots){const r=u*0.42,sp=u*1.6,x0=cx-((dots-1)*sp)/2;
+    for(let i=0;i<dots;i++) g+=`<circle cx="${x0+i*sp}" cy="${y+r}" r="${r}" fill="${color}"/>`;
+    y+=r*2+u*0.55;}
+  const bw=u*5,bh=u*0.85,bg=u*0.5;
+  for(let i=0;i<bars;i++){ g+=`<rect x="${cx-bw/2}" y="${y}" width="${bw}" height="${bh}" rx="${bh*0.35}" fill="${color}"/>`; y+=bh+bg; }
+  return {svg:g, bottom:y};
+}
+function svgWrap(text,max){const w=text.split(/\s+/),lines=[];let cur='';
+  for(const word of w){ if((cur+' '+word).trim().length>max){ if(cur)lines.push(cur); cur=word; } else cur=(cur+' '+word).trim(); }
+  if(cur)lines.push(cur); return lines;}
+const CARD_BG='#0d1311',CARD_JADE='#34a088',CARD_JADEB='#5fc2a8',CARD_BONE='#e8e2d2',CARD_DIM='#bcb4a4',CARD_SAGE='#7d8a82';
+function composeCard(o){
+  const W=800,H=800, acc=o.accent||CARD_JADEB;
+  let s=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" font-family="Georgia, 'Times New Roman', serif">`;
+  s+=`<rect width="${W}" height="${H}" fill="${CARD_BG}"/>`;
+  s+=`<rect x="18" y="18" width="${W-36}" height="${H-36}" rx="30" fill="none" stroke="${acc}" stroke-opacity="0.4" stroke-width="1.5"/>`;
+  s+=`<text x="${W/2}" y="92" text-anchor="middle" font-family="ui-monospace, monospace" font-size="19" letter-spacing="4" fill="${CARD_SAGE}">${esc(o.eyebrow||"DREAMSPELL · ГАЛАКТИЧЕСКАЯ СИГНАТУРА")}</text>`;
+  const nm=numeralSVG(o.tone, W/2, 150, 24, acc); s+=nm.svg;
+  let y=nm.bottom+72;
+  const _tl=(o.title||'').length, _tfs=Math.max(28,Math.min(60,Math.floor(680/Math.max(1,_tl*0.62))));
+  s+=`<text x="${W/2}" y="${y}" text-anchor="middle" font-size="${_tfs}" fill="${CARD_BONE}">${esc(o.title)}</text>`; y+=46;
+  s+=`<text x="${W/2}" y="${y}" text-anchor="middle" font-family="ui-monospace, monospace" font-size="21" letter-spacing="1" fill="${CARD_JADEB}">${esc(o.sub)}</text>`; y+=48;
+  (o.metas||[]).forEach(m=>{ s+=`<text x="${W/2}" y="${y}" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" fill="${CARD_DIM}">${esc(m)}</text>`; y+=34; });
+  y+=20;
+  svgWrap(o.essence||'',42).slice(0,4).forEach(line=>{ s+=`<text x="${W/2}" y="${y}" text-anchor="middle" font-family="system-ui, sans-serif" font-size="23" fill="${CARD_DIM}">${esc(line)}</text>`; y+=33; });
+  s+=`<text x="40" y="${H-40}" font-family="ui-monospace, monospace" font-size="18" fill="${CARD_SAGE}">${esc(o.footer||'')}</text>`;
+  s+=`<text x="${W-40}" y="${H-40}" text-anchor="end" font-family="ui-monospace, monospace" font-size="18" fill="${CARD_SAGE}">drche79.github.io/dreamspell</text>`;
+  return s+'</svg>';
+}
+function pairCardSVG(A,B,nameA,nameB){
+  const W=800,H=800, accA=DIR[A.idx%4].accent, accB=DIR[B.idx%4].accent;
+  let s=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" font-family="Georgia, 'Times New Roman', serif">`;
+  s+=`<rect width="${W}" height="${H}" fill="${CARD_BG}"/>`;
+  s+=`<rect x="18" y="18" width="${W-36}" height="${H-36}" rx="30" fill="none" stroke="${CARD_JADE}" stroke-opacity="0.4" stroke-width="1.5"/>`;
+  s+=`<text x="${W/2}" y="92" text-anchor="middle" font-family="ui-monospace, monospace" font-size="19" letter-spacing="4" fill="${CARD_SAGE}">DREAMSPELL · ВЗАИМОДЕЙСТВИЕ</text>`;
+  const n1=numeralSVG(A.tone, W*0.30, 158, 17, accA), n2=numeralSVG(B.tone, W*0.70, 158, 17, accB); s+=n1.svg+n2.svg;
+  let y=Math.max(n1.bottom,n2.bottom)+52;
+  s+=`<text x="${W/2}" y="${y-8}" text-anchor="middle" font-size="30" fill="${CARD_SAGE}">и</text>`;
+  const _fs=k=>Math.max(18,Math.min(36,Math.floor(300/Math.max(1,k.length*0.56))));
+  s+=`<text x="${W*0.30}" y="${y}" text-anchor="middle" font-size="${_fs(N[A.idx].k)}" fill="${CARD_BONE}">${esc(N[A.idx].k)}</text>`;
+  s+=`<text x="${W*0.70}" y="${y}" text-anchor="middle" font-size="${_fs(N[B.idx].k)}" fill="${CARD_BONE}">${esc(N[B.idx].k)}</text>`;
+  y+=34;
+  s+=`<text x="${W*0.30}" y="${y}" text-anchor="middle" font-family="ui-monospace, monospace" font-size="18" fill="${CARD_JADEB}">${esc(nameA)}</text>`;
+  s+=`<text x="${W*0.70}" y="${y}" text-anchor="middle" font-family="ui-monospace, monospace" font-size="18" fill="${CARD_JADEB}">${esc(nameB)}</text>`;
+  y+=58;
+  const common = A.idx%4===B.idx%4 ? 'один цвет-сторона — вы смотрите в мир похоже' : (A.tone===B.tone?'один галактический тон — общий темп и ритм':'разные цвета и тоны — вы дополняете друг друга');
+  svgWrap('Общая почва: '+common+'. Где дар одного встречает нужду другого — там опора; где сходятся тени — там работа.',46).slice(0,5).forEach(line=>{ s+=`<text x="${W/2}" y="${y}" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" fill="${CARD_DIM}">${esc(line)}</text>`; y+=32; });
+  s+=`<text x="40" y="${H-40}" font-family="ui-monospace, monospace" font-size="18" fill="${CARD_SAGE}">зеркало, не приговор</text>`;
+  s+=`<text x="${W-40}" y="${H-40}" text-anchor="end" font-family="ui-monospace, monospace" font-size="18" fill="${CARD_SAGE}">drche79.github.io/dreamspell</text>`;
+  return s+'</svg>';
+}
+function svgToPng(svg, filename, done){
+  try{
+    const blob=new Blob([svg],{type:'image/svg+xml;charset=utf-8'}), url=URL.createObjectURL(blob), img=new Image();
+    img.onload=()=>{ const sc=2,c=document.createElement('canvas'); c.width=800*sc; c.height=800*sc;
+      const ctx=c.getContext('2d'); ctx.scale(sc,sc); ctx.drawImage(img,0,0); URL.revokeObjectURL(url);
+      c.toBlob(bl=>{ const a=document.createElement('a'),u2=URL.createObjectURL(bl); a.href=u2; a.download=filename;
+        document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(u2),1500); if(done)done(true); },'image/png'); };
+    img.onerror=()=>{ URL.revokeObjectURL(url); if(done)done(false); };
+    img.src=url;
+  }catch(e){ if(done)done(false); }
+}
+function addImgBtn(container, getSVG, filename){
+  if(!container) return;
+  const old=container.querySelector('.imgbtn'); if(old) old.remove();
+  const b=document.createElement('button'); b.className='imgbtn'; b.type='button'; b.textContent='Сохранить картинкой';
+  b.addEventListener('click',()=>{ b.textContent='Готовлю…';
+    svgToPng(getSVG(), filename, ok=>{ b.textContent=ok?'Картинка сохранена ✓':'Не удалось'; setTimeout(()=>{b.textContent='Сохранить картинкой';},1800); }); });
+  container.appendChild(b);
+}
+
+/* ── quote of the day ── */
+const MOTTO=[
+"Питай начатое и доверься истоку — кин рождения, день Дракона.",
+"Говори ясно и одухотвори дело — день Ветра.",
+"Слушай сны и копи изобилие — день Ночи.",
+"Сей и наводи на цель — день Семени.",
+"Доверься телу, держи огонь в узде — день Змея.",
+"Отпусти отжившее и наведи мост — день Соединителя миров.",
+"Доводи до свершения, исцеляй делом — день Руки.",
+"Твори красоту и гармонию — день Звезды.",
+"Иди потоком и очистись — день Луны.",
+"Люби и будь верен — день Собаки.",
+"Играй и расколдуй иллюзию — день Обезьяны.",
+"Выбирай свободно, влияй мудростью — день Человека.",
+"Исследуй, соедини землю с небом — день Небесного Странника.",
+"Принимай и ворожи сердцем — день Мага.",
+"Смотри с высоты, твори умом — день Орла.",
+"Спрашивай, иди сквозь страх — день Воина.",
+"Лови знаки, выровняйся с землёй — день Земли.",
+"Отрази правду, наведи порядок — день Зеркала.",
+"Катализируй, обнови застой — день Бури.",
+"Свети, доводи до полноты — день Солнца."];
+function dayQuoteCard(D,dd,md,yd){
+  const dir=DIR[D.idx%4];
+  return `<div class="day-quote" style="--dq:${dir.accent}">`+
+    `<div class="dq-top"><span class="dq-label">Цитата дня</span><span class="dq-date">${String(dd).padStart(2,'0')}.${String(md).padStart(2,'0')}.${yd}</span></div>`+
+    `<div class="dq-motto">«${MOTTO[D.idx]}»</div>`+
+    `<div class="dq-sign"><b>${D.tone} ${N[D.idx].k}</b> · ${KW[D.idx]} · ${dir.name.toLowerCase()}, ${dir.col.toLowerCase()}</div>`+
+    `</div>`;
+}
+
+/* ── tabs ── */
+function switchTab(v){
+  document.querySelectorAll('.tab').forEach(x=>{const on=x.dataset.v===v;
+    x.classList.toggle('active',on); x.setAttribute('aria-selected',on?'true':'false');});
+  ['today','single','pair','matrix','chat','ref','about'].forEach(name=>{const el=document.getElementById('view-'+name); if(el) el.hidden = v!==name;});
+}
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>switchTab(t.dataset.v)));
+
+/* ── permalink / share ── */
+function addShare(container, query){
+  if(!container) return;
+  const old=container.querySelector('.sharebtn'); if(old) old.remove();
+  const url=location.origin+location.pathname+'?'+query;
+  const b=document.createElement('button');
+  b.className='sharebtn'; b.type='button'; b.textContent='Скопировать ссылку на это чтение';
+  b.addEventListener('click',()=>{
+    const done=()=>{b.textContent='Ссылка скопирована ✓'; setTimeout(()=>{b.textContent='Скопировать ссылку на это чтение';},1800);};
+    if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done).catch(()=>{b.textContent=url;});
+    else b.textContent=url;
+  });
+  container.appendChild(b);
+}
+
+document.getElementById('go').addEventListener('click',render);
+document.getElementById('d').addEventListener('keydown',e=>{if(e.key==='Enter')render();});
+document.getElementById('go2').addEventListener('click',runPair);
+document.getElementById('tb-go').addEventListener('click',renderToday);
+document.getElementById('tb').addEventListener('change',renderToday);
+document.getElementById('tb').addEventListener('keydown',e=>{if(e.key==='Enter')renderToday();});
+document.getElementById('mb-go').addEventListener('click',runMatrixFind);
+document.getElementById('mb').addEventListener('change',runMatrixFind);
+(function(){const t=new Date();const iso=`${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`;
+  document.getElementById('d').value=iso;})();
+renderToday();
+render();
+renderMatrix();
+buildReference();
+
+/* ── open from a shared link ── */
+(function applyURLParams(){
+  const p=new URLSearchParams(location.search);
+  const set=(id,v)=>{const e=document.getElementById(id); if(e&&v) e.value=v;};
+  const openRef=(id)=>{const e=document.getElementById(id); if(e){e.open=true; setTimeout(()=>e.scrollIntoView({behavior:'smooth',block:'center'}),60);}};
+  if(p.has('pa')||p.has('pb')){ set('da',p.get('pa')); set('db',p.get('pb')); set('na',p.get('pna')); set('nb',p.get('pnb')); switchTab('pair'); runPair(); }
+  else if(p.has('born')){ set('tb',p.get('born')); switchTab('today'); renderToday(); }
+  else if(p.has('d')){ set('d',p.get('d')); switchTab('single'); render(); }
+  else if(p.has('sign')){ switchTab('ref'); openRef('sign-'+(parseInt(p.get('sign'),10)-1)); }
+  else if(p.has('tone')){ switchTab('ref'); openRef('tone-'+parseInt(p.get('tone'),10)); }
+  else if(p.has('tab')){ switchTab(p.get('tab')); }
+})();
+</script>
+</body>
+</html>
