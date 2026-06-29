@@ -159,6 +159,12 @@
   .read .mam b{color:var(--bone);font-weight:500}
   .read .mam .mam-k{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.13em;
     text-transform:uppercase;color:var(--sage);display:block;margin-bottom:5px}
+  .wave-block{margin-top:18px;border-top:1px dashed var(--hair);padding-top:14px}
+  .wave-block .mam-k{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--sage);display:block;margin-bottom:4px}
+  .wave-spiral{display:block;width:100%;max-width:330px;height:auto;margin:6px auto 4px}
+  .wave-char{font-size:14px;color:var(--bone-dim);line-height:1.6;margin:8px 0 0}
+  .wave-char b{color:var(--bone);font-weight:600}
   .read .toggle-detail{background:transparent;border:1px solid var(--hair-strong);
     color:var(--jade-bright);font-family:"Space Mono",monospace;font-size:11px;
     letter-spacing:.12em;text-transform:uppercase;border-radius:9px;padding:10px 16px;
@@ -309,6 +315,90 @@
   .orc-name .seal-ic{margin-right:0}
   .ref-ic{display:inline-flex;align-items:center;justify-content:center;width:24px;flex:0 0 auto}
   .ref-ic .seal-ic{margin-right:0}
+  /* ── волновой модуль человека ── */
+  .ws-intro{font-size:14px;color:var(--bone-dim);margin:2px 0 12px;line-height:1.55}
+  .ws-intro b{color:var(--bone);font-weight:600}
+  .ws-track{display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    padding:2px 0 10px;margin-bottom:12px}
+  .ws-step{flex:0 0 auto;width:64px;display:flex;flex-direction:column;align-items:center;
+    gap:3px;padding:9px 4px 8px;border:1px solid var(--hair);border-radius:11px;background:#fff;
+    position:relative}
+  .ws-tone{font-family:"Space Mono",monospace;font-size:14px;font-weight:700;color:var(--oc)}
+  .ws-ic{line-height:0}
+  .ws-name{font-family:"Space Mono",monospace;font-size:9.5px;color:var(--bone-dim);
+    text-align:center;line-height:1.2;min-height:2.2em;display:flex;align-items:center}
+  .ws-kin{font-family:"Space Mono",monospace;font-size:9px;color:var(--sage)}
+  .ws-step.me{border-color:var(--oc);border-width:2px;background:rgba(82,71,201,.05);
+    box-shadow:0 4px 14px rgba(32,36,46,.10)}
+  .ws-step.gap::after{content:"";position:absolute;top:6px;right:6px;width:6px;height:6px;
+    border-radius:50%;background:#74c39b}
+  .ws-save{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.04em;
+    color:var(--jade);background:none;border:1px solid var(--hair-strong);border-radius:9px;
+    padding:8px 14px;cursor:pointer;transition:background .15s,border-color .15s;margin-bottom:6px}
+  .ws-save:hover{background:rgba(82,71,201,.06);border-color:var(--jade)}
+  .ws-save:disabled{opacity:.6;cursor:default}
+  /* ── годы жизни ── */
+  .life-years{margin:16px 0 4px;border:1px solid var(--hair);border-radius:12px;
+    background:var(--panel-2);overflow:hidden}
+  .life-years summary{cursor:pointer;padding:13px 16px;font-family:"Space Grotesk",system-ui,sans-serif;
+    font-weight:600;font-size:14.5px;color:var(--bone);list-style:none}
+  .life-years summary::-webkit-details-marker{display:none}
+  .life-years summary::after{content:"▾";float:right;color:var(--sage);font-size:12px}
+  .life-years[open] summary::after{content:"▴"}
+  .ly-intro{font-size:12.5px;color:var(--bone-dim);margin:0;padding:0 16px 10px;line-height:1.5}
+  .ly-grid{max-height:340px;overflow-y:auto;padding:0 8px 8px}
+  .ly-row{display:grid;grid-template-columns:46px 54px 1fr;align-items:center;gap:6px;
+    padding:5px 8px;font-family:"Space Mono",monospace;font-size:12px;border-radius:7px}
+  .ly-row:nth-child(even){background:rgba(32,36,46,.025)}
+  .ly-head{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--sage);
+    position:sticky;top:0;background:#f6f2ea}
+  .ly-age{color:var(--sage);text-align:center}
+  .ly-year{color:var(--bone-dim)}
+  .ly-kin{color:var(--bone);display:flex;align-items:center;gap:5px}
+  .ly-kin b{color:var(--jade);font-weight:700}
+  .ly-row.cur{background:rgba(82,71,201,.12);outline:1px solid rgba(82,71,201,.35)}
+  .ly-row.cur .ly-year{color:var(--bone);font-weight:700}
+  .union-note{font-size:12.5px;color:var(--bone-dim);background:rgba(82,71,201,.05);
+    border-left:2px solid var(--hair-strong);border-radius:0 8px 8px 0;padding:9px 12px;
+    margin:0 0 14px;line-height:1.55}
+  .union-kin{display:flex;align-items:center;gap:13px;padding:14px 16px;margin:0 0 14px;
+    background:#fff;border:1px solid var(--hair-strong);border-left:3px solid var(--dir);
+    border-radius:13px;box-shadow:0 1px 2px rgba(32,36,46,.05)}
+  .uk-ic{line-height:0;flex:0 0 auto}
+  .uk-name{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:600;font-size:21px;color:var(--bone)}
+  .uk-meta{font-family:"Space Mono",monospace;font-size:12px;color:var(--bone-dim);margin-top:2px}
+  .ref-sub{font-size:13px;color:var(--bone-dim);margin:-2px 0 12px;line-height:1.55}
+  .wv-meta{font-family:"Space Mono",monospace;font-size:12px;color:var(--bone-dim);margin:8px 0}
+  .wv-meta b{color:var(--bone)}
+  .wave-strip{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0 12px}
+  .wv-dot{width:30px;height:30px;display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--hair);border-radius:8px;background:#fff}
+  .wv-dates{font-family:"Space Mono",monospace;font-size:12px;color:var(--sage);margin:8px 0 0}
+  .wv-dates b{color:var(--jade)}
+  /* ── 13 Лун ── */
+  .moon-card{background:#fff;border:1px solid var(--hair-strong);border-left:3px solid var(--mc,var(--jade));
+    border-radius:16px;padding:22px 22px 18px;box-shadow:0 1px 2px rgba(32,36,46,.05),0 14px 40px rgba(32,36,46,.06)}
+  .moon-card.special{border-left-color:var(--sage);text-align:center}
+  .moon-no{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mc,var(--sage))}
+  .moon-name{font-family:"Space Grotesk",system-ui,sans-serif;font-weight:600;font-size:26px;color:var(--bone);margin:4px 0 3px}
+  .moon-sub{font-family:"Space Mono",monospace;font-size:12.5px;color:var(--bone-dim)}
+  .moon-task{font-size:15px;color:var(--bone-dim);line-height:1.6;margin:14px 0 16px}
+  .moon-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+  .mf{background:var(--panel-2);border:1px solid var(--hair);border-radius:11px;padding:11px 13px}
+  .mf-k{display:block;font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--sage);margin-bottom:4px}
+  .mf-v{font-family:"Space Grotesk",system-ui,sans-serif;font-size:15px;color:var(--bone);font-weight:500}
+  .mf-v small{display:block;font-family:"Space Mono",monospace;font-weight:400;font-size:11px;color:var(--bone-dim);margin-top:2px;line-height:1.35}
+  .moon-grid{display:grid;grid-template-columns:auto repeat(7,1fr);gap:4px;margin:6px 0 4px}
+  .mg-corner{}
+  .mg-ph{font-family:"Space Mono",monospace;font-size:9.5px;color:var(--sage);text-align:center;align-self:end;padding-bottom:3px}
+  .mg-wk{font-family:"Space Mono",monospace;font-size:10px;color:var(--bone-dim);display:flex;align-items:center;justify-content:flex-end;padding-right:6px}
+  .mg-cell{aspect-ratio:1;min-height:30px;display:flex;align-items:center;justify-content:center;
+    font-family:"Space Mono",monospace;font-size:12px;color:var(--bone-dim);border-radius:6px;border:1px solid rgba(32,36,46,.06)}
+  .mg-cell.wk0{background:#f4ddd9}.mg-cell.wk1{background:#eceef1}.mg-cell.wk2{background:#dde8f3}.mg-cell.wk3{background:#f4ead0}
+  .mg-wk.wk0{color:#cf3a2a}.mg-wk.wk1{color:#7f8b99}.mg-wk.wk2{color:#2f72b6}.mg-wk.wk3{color:#c4880f}
+  .mg-cell.cur{outline:2.5px solid var(--bone);outline-offset:1px;font-weight:700;color:var(--bone);z-index:2}
+  .moon-note{font-size:12px;color:var(--sage);line-height:1.5;margin:12px 0 0}
+  @media(max-width:520px){.moon-facts{grid-template-columns:1fr}.mg-cell{min-height:26px;font-size:11px}.mg-ph{font-size:8.5px}}
   .matrix-legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin:0 0 14px}
   .mx-leg{display:flex;align-items:center;gap:7px;font-family:"Space Mono",monospace;
     font-size:11px;color:var(--bone-dim)}
@@ -400,6 +490,7 @@
     <button class="tab" data-v="single" role="tab" aria-selected="false">Сигнатура</button>
     <button class="tab" data-v="pair" role="tab" aria-selected="false">Двое</button>
     <button class="tab" data-v="matrix" role="tab" aria-selected="false">Цолькин</button>
+    <button class="tab" data-v="moons" role="tab" aria-selected="false">Луны</button>
     <button class="tab" data-v="chat" role="tab" aria-selected="false">Беседа</button>
     <button class="tab" data-v="ref" role="tab" aria-selected="false">Справочник</button>
     <button class="tab" data-v="about" role="tab" aria-selected="false">О календаре</button>
@@ -479,6 +570,19 @@
     <p class="note"><b>Как читать.</b> Это «Гармонический модуль» Dreamspell: 260 кинов = 20 печатей × 13 тонов, сложенные в сетку 13×20. Пять <b>замков</b> по 52 кина (формула floor((кин−1)/52)) идут по цветам красный→белый→синий→жёлтый→зелёный. 52 <b>портала</b> (GAP) сверены по «Книге Кинов» Аргуэльеса; они образуют симметричный узор-«бабочку» (оккультные пары, тоны в сумме 14). <b>Мистическая колонна</b> — центральный 7-й столбец, кины 121–140. Это карта-конструкция авторской системы, не древний майяский артефакт.</p>
   </section>
 
+  <!-- ░░ 13 MOONS ░░ -->
+  <section id="view-moons" class="view" hidden>
+    <p class="lede">13-лунный календарь (счёт 13:28) — отдельный годовой круг: 13 лун по 28 дней (4 недели-гептады по 7), год с 26 июля. Это не киновый счёт 13:20, а параллельный солнечно-лунный ритм. Выбери дату — покажу луну, день, неделю и плазму дня.</p>
+    <div class="console" style="margin-bottom:18px">
+      <div class="field"><label for="moon-d">Дата</label><input type="date" id="moon-d" min="1800-01-01" max="2200-12-31"></div>
+      <button class="btn" id="moon-go">Показать луну</button>
+    </div>
+    <div id="moon-card"></div>
+    <h3 class="ref-h" style="margin-top:26px">13 лун · справочник</h3>
+    <div class="ref-list" id="moon-ref"></div>
+    <p class="note">Луны названы по 13 галактическим тонам, тотемы — по 13 созвездиям майяской астрологии. 29 февраля — «0.0 Hunab Ku» (вне счёта), 25 июля — «День вне времени». Соответствие григорианской даты и лунного дня вечное: каждый год 26 июля = Магнитная Луна, день 1. Это авторская система Аргуэльеса, не древний майяский артефакт.</p>
+  </section>
+
   <!-- ░░ CHAT ░░ -->
   <section id="view-chat" class="view" hidden>
     <p class="lede">Помощник, который беседует только про календарь Dreamspell. Спроси про дату, солнечную печать, галактический тон, цвета и волны — или чем этот счёт отличается от жреческого цолькина.</p>
@@ -496,12 +600,15 @@
 
   <!-- ░░ REFERENCE ░░ -->
   <section id="view-ref" class="view" hidden>
-    <p class="lede">Все двадцать солнечных печатей и тринадцать галактических тонов — листай и читай, без ввода даты. Нажми на любой, чтобы раскрыть описание.</p>
+    <p class="lede">Все двадцать солнечных печатей, тринадцать галактических тонов и двадцать волновых модулей — листай и читай, без ввода даты. Нажми на любой, чтобы раскрыть описание.</p>
     <h3 class="ref-h">20 печатей · solar seals</h3>
     <div class="ref-list" id="ref-signs"></div>
     <h3 class="ref-h">13 тонов · галактические тоны</h3>
     <div class="ref-list" id="ref-tones"></div>
-    <p class="note">Печать — это «кто» (постоянный нрав), тон — «как» (его окраска). В кине они сочетаются: тон + печать. Это словарь архетипов, зеркало для размышления, не приговор.</p>
+    <h3 class="ref-h">20 волновых модулей · wavespells</h3>
+    <p class="ref-sub">Волновой модуль — это 13-дневная «галактическая неделя»: 13 кинов от Магнитного тона 1 до Космического тона 13, ведомые одной печатью. Двадцать модулей × 13 = 260 кинов; ровно по четыре модуля на каждый из пяти замков.</p>
+    <div class="ref-list" id="ref-waves"></div>
+    <p class="note">Печать — это «кто» (постоянный нрав), тон — «как» (его окраска), волновой модуль — «куда» (13-дневная задача периода). Это словарь архетипов, зеркало для размышления, не приговор. Луны (счёт 13:28) — отдельный цикл и к модулям (13:20) жёстко не привязаны.</p>
   </section>
 
   <!-- ░░ ABOUT ░░ -->
@@ -950,7 +1057,11 @@ function todayCardHTML(r,dateStr){
     <div class="read">
       ${affirmHTML(r)}
       <p class="synth">Сегодня хорошо: ${lc(c.dfor)} Тема дня — ${KW[r.idx]}; тон ${r.tone}, ${tempo(r.tone)}. Это погода дня, не приговор.</p>
-      <p class="mam"><span class="mam-k">Где в счёте</span>День <b>${r.tone} из 13</b> в волне <b>1 ${lord.k}</b> (${KW[r.lordIdx]}) · кин <b>${r.kin} из 260</b> · ${cas.name}, <b>${cas.court.toLowerCase()}</b>.</p>
+      <div class="wave-block">
+        <p class="mam-k">Внутри волны</p>
+        ${wavespellSpiralSVG(r,'сегодня')}
+        <p class="wave-char">Сегодня — день <b>${r.tone} из 13</b> в волне <b>1 ${lord.k}</b> (тема: ${KW[r.lordIdx]}), ${cas.name.toLowerCase()}. ${WAVE_TASK[r.lordIdx]} Фаза волны — ${r.tone<=3?'завязка и намерение':r.tone<=7?'построение и равновесие':r.tone<=10?'проявление и зрелость':'освобождение и пик'}.</p>
+      </div>
     </div></div>`;
 }
 function renderToday(){
@@ -1078,6 +1189,8 @@ function render(){
       <p class="mam"><span class="mam-k">Возвращение твоего кина</span>${retIn===0
         ? `Сегодня твой кин возвращается — <b>${r.tone} ${naw.k}</b> снова в счёте: личный галактический «новый год» по кругу в 260 кинов, точка обновления твоей энергии.`
         : `Тот же кин — <b>${r.tone} ${naw.k}</b> — вернётся <b>${retStr}</b>, через ${retIn} дн.: личный галактический «новый год» по кругу в 260 кинов, когда твоя энергия совершает полный оборот и обновляется.`}</p>
+      ${wavespellHTML(r)}
+      ${lifeYearsHTML(r,y)}
       <button class="toggle-detail" type="button">Подробный портрет ▾</button>
       <div class="detailed" hidden>${composeDetailed(r)}</div>
     </div>`;
@@ -1092,6 +1205,9 @@ function render(){
     const e=document.getElementById('sign-'+i);
     if(e){e.open=true; setTimeout(()=>e.scrollIntoView({behavior:'smooth',block:'center'}),60);}
   }));
+  const wsb=card.querySelector('.ws-save');
+  if(wsb) wsb.addEventListener('click',()=>{const o=wsb.textContent;wsb.textContent='Готовлю картинку…';wsb.disabled=true;
+    svgToPng(wavespellCardSVG(r),'dreamspell-wave-'+val+'.png',()=>{wsb.textContent=o;wsb.disabled=false;});});
   addShare(card.querySelector('.read'), 'd='+val);
   addImgBtn(card.querySelector('.read'), ()=>composeCard({tone:r.tone,title:naw.k,
     sub:`тон ${r.tone} · ${numK[0]} · кин ${r.kin}`,
@@ -1159,6 +1275,13 @@ function buildReading(A,B,nameA,nameB){
 
   out+='<h3>Вместе</h3>';
   out+=`<p class="close">Сложите вклад одного с нуждой другого: где дар одного встречает потребность второго — там опора; где сходятся две тени — там работа. ${A.kin===B.kin?'Вы — одно зеркало: сила в полном понимании, задача — не утонуть в общих тенях.':(x===0?'Родственные стихии дают тепло узнавания.':x===2?'Контраст стихий даёт ток — берегите его от короткого замыкания.':'')}</p>`;
+  // ── союз · общая энергия (сумма номеров кинов — как в большинстве приложений) ──
+  const cKin=((A.kin+B.kin-1)%260)+1, cSeal=(cKin-1)%20, ct=(cKin-1)%13+1;
+  const udir=DIR[cSeal%4], uc=DESC[cSeal];
+  out+='<h3>Союз · общая энергия</h3>';
+  out+=`<p class="union-note">Общий кин пары — сумма номеров двух кинов (${A.kin} + ${B.kin}), приведённая к кругу из 260. Так считают в большинстве приложений Dreamspell. Это вспомогательный образ совместной энергии; каноничная связь между вами — в раскладе по оракулу выше.</p>`;
+  out+=`<div class="union-kin" style="--dir:${udir.accent}"><span class="uk-ic">${sealIcon(cSeal,32,udir.accent)}</span><div><div class="uk-name">${ct} ${N[cSeal].k}</div><div class="uk-meta">${NUM[ct][0]} тон · ${udir.col.toLowerCase()}, ${udir.name.toLowerCase()} · кин ${cKin} · тема ${KW[cSeal]}</div></div></div>`;
+  out+=`<dl class="facets"><div><dt>Сверх-сила вместе</dt><dd>${uc.gift}</dd></div><div><dt>Риск-тень союза</dt><dd>${uc.shadow}</dd></div><div><dt>Что даётся вместе</dt><dd>${cap(uc.dfor)}</dd></div><div><dt>Тон союза · ${NUM[ct][0]}</dt><dd>${NUM[ct][1]}</dd></div></dl>`;
   return out;
 }
 function runPair(){
@@ -1337,6 +1460,132 @@ function chatClear(){ chatHistory=[]; document.getElementById('chat-log').innerH
 
 /* ── reference (20 signs + 13 tones) ── */
 const toneShort=t=>t<=4?'младшее · мягкое, заземляющее':t<=9?'срединное · рабочее, уравновешенное':'старшее · напряжённое, проявляющее';
+// ── 20 волновых модулей: задача 13-дневного периода по ведущей печати (idx 0–19) ──
+const WAVE_TASK=[
+"Период начала и питания: довериться истоку, дать новому родиться и обеспечить ему опору.",
+"Период духа и слова: дышать, говорить правду, передавать вдохновение и дух дальше.",
+"Период глубины и изобилия: уйти внутрь, довериться снам и интуиции, копить ресурс в тишине.",
+"Период замысла и роста: посеять намерение, терпеливо растить, довести осознание до цветения.",
+"Период тела и силы: вернуться к инстинкту и витальности, действовать из живого тела, обновить жизненную энергию.",
+"Период отпускания и связи: отпустить отжившее, навести мосты, уравнять и соединить разделённое.",
+"Период дела и исцеления: довести начатое до результата своими руками, закрыть то, что просит завершения.",
+"Период красоты и гармонии: навести изящество, держать стандарт, украсить и гармонизировать.",
+"Период чувств и очищения: течь с эмоцией, очищаться водой, довести чувство до ясности.",
+"Период сердца и верности: любить, держать преданность, действовать из тепла и близости.",
+"Период игры и магии: вернуть лёгкость и юмор, видеть волшебство в синхронностях, творить играючи.",
+"Период выбора и мудрости: взять свободу и ответственность, влиять по-человечески, выбирать сердцем.",
+"Период исследования и присутствия: выйти за привычные границы, соединить небо и землю, расширить пространство.",
+"Период приёмлемости и чар: замедлиться, слушать сердцем, действовать вне спешки, держать связь с вневременным.",
+"Период видения и замысла: подняться выше, увидеть картину целиком, творить из ясного видения.",
+"Период вопросов и бесстрашия: идти на вызов с разумом, спрашивать прямо, действовать без страха.",
+"Период согласия с потоком: ловить знаки, выравниваться с землёй, двигаться в ритме синхроний.",
+"Период правды и порядка: отражать как есть, навести ясность, отсечь иллюзии и упорядочить.",
+"Период перемен и обновления: встряхнуть застой, пройти грозу очищения, родить себя заново.",
+"Период полноты и тепла: освещать, согревать, довести замысел до зрелого света и щедро делиться."
+];
+function nextKinDate(kin){const _n=new Date();let rd=new Date(Date.UTC(_n.getFullYear(),_n.getMonth(),_n.getDate()));
+  for(let g=0;g<=260;g++){if(dsKin(rd.getUTCFullYear(),rd.getUTCMonth()+1,rd.getUTCDate())===kin)return new Date(rd);rd.setUTCDate(rd.getUTCDate()+1);}return null;}
+const _fmtD=d=>d?`${String(d.getUTCDate()).padStart(2,'0')}.${String(d.getUTCMonth()+1).padStart(2,'0')}.${d.getUTCFullYear()}`:'';
+function buildWaves(){
+  let html='';
+  for(let w=1;w<=20;w++){
+    const leadKin=(w-1)*13+1, leadIdx=(leadKin-1)%20, dir=DIR[leadIdx%4], cas=castleOf(leadKin);
+    let strip=''; for(let p=0;p<13;p++){const si=(leadIdx+p)%20; strip+=`<span class="wv-dot" title="тон ${p+1} ${N[si].k}">${sealIcon(si,16,DIR[si%4].accent)}</span>`;}
+    const st=nextKinDate(leadKin); const en=st?new Date(st.getTime()+12*86400000):null;
+    html+=`<details class="ref-item" id="wave-${w}">
+      <summary><span class="ref-ic">${sealIcon(leadIdx,22,dir.accent)}</span><span class="ref-no">Волна ${w}</span><span class="ref-name">1 ${N[leadIdx].k}</span><span class="ref-theme">${KW[leadIdx]}</span></summary>
+      <div class="ref-body">
+        <p>${WAVE_TASK[leadIdx]}</p>
+        <p class="wv-meta">Кины <b>${leadKin}–${leadKin+12}</b> · ${cas.name.toLowerCase()} · 13 дней от Магнитного замысла (тон 1) к Космическому итогу (тон 13).</p>
+        <div class="wave-strip">${strip}</div>
+        <p><b>Сила периода:</b> ${lc(DESC[leadIdx].gift)} <b>· Риск:</b> ${lc(DESC[leadIdx].shadow)}</p>
+        ${st?`<p class="wv-dates">Ближайший прогон: <b>${_fmtD(st)} — ${_fmtD(en)}</b></p>`:''}
+      </div>
+    </details>`;
+  }
+  document.getElementById('ref-waves').innerHTML=html;
+}
+// ── 13 Лун · счёт 13:28 (сверено по Фонду Закона Времени) ──
+const MOON_ADJ=["Магнитная","Лунная","Электрическая","Самосущная","Обертональная","Ритмическая","Резонансная","Галактическая","Солнечная","Планетарная","Спектральная","Кристаллическая","Космическая"];
+const MOON_TOTEM=["Летучая мышь","Скорпион","Олень","Сова","Павлин","Ящерица","Обезьяна","Ястреб","Ягуар","Собака","Змея","Кролик","Черепаха"];
+const MOON_POWER=["Цель","Вызов","Служение","Форма","Сияние","Равенство","Созвучие","Целостность","Намерение","Проявление","Освобождение","Сотрудничество","Присутствие"];
+const MOON_DATES=["26 июл – 22 авг","23 авг – 19 сен","20 сен – 17 окт","18 окт – 14 ноя","15 ноя – 12 дек","13 дек – 9 янв","10 янв – 6 фев","7 фев – 6 мар","7 мар – 3 апр","4 апр – 1 мая","2 мая – 29 мая","30 мая – 26 июн","27 июн – 24 июл"];
+const MOON_TASK=[
+"Притянуть и объединить замысел года: зачем я здесь, какова цель.",
+"Назвать вызов и поляризовать препятствие: что встанет на пути и что закаляет.",
+"Связать намерение с делом, активировать служение: чем я полезен.",
+"Измерить и придать форму: какой вид примет замысел.",
+"Собрать ресурс и засиять: как обрести и удержать силу.",
+"Организовать и выровнять: как привести жизнь в равновесие.",
+"Настроиться и войти в созвучие: чем вдохновиться, с чем срезонировать.",
+"Привести образ и дело в целостность: живу ли я тем, во что верю.",
+"Воплотить и пульсировать намерением: как достичь задуманного.",
+"Довести до проявления и завершить форму: как получить результат.",
+"Растворить и освободить: что отпустить, от чего очиститься.",
+"Соединить усилия и посвятить общему: как сотрудничать.",
+"Превзойти и удержать присутствие: как пребыть, продлить и завершить круг."
+];
+const PLASMA=[
+{n:"Дали",f:"цель",ch:"венечная (сахасрара)"},
+{n:"Сели",f:"поток",ch:"корневая (муладхара)"},
+{n:"Гамма",f:"умиротворение",ch:"третий глаз (аджна)"},
+{n:"Кали",f:"утверждение",ch:"сакральная (свадхистхана)"},
+{n:"Альфа",f:"высвобождение",ch:"горловая (вишуддха)"},
+{n:"Лими",f:"очищение",ch:"солнечное сплетение (манипура)"},
+{n:"Силио",f:"разрядка",ch:"сердечная (анахата)"}
+];
+const HEPTAD=[
+{col:"Красная",power:"Знание начинает видение"},
+{col:"Белая",power:"Смирение утончает медитацию"},
+{col:"Синяя",power:"Терпение преображает поведение"},
+{col:"Жёлтая",power:"Сила доводит плод до зрелости"}
+];
+const HEPTAD_ACC=["#cf3a2a","#7f8b99","#2f72b6","#c4880f"];
+const _MD=[0,31,59,90,120,151,181,212,243,273,304,334];
+function moonInfo(y,m,d){
+  if(m===2&&d===29) return {hunab:true};
+  const ord=_MD[m-1]+(d-1), mdoy=((ord-206)%365+365)%365;
+  if(mdoy===364) return {doot:true};
+  return {moon:Math.floor(mdoy/28), day:mdoy%28+1, week:Math.floor((mdoy%28)/7), plasma:(mdoy%28)%7};
+}
+function moonReadHTML(y,m,d){
+  const mi=moonInfo(y,m,d);
+  if(mi.hunab) return `<div class="moon-card special"><div class="moon-head"><div class="moon-no">29 февраля</div><h2 class="moon-name">0.0 Hunab Ku</h2></div><p class="moon-task">Високосный день вне счёта: в календаре 13:28 это «0.0 Hunab Ku» — день без луны, недели и галактической сигнатуры. Он держит синхронный порядок: каждые 52 года всё повторяется день в день. Пауза между временами.</p></div>`;
+  if(mi.doot) return `<div class="moon-card special"><div class="moon-head"><div class="moon-no">25 июля</div><h2 class="moon-name">День вне времени</h2></div><p class="moon-task">365-й день года, не принадлежащий ни одной луне. «Время — искусство»: день прощения, праздника и творчества между Космической Черепахой и новым Магнитным годом (26 июля).</p></div>`;
+  const acc=HEPTAD_ACC[mi.week], hp=HEPTAD[mi.week], pl=PLASMA[mi.plasma];
+  let grid='<div class="moon-grid"><div class="mg-corner"></div>';
+  PLASMA.forEach(p=>grid+=`<div class="mg-ph">${p.n}</div>`);
+  for(let w=0;w<4;w++){grid+=`<div class="mg-wk wk${w}">н${w+1}</div>`;
+    for(let p=0;p<7;p++){const dd=w*7+p+1; grid+=`<div class="mg-cell wk${w}${dd===mi.day?' cur':''}">${dd}</div>`;}}
+  grid+='</div>';
+  return `<div class="moon-card" style="--mc:${acc}">
+    <div class="moon-head"><div class="moon-no">Луна ${mi.moon+1} из 13 · день ${mi.day} из 28</div>
+      <h2 class="moon-name">${MOON_ADJ[mi.moon]} Луна · ${MOON_TOTEM[mi.moon]}</h2>
+      <div class="moon-sub">сила луны: ${MOON_POWER[mi.moon]} · ${MOON_DATES[mi.moon]}</div></div>
+    <p class="moon-task">${MOON_TASK[mi.moon]}</p>
+    <div class="moon-facts">
+      <div class="mf"><span class="mf-k">Неделя · гептада</span><span class="mf-v">${mi.week+1} из 4 · ${hp.col}<small>${hp.power}</small></span></div>
+      <div class="mf"><span class="mf-k">Плазма дня</span><span class="mf-v">${pl.n} · ${pl.f}<small>${pl.ch} чакра</small></span></div>
+    </div>
+    ${grid}
+    <p class="moon-note">28-дневная луна = 4 недели по 7 дней. 1·8·15·22 — всегда Дали, 7·14·21·28 — всегда Силио. Текущий день выделен.</p>
+  </div>`;
+}
+function buildMoonRef(){
+  let html='';
+  for(let i=0;i<13;i++){
+    html+=`<details class="ref-item" id="moon-${i+1}">
+      <summary><span class="ref-no">Луна ${i+1}</span><span class="ref-name">${MOON_ADJ[i]} · ${MOON_TOTEM[i]}</span><span class="ref-theme">${MOON_POWER[i]} · ${MOON_DATES[i]}</span></summary>
+      <div class="ref-body"><p>${MOON_TASK[i]}</p><p class="ref-meta">Тотем: ${MOON_TOTEM[i]} · сила: ${MOON_POWER[i]} · григориански ${MOON_DATES[i]}</p></div>
+    </details>`;
+  }
+  document.getElementById('moon-ref').innerHTML=html;
+}
+function renderMoon(){
+  const v=document.getElementById('moon-d').value; if(!v) return;
+  const [y,m,d]=v.split('-').map(Number);
+  document.getElementById('moon-card').innerHTML=moonReadHTML(y,m,d);
+}
 function buildReference(){
   const signs=N.map((o,i)=>{
     const dir=DIR[i%4], c=DESC[i];
@@ -1354,6 +1603,7 @@ function buildReference(){
   }
   document.getElementById('ref-signs').innerHTML=signs;
   document.getElementById('ref-tones').innerHTML=tones;
+  buildWaves();
 }
 
 /* ── save reading as image (SVG card → PNG) ── */
@@ -1410,6 +1660,102 @@ function pairCardSVG(A,B,nameA,nameB){
   s+=`<text x="${W-40}" y="${H-40}" text-anchor="end" font-family="ui-monospace, monospace" font-size="18" fill="${CARD_SAGE}">drche79.github.io/dreamspell</text>`;
   return s+'</svg>';
 }
+// ── волновой модуль человека (13 кинов) ──
+function wavespellHTML(r){
+  const lordKin=r.kin-(r.tone-1), lordIdx=(lordKin-1)%20;
+  let steps='';
+  for(let p=1;p<=13;p++){
+    const k=lordKin+(p-1), idx=(k-1)%20, dc=DIR[idx%4], isMe=(p===r.tone), isGap=GAP.has(k);
+    steps+=`<div class="ws-step${isMe?' me':''}${isGap?' gap':''}" style="--oc:${dc.accent}">`+
+      `<span class="ws-tone">${p}</span>`+
+      `<span class="ws-ic">${sealIcon(idx,22,dc.accent)}</span>`+
+      `<span class="ws-name">${N[idx].k}</span>`+
+      `<span class="ws-kin">${k}</span></div>`;
+  }
+  return `<div class="angle">Твоя волна · 13-дневный модуль</div>`+
+    `<p class="ws-intro">Твой кин живёт внутри волны <b>1 ${N[lordIdx].k}</b> (тема: ${KW[lordIdx]}), ${castleOf(lordKin).name.toLowerCase()}. Тринадцать ступеней — от Магнитного замысла до Космического итога; твой день — <b>${r.tone}-й</b>.</p>`+
+    `<div class="ws-track">${steps}</div>`+
+    `<button class="ws-save" type="button">Сохранить волну картинкой ↓</button>`;
+}
+// ── годы жизни: натальный кин + 105 за год (52-летний круг) ──
+function lifeYearsHTML(r, by){
+  const nowY=new Date().getFullYear(), curAge=nowY-by;
+  let rows='';
+  for(let a=0;a<52;a++){
+    const k=((r.kin-1+105*a)%260)+1, idx=(k-1)%20, tone=(k-1)%13+1, dc=DIR[idx%4], isCur=(a===curAge);
+    rows+=`<div class="ly-row${isCur?' cur':''}">`+
+      `<span class="ly-age">${a}</span>`+
+      `<span class="ly-year">${by+a}</span>`+
+      `<span class="ly-kin">${sealIcon(idx,16,dc.accent)}<b>${tone}</b> ${N[idx].k}</span></div>`;
+  }
+  return `<details class="life-years"><summary>Годы жизни · кин каждого года</summary>`+
+    `<p class="ly-intro">Каждый год жизни несёт свой кин: натальный + 105 за год (это +1 тон и +5 печать). Через 52 года кин возвращается — круг замыкается. Отсчёт от года рождения (${by}); текущий год выделен.</p>`+
+    `<div class="ly-grid"><div class="ly-row ly-head"><span class="ly-age">возр.</span><span class="ly-year">год</span><span class="ly-kin">кин года</span></div>${rows}</div>`+
+    `</details>`;
+}
+// ── глиф печати внутри карточного SVG ──
+function sealGlyphCard(idx,cx,cy,size,color){const sc=size/24;
+  return `<g transform="translate(${(cx-size/2).toFixed(1)},${(cy-size/2).toFixed(1)}) scale(${sc.toFixed(3)})" fill="none" stroke="${color}" stroke-width="${(1.7/sc).toFixed(2)}" stroke-linecap="round" stroke-linejoin="round">${SEAL_PATHS[idx]}</g>`;}
+// ── сохраняемая картинка-«завиток» волны (13 кинов спиралью) ──
+// ── инлайн-спираль волны (гладкая, равномерная, 13 кинов) ──
+function wavespellSpiralSVG(r, meLabel){
+  meLabel=meLabel||'ты';
+  const lordKin=r.kin-(r.tone-1);
+  const W=360,H=360,cx=180,cy=182;
+  const turns=1.55, th0=-Math.PI/2, TH=turns*2*Math.PI, r0=48, r1=150;
+  const N0=280, samp=[];
+  for(let i=0;i<=N0;i++){const t=i/N0, th=th0+t*TH, rr=r0+t*(r1-r0); samp.push([cx+Math.cos(th)*rr, cy+Math.sin(th)*rr]);}
+  const cum=[0];
+  for(let i=1;i<samp.length;i++){cum.push(cum[i-1]+Math.hypot(samp[i][0]-samp[i-1][0], samp[i][1]-samp[i-1][1]));}
+  const L=cum[cum.length-1];
+  const at=dist=>{let lo=0,hi=cum.length-1; while(lo<hi){const mid=(lo+hi)>>1; if(cum[mid]<dist)lo=mid+1; else hi=mid;}
+    const i=Math.max(1,lo), seg=(cum[i]-cum[i-1])||1, f=(dist-cum[i-1])/seg;
+    return [samp[i-1][0]+(samp[i][0]-samp[i-1][0])*f, samp[i-1][1]+(samp[i][1]-samp[i-1][1])*f];};
+  let path='M'+samp[0][0].toFixed(1)+' '+samp[0][1].toFixed(1);
+  for(let i=2;i<samp.length;i+=2) path+=' L'+samp[i][0].toFixed(1)+' '+samp[i][1].toFixed(1);
+  let s=`<svg class="wave-spiral" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Спираль волны из 13 дней">`;
+  s+=`<path d="${path}" fill="none" stroke="#cbc4b1" stroke-width="1.4" stroke-linecap="round"/>`;
+  for(let p=1;p<=13;p++){
+    const t=(p-1)/12, pos=at(t*L), x=pos[0], yy=pos[1];
+    const k=lordKin+(p-1), idx=(k-1)%20, dc=DIR[idx%4], isMe=(p===r.tone);
+    const R=11.5+t*2.8+(isMe?3.4:0);
+    if(isMe){s+=`<circle cx="${x.toFixed(1)}" cy="${yy.toFixed(1)}" r="${(R+8).toFixed(1)}" fill="${dc.accent}" fill-opacity="0.15"/>`;
+      s+=`<circle cx="${x.toFixed(1)}" cy="${yy.toFixed(1)}" r="${(R+8).toFixed(1)}" fill="none" stroke="${dc.accent}" stroke-opacity="0.4" stroke-width="1"/>`;}
+    s+=`<circle cx="${x.toFixed(1)}" cy="${yy.toFixed(1)}" r="${R.toFixed(1)}" fill="${dc.accent}" fill-opacity="${isMe?1:0.13}" stroke="${dc.accent}" stroke-width="${isMe?0:1.7}"/>`;
+    s+=sealGlyphCard(idx, x, yy, R*1.3, isMe?'#fffdf7':dc.accent);
+    const dx=x-cx, dy=yy-cy, len=Math.hypot(dx,dy)||1, ox=(x+dx/len*(R+11)).toFixed(1), oy=(yy+dy/len*(R+11)+3.5).toFixed(1);
+    if(isMe) s+=`<text x="${ox}" y="${oy}" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11.5" font-weight="700" fill="#20242e">${p}<tspan x="${ox}" dy="10.5" font-size="7.5" font-weight="400" fill="${dc.accent}">${meLabel}</tspan></text>`;
+    else s+=`<text x="${ox}" y="${oy}" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9" fill="#9a9684">${p}</text>`;
+  }
+  return s+'</svg>';
+}
+function wavespellCardSVG(r){
+  const W=800,H=800, lordKin=r.kin-(r.tone-1), lordIdx=(lordKin-1)%20, acc=DIR[r.idx%4].accent;
+  let s=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, system-ui, sans-serif">`;
+  s+=`<rect width="${W}" height="${H}" fill="${CARD_BG}"/>`;
+  s+=`<rect x="18" y="18" width="${W-36}" height="${H-36}" rx="30" fill="none" stroke="${acc}" stroke-opacity="0.4" stroke-width="1.5"/>`;
+  s+=`<text x="${W/2}" y="76" text-anchor="middle" font-family="ui-monospace, monospace" font-size="18" letter-spacing="4" fill="${CARD_SAGE}">DREAMSPELL · ВОЛНОВОЙ МОДУЛЬ</text>`;
+  s+=`<text x="${W/2}" y="122" text-anchor="middle" font-size="34" fill="${CARD_BONE}">Волна 1 ${esc(N[lordIdx].k)}</text>`;
+  s+=`<text x="${W/2}" y="153" text-anchor="middle" font-family="ui-monospace, monospace" font-size="17" fill="${CARD_JADEB}">тема: ${esc(KW[lordIdx])} · ${esc(castleOf(lordKin).col.toLowerCase())} замок</text>`;
+  const cx=W/2, cy=472;
+  const pts=[];
+  for(let p=1;p<=13;p++){const t=(p-1)/12, ang=-Math.PI/2+t*Math.PI*2*1.32, rad=72+t*250;
+    pts.push([cx+Math.cos(ang)*rad, cy+Math.sin(ang)*rad]);}
+  // спираль-связка под узлами
+  let path='M'+pts[0][0].toFixed(1)+' '+pts[0][1].toFixed(1);
+  for(let i=1;i<pts.length;i++) path+=' L'+pts[i][0].toFixed(1)+' '+pts[i][1].toFixed(1);
+  s+=`<path d="${path}" fill="none" stroke="${CARD_SAGE}" stroke-opacity="0.5" stroke-width="1.5"/>`;
+  for(let p=1;p<=13;p++){
+    const k=lordKin+(p-1), idx=(k-1)%20, dc=DIR[idx%4], isMe=(p===r.tone);
+    const x=pts[p-1][0], yy=pts[p-1][1], R=isMe?30:21;
+    s+=`<circle cx="${x.toFixed(1)}" cy="${yy.toFixed(1)}" r="${R}" fill="#ffffff" stroke="${dc.accent}" stroke-width="${isMe?2.6:1.4}"/>`;
+    s+=sealGlyphCard(idx, x, yy-(isMe?3:2), isMe?27:18, dc.accent);
+    s+=`<text x="${x.toFixed(1)}" y="${(yy+R+13).toFixed(1)}" text-anchor="middle" font-family="ui-monospace, monospace" font-size="${isMe?14:11}" fill="${isMe?CARD_BONE:CARD_DIM}">${p}${isMe?' · ты':''}</text>`;
+  }
+  s+=`<text x="40" y="${H-40}" font-family="ui-monospace, monospace" font-size="18" fill="${CARD_SAGE}">тон ${r.tone} ${esc(N[r.idx].k)}</text>`;
+  s+=`<text x="${W-40}" y="${H-40}" text-anchor="end" font-family="ui-monospace, monospace" font-size="18" fill="${CARD_SAGE}">drche79.github.io/dreamspell</text>`;
+  return s+'</svg>';
+}
 function svgToPng(svg, filename, done){
   try{
     const blob=new Blob([svg],{type:'image/svg+xml;charset=utf-8'}), url=URL.createObjectURL(blob), img=new Image();
@@ -1436,7 +1782,7 @@ function addImgBtn(container, getSVG, filename){
 function switchTab(v){
   document.querySelectorAll('.tab').forEach(x=>{const on=x.dataset.v===v;
     x.classList.toggle('active',on); x.setAttribute('aria-selected',on?'true':'false');});
-  ['today','single','pair','matrix','chat','ref','about'].forEach(name=>{const el=document.getElementById('view-'+name); if(el) el.hidden = v!==name;});
+  ['today','single','pair','matrix','moons','chat','ref','about'].forEach(name=>{const el=document.getElementById('view-'+name); if(el) el.hidden = v!==name;});
 }
 document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>switchTab(t.dataset.v)));
 
@@ -1463,12 +1809,18 @@ document.getElementById('tb').addEventListener('change',renderToday);
 document.getElementById('tb').addEventListener('keydown',e=>{if(e.key==='Enter')renderToday();});
 document.getElementById('mb-go').addEventListener('click',runMatrixFind);
 document.getElementById('mb').addEventListener('change',runMatrixFind);
+document.getElementById('moon-go').addEventListener('click',renderMoon);
+document.getElementById('moon-d').addEventListener('change',renderMoon);
+(function(){const t=new Date();const iso=`${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`;
+  document.getElementById('moon-d').value=iso;})();
 (function(){const t=new Date();const iso=`${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`;
   document.getElementById('d').value=iso;})();
 renderToday();
 render();
 renderMatrix();
 buildReference();
+buildMoonRef();
+renderMoon();
 
 /* ── open from a shared link ── */
 (function applyURLParams(){
