@@ -407,13 +407,17 @@
   .year-banner:empty{display:none}
   .year-banner b{color:var(--bone);font-weight:600}
   .yb-ic{line-height:0;flex:0 0 auto}
-  /* ── кнопка .ics ── */
-  .ics-btn{display:block;width:100%;margin:16px 0 0;font-family:"Space Mono",monospace;
+  /* ── кнопки .ics ── */
+  .ics-row{display:flex;gap:8px;margin:16px 0 0;flex-wrap:wrap}
+  .ics-btn{flex:1 1 auto;text-align:center;text-decoration:none;font-family:"Space Mono",monospace;
     font-size:12.5px;letter-spacing:.02em;color:var(--jade);background:none;
     border:1px dashed var(--hair-strong);border-radius:11px;padding:12px 16px;cursor:pointer;
-    transition:background .15s,border-color .15s}
+    transition:background .15s,border-color .15s;display:flex;align-items:center;justify-content:center;gap:6px}
   .ics-btn:hover{background:rgba(82,71,201,.06);border-color:var(--jade)}
   .ics-btn:disabled{opacity:.6;cursor:default}
+  .ics-sub{background:rgba(82,71,201,.07);border-style:solid;border-color:var(--jade);color:var(--jade);font-weight:600}
+  .ics-hint{font-size:11.5px;color:var(--sage);line-height:1.5;margin:9px 0 0}
+  .ics-hint code{font-family:"Space Mono",monospace;font-size:11px;background:var(--panel-2);padding:1px 5px;border-radius:4px}
   /* ── Подбор кина ── */
   .pick-controls{margin:0 0 22px}
   .pk-group{margin-bottom:16px}
@@ -537,7 +541,11 @@
     <p class="lede">Кин сегодняшнего дня — солнечная печать, галактический тон, волна, замок и аффирмация. Введёшь свою дату рождения — покажу, чем сегодня приходится лично тебе: проводник, аналог, антипод, скрытая сила, твоя волна или замок.</p>
     <div class="year-banner" id="year-banner"></div>
     <div class="result show" id="today-card"></div>
-    <button class="ics-btn" id="ics-go" type="button">📅 Скачать кин дня в календарь (.ics) — год вперёд</button>
+    <div class="ics-row">
+      <a class="ics-btn ics-sub" href="webcal://drche79.github.io/dreamspell/dreamspell.ics">📅 Подписаться в Календаре (iPhone / Mac)</a>
+      <button class="ics-btn" id="ics-go" type="button">⤓ Скачать .ics файлом (год вперёд)</button>
+    </div>
+    <p class="ics-hint">Подписка — надёжный способ для iPhone: кин дня появится в Календаре и будет обновляться. «Скачать» — разовый файл (на iPhone Safari может не сохранять, лучше подписка).</p>
     <div class="console" style="margin-top:24px">
       <div class="field">
         <label for="tb">Твоя дата рождения · необязательно</label>
@@ -1651,7 +1659,10 @@ function downloadICS(){
     L.push('BEGIN:VEVENT',`UID:ds-${ymd}@drche79.github.io`,`DTSTAMP:${stamp}`,`DTSTART;VALUE=DATE:${ymd}`,`DTEND;VALUE=DATE:${ymd2}`,`SUMMARY:${sum}`,`DESCRIPTION:${desc}`,'TRANSP:TRANSPARENT','END:VEVENT');
   }
   L.push('END:VCALENDAR');
-  const blob=new Blob([L.join('\r\n')],{type:'text/calendar;charset=utf-8'}), url=URL.createObjectURL(blob), a2=document.createElement('a');
+  const ics=L.join('\r\n');
+  const isIOS=/iP(hone|ad|od)/.test(navigator.userAgent||'')||((navigator.platform||'')==='MacIntel'&&(navigator.maxTouchPoints||0)>1);
+  if(isIOS){ window.location.href='data:text/calendar;charset=utf-8,'+encodeURIComponent(ics); return; }
+  const blob=new Blob([ics],{type:'text/calendar;charset=utf-8'}), url=URL.createObjectURL(blob), a2=document.createElement('a');
   a2.href=url; a2.download='dreamspell-kin.ics'; document.body.appendChild(a2); a2.click(); a2.remove(); setTimeout(()=>URL.revokeObjectURL(url),1500);
 }
 // ── Подбор кина: по тону и печати, без даты ──
