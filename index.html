@@ -399,12 +399,11 @@
   .mg-cell.cur{outline:2.5px solid var(--bone);outline-offset:1px;font-weight:700;color:var(--bone);z-index:2}
   .moon-note{font-size:12px;color:var(--sage);line-height:1.5;margin:12px 0 0}
   @media(max-width:520px){.moon-facts{grid-template-columns:1fr}.mg-cell{min-height:26px;font-size:11px}.mg-ph{font-size:8.5px}}
-  /* ── карточка-иллюстрация печати ── */
-  .sign-hero{display:flex;justify-content:center;margin:2px 0 18px}
-  .sign-hero:empty{display:none}
-  .sign-img{width:158px;height:auto;filter:drop-shadow(0 10px 22px rgba(32,36,46,.15))}
-  .sign-hero.sm .sign-img{width:118px}
-  @media(max-width:520px){.sign-img{width:140px}.sign-hero.sm .sign-img{width:104px}}
+  /* ── карточка-иллюстрация печати (миниатюра в шапке) ── */
+  .sign-thumb{flex:0 0 auto;line-height:0}
+  .sign-thumb .sign-img{width:60px;height:auto;display:block;
+    filter:drop-shadow(0 6px 14px rgba(32,36,46,.16))}
+  @media(max-width:520px){.sign-thumb .sign-img{width:50px}}
   /* ── баннер года ── */
   .year-banner{display:flex;align-items:center;gap:8px;justify-content:center;
     background:linear-gradient(180deg,#fbf8f1,#f4f0e6);border:1px solid var(--hair);
@@ -1105,12 +1104,11 @@ function relateToday(you,today){
   return out;
 }
 
-function signImg(idx,cls){const nn=String(idx+1).padStart(2,'0');return `<img class="sign-img${cls?' '+cls:''}" src="signs/${nn}.png" alt="${esc(N[idx].k)}" loading="lazy" onerror="var h=this.closest('.sign-hero'); if(h) h.style.display='none';">`;}
+function signImg(idx,cls){const nn=String(idx+1).padStart(2,'0');return `<img class="sign-img${cls?' '+cls:''}" src="signs/${nn}.png" alt="${esc(N[idx].k)}" loading="lazy" onerror="this.style.display='none';">`;}
 function todayCardHTML(r,dateStr){
   const dir=DIR[r.idx%4],numK=NUM[r.tone],lord=N[r.lordIdx],cas=castleOf(r.kin),c=DESC[r.idx];
   return `<div class="card today-card" style="--dir:${dir.accent}">
-    <div class="sign-hero sm">${signImg(r.idx)}</div>
-    <div class="head">${numeral(r.tone)}
+    <div class="head"><div class="sign-thumb">${signImg(r.idx)}</div>${numeral(r.tone)}
       <div class="names">
         <div class="today-tag">Кин дня · ${dateStr}</div>
         <h2 class="kiche">${sealIcon(r.idx,30,dir.accent)}${r.tone} ${N[r.idx].k}</h2>
@@ -1226,8 +1224,7 @@ function render(){
   const prev=N[r.prevIdx],next=N[r.nextIdx],dsEn=DSEN[r.idx],c=DESC[r.idx];
   card.style.setProperty('--dir',dir.accent);
   card.innerHTML=`
-    <div class="sign-hero">${signImg(r.idx)}</div>
-    <div class="head">${numeral(r.tone)}
+    <div class="head"><div class="sign-thumb">${signImg(r.idx)}</div>${numeral(r.tone)}
       <div class="names">
         <h2 class="kiche">${sealIcon(r.idx,30,dir.accent)}${naw.k}</h2>
         <div class="yuc">тон ${r.tone} · ${numK[0]} · кин ${r.kin}<span class="sep">·</span>печать №${r.idx+1} из 20</div>
@@ -1680,8 +1677,7 @@ function fromKin(kin){const idx=mod(kin-1,20),tone=mod(kin-1,13)+1,lordIdx=mod(i
 function pickedKinHTML(r){
   const naw=N[r.idx],dir=DIR[r.idx%4],lord=N[r.lordIdx],numK=NUM[r.tone],c=DESC[r.idx],cas=castleOf(r.kin),li=r.lordIdx;
   return `<div class="card" style="--dir:${dir.accent}">
-    <div class="sign-hero">${signImg(r.idx)}</div>
-    <div class="head">${numeral(r.tone)}
+    <div class="head"><div class="sign-thumb">${signImg(r.idx)}</div>${numeral(r.tone)}
       <div class="names">
         <h2 class="kiche">${sealIcon(r.idx,30,dir.accent)}${naw.k}</h2>
         <div class="yuc">тон ${r.tone} · ${numK[0]} · кин ${r.kin}<span class="sep">·</span>печать №${r.idx+1} из 20</div>
