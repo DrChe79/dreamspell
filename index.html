@@ -399,6 +399,41 @@
   .mg-cell.cur{outline:2.5px solid var(--bone);outline-offset:1px;font-weight:700;color:var(--bone);z-index:2}
   .moon-note{font-size:12px;color:var(--sage);line-height:1.5;margin:12px 0 0}
   @media(max-width:520px){.moon-facts{grid-template-columns:1fr}.mg-cell{min-height:26px;font-size:11px}.mg-ph{font-size:8.5px}}
+  /* ── баннер года ── */
+  .year-banner{display:flex;align-items:center;gap:8px;justify-content:center;
+    background:linear-gradient(180deg,#fbf8f1,#f4f0e6);border:1px solid var(--hair);
+    border-radius:11px;padding:9px 14px;margin:0 0 16px;font-family:"Space Mono",monospace;
+    font-size:12.5px;color:var(--bone-dim)}
+  .year-banner:empty{display:none}
+  .year-banner b{color:var(--bone);font-weight:600}
+  .yb-ic{line-height:0;flex:0 0 auto}
+  /* ── кнопка .ics ── */
+  .ics-btn{display:block;width:100%;margin:16px 0 0;font-family:"Space Mono",monospace;
+    font-size:12.5px;letter-spacing:.02em;color:var(--jade);background:none;
+    border:1px dashed var(--hair-strong);border-radius:11px;padding:12px 16px;cursor:pointer;
+    transition:background .15s,border-color .15s}
+  .ics-btn:hover{background:rgba(82,71,201,.06);border-color:var(--jade)}
+  .ics-btn:disabled{opacity:.6;cursor:default}
+  /* ── Подбор кина ── */
+  .pick-controls{margin:0 0 22px}
+  .pk-group{margin-bottom:16px}
+  .pk-label{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--sage);margin-bottom:9px}
+  .pk-row{display:flex;flex-wrap:wrap;gap:6px}
+  .pk-t{flex:0 0 auto;min-width:54px;display:flex;flex-direction:column;align-items:center;gap:1px;
+    padding:8px 6px;border:1px solid var(--hair);border-radius:10px;background:#fff;cursor:pointer;
+    font-family:"Space Mono",monospace;font-size:15px;font-weight:700;color:var(--bone);transition:all .12s}
+  .pk-t small{font-size:8.5px;font-weight:400;letter-spacing:.02em;color:var(--sage);text-transform:none}
+  .pk-t:hover{border-color:var(--hair-strong)}
+  .pk-t.on{border-color:var(--jade);background:rgba(82,71,201,.08);color:var(--jade);box-shadow:0 3px 12px rgba(32,36,46,.08)}
+  .pk-t.on small{color:var(--jade)}
+  .pk-seals{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:6px}
+  .pk-s{display:flex;align-items:center;gap:7px;padding:9px 11px;border:1px solid var(--hair);
+    border-radius:10px;background:#fff;cursor:pointer;font-family:"Space Mono",monospace;
+    font-size:11.5px;color:var(--bone-dim);text-align:left;transition:all .12s}
+  .pk-s span{line-height:1.15}
+  .pk-s:hover{border-color:var(--hair-strong)}
+  .pk-s.on{border-color:var(--jade);background:rgba(82,71,201,.08);color:var(--bone);box-shadow:0 3px 12px rgba(32,36,46,.08)}
   .matrix-legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin:0 0 14px}
   .mx-leg{display:flex;align-items:center;gap:7px;font-family:"Space Mono",monospace;
     font-size:11px;color:var(--bone-dim)}
@@ -488,6 +523,7 @@
   <div class="tabs" role="tablist" aria-label="Режимы календаря">
     <button class="tab active" data-v="today" role="tab" aria-selected="true">Сегодня</button>
     <button class="tab" data-v="single" role="tab" aria-selected="false">Сигнатура</button>
+    <button class="tab" data-v="pick" role="tab" aria-selected="false">Подбор кина</button>
     <button class="tab" data-v="pair" role="tab" aria-selected="false">Двое</button>
     <button class="tab" data-v="matrix" role="tab" aria-selected="false">Цолькин</button>
     <button class="tab" data-v="moons" role="tab" aria-selected="false">Луны</button>
@@ -499,7 +535,9 @@
   <!-- ░░ TODAY ░░ -->
   <section id="view-today" class="view">
     <p class="lede">Кин сегодняшнего дня — солнечная печать, галактический тон, волна, замок и аффирмация. Введёшь свою дату рождения — покажу, чем сегодня приходится лично тебе: проводник, аналог, антипод, скрытая сила, твоя волна или замок.</p>
+    <div class="year-banner" id="year-banner"></div>
     <div class="result show" id="today-card"></div>
+    <button class="ics-btn" id="ics-go" type="button">📅 Скачать кин дня в календарь (.ics) — год вперёд</button>
     <div class="console" style="margin-top:24px">
       <div class="field">
         <label for="tb">Твоя дата рождения · необязательно</label>
@@ -543,6 +581,16 @@
     </div>
     <div class="result" id="result2" aria-live="polite"></div>
     <p class="note" id="note2" hidden></p>
+  </section>
+
+  <!-- ░░ KIN PICKER ░░ -->
+  <section id="view-pick" class="view" hidden>
+    <p class="lede">Подбор кина вручную: выбери галактический тон и солнечную печать — покажу кин и его полный разбор без ввода даты. Удобно изучать систему и сравнивать энергии печатей и тонов.</p>
+    <div class="pick-controls">
+      <div class="pk-group"><div class="pk-label">Галактический тон · 1–13</div><div class="pk-row" id="pick-tones"></div></div>
+      <div class="pk-group"><div class="pk-label">Солнечная печать · 1–20</div><div class="pk-seals" id="pick-seals"></div></div>
+    </div>
+    <div id="pick-card"></div>
   </section>
 
   <!-- ░░ TZOLKIN MATRIX ░░ -->
@@ -1070,6 +1118,8 @@ function renderToday(){
   const r=compute(y,m,d);
   const ds=`${String(d).padStart(2,'0')}.${String(m).padStart(2,'0')}.${y}`;
   host.innerHTML=todayCardHTML(r,ds);
+  const yb=yearBearer(y,m,d), ybEl=document.getElementById('year-banner');
+  if(ybEl) ybEl.innerHTML=`<span class="yb-ic">${sealIcon(yb.idx,18,DIR[yb.idx%4].accent)}</span><span class="yb-txt">Галактический год — <b>${yb.tone} ${N[yb.idx].k}</b> · с 26 июля ${yb.year}</span>`;
   const tb=document.getElementById('tb'), rel=document.getElementById('today-relate');
   if(tb && tb.value && rel){
     const [by,bm,bd]=tb.value.split('-').map(Number); const you=compute(by,bm,bd);
@@ -1586,6 +1636,79 @@ function renderMoon(){
   const [y,m,d]=v.split('-').map(Number);
   document.getElementById('moon-card').innerHTML=moonReadHTML(y,m,d);
 }
+// ── экспорт в календарь (.ics): кин дня на год вперёд ──
+function _icsEsc(s){return String(s).replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\n/g,'\\n');}
+function downloadICS(){
+  const L=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//drche79//dreamspell//RU','CALSCALE:GREGORIAN','METHOD:PUBLISH','X-WR-CALNAME:Dreamspell · кин дня','X-WR-TIMEZONE:UTC'];
+  const start=new Date(), stamp=`${start.getUTCFullYear()}${String(start.getUTCMonth()+1).padStart(2,'0')}${String(start.getUTCDate()).padStart(2,'0')}T000000Z`;
+  for(let i=0;i<366;i++){
+    const dt=new Date(start.getTime()+i*86400000), y=dt.getFullYear(),m=dt.getMonth()+1,d=dt.getDate();
+    const r=compute(y,m,d), a=affirmationRU(r), dir=DIR[r.idx%4];
+    const ymd=`${y}${String(m).padStart(2,'0')}${String(d).padStart(2,'0')}`;
+    const n2=new Date(dt.getTime()+86400000), ymd2=`${n2.getFullYear()}${String(n2.getMonth()+1).padStart(2,'0')}${String(n2.getDate()).padStart(2,'0')}`;
+    const sum=_icsEsc(`${r.tone} ${N[r.idx].k} · кин ${r.kin}`);
+    const desc=_icsEsc(`${a.l1} ${a.l2} ${a.l3}\nТон ${r.tone} (${NUM[r.tone][0]}) · ${dir.col.toLowerCase()}, ${dir.name.toLowerCase()} · волна 1 ${N[r.lordIdx].k} · ${castleOf(r.kin).name}.`);
+    L.push('BEGIN:VEVENT',`UID:ds-${ymd}@drche79.github.io`,`DTSTAMP:${stamp}`,`DTSTART;VALUE=DATE:${ymd}`,`DTEND;VALUE=DATE:${ymd2}`,`SUMMARY:${sum}`,`DESCRIPTION:${desc}`,'TRANSP:TRANSPARENT','END:VEVENT');
+  }
+  L.push('END:VCALENDAR');
+  const blob=new Blob([L.join('\r\n')],{type:'text/calendar;charset=utf-8'}), url=URL.createObjectURL(blob), a2=document.createElement('a');
+  a2.href=url; a2.download='dreamspell-kin.ics'; document.body.appendChild(a2); a2.click(); a2.remove(); setTimeout(()=>URL.revokeObjectURL(url),1500);
+}
+// ── Подбор кина: по тону и печати, без даты ──
+function fromKin(kin){const idx=mod(kin-1,20),tone=mod(kin-1,13)+1,lordIdx=mod(idx-(tone-1),20),kp=mod(kin-2,260)+1,kn=mod(kin,260)+1;
+  return {kin,tone,idx,lordIdx,prevIdx:mod(kp-1,20),nextIdx:mod(kn-1,20),prevTone:mod(kp-1,13)+1,nextTone:mod(kn-1,13)+1};}
+function pickedKinHTML(r){
+  const naw=N[r.idx],dir=DIR[r.idx%4],lord=N[r.lordIdx],numK=NUM[r.tone],c=DESC[r.idx],cas=castleOf(r.kin),li=r.lordIdx;
+  return `<div class="card" style="--dir:${dir.accent}">
+    <div class="head">${numeral(r.tone)}
+      <div class="names">
+        <h2 class="kiche">${sealIcon(r.idx,30,dir.accent)}${naw.k}</h2>
+        <div class="yuc">тон ${r.tone} · ${numK[0]} · кин ${r.kin}<span class="sep">·</span>печать №${r.idx+1} из 20</div>
+        <div class="ds"><span class="ds-tag">Seal · Maya</span>${DSEN[r.idx]} <span class="dsen">(${naw.y})</span></div>
+      </div>
+      <div class="rose-wrap">${rose(dir.rose)}<span class="dir-label">${dir.name}</span></div>
+    </div>
+    <div class="grid">
+      <div class="cell"><p class="k">Цвет · сторона</p><p class="v"><span class="swatch" style="background:${dir.ink}"></span>${dir.col}, ${dir.name.toLowerCase()}<small>${dir.q}</small></p></div>
+      <div class="cell"><p class="k">Волна · wavespell</p><p class="v">1 ${lord.k}<small>тема волны: ${KW[li]}</small></p></div>
+      <div class="cell"><p class="k">Откуда выходит</p><p class="v">${r.prevTone} ${N[r.prevIdx].k}<small>предыдущий кин</small></p></div>
+      <div class="cell"><p class="k">Куда входит</p><p class="v">${r.nextTone} ${N[r.nextIdx].k}<small>следующий кин</small></p></div>
+    </div>
+    <div class="read">
+      <div class="angle">Человек этого кина</div>
+      <p class="image-line">${c.img}</p>
+      <dl class="facets">
+        <div><dt>Характер</dt><dd>${c.char}</dd></div>
+        <div><dt>Дар · призвание</dt><dd>${c.gift}</dd></div>
+        <div><dt>Теневая сторона</dt><dd>${c.shadow}</dd></div>
+        <div><dt>Тон ${r.tone} · ${numK[0]}</dt><dd>${numK[1]}</dd></div>
+      </dl>
+      ${affirmHTML(r)}
+      ${oracleHTML(r)}
+      <div class="wave-block"><p class="mam-k">Внутри волны</p>${wavespellSpiralSVG(r,'этот кин')}
+        <p class="wave-char">Кин в волне <b>1 ${lord.k}</b> (тема: ${KW[li]}), ${cas.name.toLowerCase()}. ${WAVE_TASK[li]} Тон ${r.tone} из 13.</p></div>
+      <p class="mam"><span class="mam-k">Где в счёте</span>Кин <b>${r.kin} из 260</b> · день <b>${r.tone} из 13</b> в волне <b>1 ${lord.k}</b> · ${cas.name}, <b>${cas.court.toLowerCase()}</b>.</p>
+    </div></div>`;
+}
+let _pickT=1,_pickS=0;
+function renderPicked(){
+  const r=fromKin(kinOf(_pickS,_pickT));
+  document.querySelectorAll('#pick-tones .pk-t').forEach(b=>b.classList.toggle('on',+b.dataset.t===_pickT));
+  document.querySelectorAll('#pick-seals .pk-s').forEach(b=>b.classList.toggle('on',+b.dataset.s===_pickS));
+  const host=document.getElementById('pick-card'); if(!host) return;
+  host.innerHTML=pickedKinHTML(r);
+  host.querySelectorAll('.orc-cell').forEach(b=>b.addEventListener('click',()=>{const i=+b.dataset.sign; switchTab('ref');
+    const e=document.getElementById('sign-'+i); if(e){e.open=true; setTimeout(()=>e.scrollIntoView({behavior:'smooth',block:'center'}),60);}}));
+}
+function buildPicker(){
+  let tones=''; for(let t=1;t<=13;t++) tones+=`<button class="pk-t" data-t="${t}" type="button">${t}<small>${NUM[t][0]}</small></button>`;
+  document.getElementById('pick-tones').innerHTML=tones;
+  let seals=''; for(let s=0;s<20;s++){const dc=DIR[s%4]; seals+=`<button class="pk-s" data-s="${s}" type="button">${sealIcon(s,20,dc.accent)}<span>${N[s].k}</span></button>`;}
+  document.getElementById('pick-seals').innerHTML=seals;
+  document.querySelectorAll('#pick-tones .pk-t').forEach(b=>b.addEventListener('click',()=>{_pickT=+b.dataset.t; renderPicked();}));
+  document.querySelectorAll('#pick-seals .pk-s').forEach(b=>b.addEventListener('click',()=>{_pickS=+b.dataset.s; renderPicked();}));
+  renderPicked();
+}
 function buildReference(){
   const signs=N.map((o,i)=>{
     const dir=DIR[i%4], c=DESC[i];
@@ -1782,7 +1905,7 @@ function addImgBtn(container, getSVG, filename){
 function switchTab(v){
   document.querySelectorAll('.tab').forEach(x=>{const on=x.dataset.v===v;
     x.classList.toggle('active',on); x.setAttribute('aria-selected',on?'true':'false');});
-  ['today','single','pair','matrix','moons','chat','ref','about'].forEach(name=>{const el=document.getElementById('view-'+name); if(el) el.hidden = v!==name;});
+  ['today','single','pick','pair','matrix','moons','chat','ref','about'].forEach(name=>{const el=document.getElementById('view-'+name); if(el) el.hidden = v!==name;});
 }
 document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>switchTab(t.dataset.v)));
 
@@ -1811,6 +1934,7 @@ document.getElementById('mb-go').addEventListener('click',runMatrixFind);
 document.getElementById('mb').addEventListener('change',runMatrixFind);
 document.getElementById('moon-go').addEventListener('click',renderMoon);
 document.getElementById('moon-d').addEventListener('change',renderMoon);
+document.getElementById('ics-go').addEventListener('click',()=>{const b=document.getElementById('ics-go'),o=b.textContent;b.textContent='Готовлю файл…';b.disabled=true;setTimeout(()=>{try{downloadICS();}catch(e){}b.textContent=o;b.disabled=false;},30);});
 (function(){const t=new Date();const iso=`${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`;
   document.getElementById('moon-d').value=iso;})();
 (function(){const t=new Date();const iso=`${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`;
@@ -1821,6 +1945,7 @@ renderMatrix();
 buildReference();
 buildMoonRef();
 renderMoon();
+buildPicker();
 
 /* ── open from a shared link ── */
 (function applyURLParams(){
